@@ -3,79 +3,79 @@ import pygame
 
 class Cube ():
 
-    def __init__ (self, x, y, width, height, screen):
+    def __init__ (self, x, y, largeur, hauteur, ecran):
         #self.image = pygame.image.load()
         #self.rect = self.image.get_rect(x = x, y = y)
-        self.rect = pygame.Rect(x,y,width,height)
-        self.mini_rect = pygame.Rect(x+(width//10),y+(height//10),width-(width//5),height-(height//5))
-        self.screen = screen
-        self.color = pygame.Color("black")
-        self.mini_color = pygame.Color("grey39")
+        self.rect = pygame.Rect(x,y,largeur,hauteur)
+        self.mini_rect = pygame.Rect(x+(largeur//10),y+(hauteur//10),largeur-(largeur//5),hauteur-(hauteur//5))
+        self.ecran = ecran
+        self.couleur = pygame.Color("black")
+        self.mini_couleur = pygame.Color("grey39")
 
-    def draw (self):
-        pygame.draw.rect (self.screen, self.color,self.rect)
-        pygame.draw.rect (self.screen, self.mini_color,self.mini_rect)
+    def dessine (self):
+        pygame.draw.rect (self.ecran, self.couleur,self.rect)
+        pygame.draw.rect (self.ecran, self.mini_couleur,self.mini_rect)
 
-class Coin ():
-    def __init__ (self, x, y, width, height, screen):
+class Piece ():
+    def __init__ (self, x, y, largeur, hauteur, ecran):
         #self.image = pygame.image.load()
         #self.rect = self.image.get_rect(x = x, y = y)
-        self.rect = pygame.Rect(x,y,width,height)
-        self.screen = screen
-        self.color = pygame.Color("yellow")
+        self.rect = pygame.Rect(x,y,largeur,hauteur)
+        self.ecran = ecran
+        self.couleur = pygame.Color("yellow")
         
-    def draw (self):
-        pygame.draw.rect (self.screen, self.color,self.rect)
+    def dessine (self):
+        pygame.draw.rect (self.ecran, self.couleur,self.rect)
 
-class WinningZone ():
-    def __init__ (self, x, y, width, height, screen):
+class Victoire ():
+    def __init__ (self, x, y, largeur, hauteur, ecran):
         #self.image = pygame.image.load()
         #self.rect = self.image.get_rect(x = x, y = y)
-        self.rect = pygame.Rect(x,y,width,height)
-        self.screen = screen
-        self.color = pygame.Color("green")
+        self.rect = pygame.Rect(x,y,largeur,hauteur)
+        self.ecran = ecran
+        self.couleur = pygame.Color("green")
 
-    def draw (self):
-        pygame.draw.rect (self.screen, self.color,self.rect)
+    def dessine (self):
+        pygame.draw.rect (self.ecran, self.couleur,self.rect)
 
-class Door ():
-    def __init__ (self, x, y, width, height, screen):
+class Porte ():
+    def __init__ (self, x, y, largeur, hauteur, ecran):
         #self.image = pygame.image.load()
         #self.rect = self.image.get_rect(x = x, y = y)
-        self.rect = pygame.Rect(x,y,width,height)
-        self.screen = screen
-        self.color = pygame.Color("brown")
+        self.rect = pygame.Rect(x,y,largeur,hauteur)
+        self.ecran = ecran
+        self.couleur = pygame.Color("brown")
 
-    def draw (self):
-        pygame.draw.rect (self.screen, self.color,self.rect)
+    def dessine (self):
+        pygame.draw.rect (self.ecran, self.couleur,self.rect)
 
-class Key ():
+class Clef ():
 
-    def __init__ (self, x, y, width, height, screen):
+    def __init__ (self, x, y, largeur, hauteur, ecran):
         #self.image = pygame.image.load()
         #self.rect = self.image.get_rect(x = x, y = y)
-        self.rect = pygame.Rect(x,y,width,height)
-        self.mini_rect = pygame.Rect(x+(width//10),y+(height//10),width-(width//5),height-(height//5))
-        self.screen = screen
-        self.color = pygame.Color("black")
-        self.mini_color = pygame.Color("yellow")
+        self.rect = pygame.Rect(x,y,largeur,hauteur)
+        self.mini_rect = pygame.Rect(x+(largeur//10),y+(hauteur//10),largeur-(largeur//5),hauteur-(hauteur//5))
+        self.ecran = ecran
+        self.couleur = pygame.Color("black")
+        self.mini_couleur = pygame.Color("yellow")
 
-    def draw (self):
-        pygame.draw.rect (self.screen, self.color,self.rect)
-        pygame.draw.rect (self.screen, self.mini_color,self.mini_rect)
+    def dessine (self):
+        pygame.draw.rect (self.ecran, self.couleur,self.rect)
+        pygame.draw.rect (self.ecran, self.mini_couleur,self.mini_rect)
 
 
-class Breakable ():
+class Cassable ():
 
-    def __init__ (self, x, y, width, height, screen):
+    def __init__ (self, x, y, largeur, hauteur, ecran):
         #self.image = pygame.image.load()
         #self.rect = self.image.get_rect(x = x, y = y)
-        self.rect = pygame.Rect(x,y,width,height)
-        self.mini_rect = pygame.Rect(x+(width//10),y+(height//10),width-(width//5),height-(height//5))
-        self.screen = screen
-        self.color = pygame.Color("black")
-        self.mini_color = pygame.Color("brown")
+        self.rect = pygame.Rect(x,y,largeur,hauteur)
+        self.mini_rect = pygame.Rect(x+(largeur//10),y+(hauteur//10),largeur-(largeur//5),hauteur-(hauteur//5))
+        self.ecran = ecran
+        self.couleur = pygame.Color("black")
+        self.mini_couleur = pygame.Color("brown")
 
-    def draw (self):
-        pygame.draw.rect (self.screen, self.color,self.rect)
-        pygame.draw.rect (self.screen, self.mini_color,self.mini_rect)
+    def dessine (self):
+        pygame.draw.rect (self.ecran, self.couleur,self.rect)
+        pygame.draw.rect (self.ecran, self.mini_couleur,self.mini_rect)
