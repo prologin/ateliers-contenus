@@ -1,4 +1,4 @@
-from utils import message_render, make_font
+from utils import message_render,  police_taille
 import pygame
 
 class Bouton ():
@@ -7,7 +7,7 @@ class Bouton ():
         self.ecran = ecran
         self.texte = texte
         self.taille = taille
-        self.message = message_render(texte,make_font("BradBunR.ttf", self.taille),couleur1)
+        self.message = message_render(texte, police_taille(self.taille),couleur1)
         self.largeur = self.message.get_width()
         self.hauteur = self.message.get_height()
 
@@ -17,7 +17,7 @@ class Bouton ():
         self.fonction = fonction
 
     def change_couleur (self, state):
-        self.message = message_render(self.texte, make_font("BradBunR.ttf", self.taille),
+        self.message = message_render(self.texte, police_taille(self.taille),
                                    self.couleurs[1] if state else self.couleurs[0])
 
 

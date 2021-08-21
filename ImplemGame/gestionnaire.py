@@ -1,19 +1,21 @@
 import menu_principal
 import menu_prochain_niveau
 import jeux
+import glob, os
 
 
 
 class Gestionnaire ():
     def __init__ (self,stats,ecran, largeur, hauteur):
         self.stats = stats 
-        self.niveau = 1
+        self.niveau = 0
         self.sons = 1
         self.musique = 1
         self.running = True
         self.ecran = ecran
         self.largeur = largeur
         self.hauteur = hauteur
+        self.niveaux = glob.glob(os.path.join("levels/","*.txt"))
 
         self.charge_stats()
 
@@ -54,35 +56,50 @@ class Gestionnaire ():
         
         
         while True:
-            
+            # on lance le menu principale et on récupère l'action effectué
             resultat = menu_principal.MenuPrincipal(self.largeur,self.hauteur,self.ecran).run()
+            # si 0 cela veut dire quitter
             if resultat == 0:
                 self.running = False
                 break
+            # si 1 afficher les options
             elif resultat == 1:
                 print('options')
                 continue
+            # sinon c'est jouer
             else:
                 self.running = True
-            
-            while self.running : 
+            # la boucle de jeu
+            while self.running and self.niveau < len(self.niveaux) :
+
+                # on lance le jeu et on récupère la valeur de fin de jeu 
                 resultat = jeux.Jeu(self.largeur,self.hauteur,self.ecran,self.niveau).run()
+                
+                # 0 signifie que le niveau a été quitté avant d'être complété
                 if resultat == 0:
                     self.running = False
                     break
                 
+                # le niveau est complété, on lance le menu de prochain niveau
                 else:
+                    # le nombre du niveau est incrémenté
                     self.niveau += 1
                     resultat = menu_prochain_niveau.MenuProchainNiveau(self.largeur,self.hauteur,self.ecran).run()
 
+                    # si 0 on veut retourner au menu principale
                     if resultat == 0:
                         self.running = False
                         break
+
+                    # si 1 on veut accéder aux options
                     elif resultat == 1:
                         print("option")
                         continue
+                    # sinon, la boucle reviens sur le lancement d'un niveau
 
+        # enregistre les valeurs modifié dans le fichier stats
         self.enregistre_stats()
+        quit()
                     
         
 

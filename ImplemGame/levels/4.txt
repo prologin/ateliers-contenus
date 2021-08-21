@@ -12,9 +12,9 @@ xx                          xx
 xx                          xx
 p                           xx
                             xx
-xx                          xx
+xx             c            xx
 xx             xx           xx
 xx             xx           xx
-xx             xx         wwxx
+xx       c     xx    c    wwxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

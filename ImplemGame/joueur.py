@@ -134,4 +134,7 @@ class Joueur ():
     def dessine (self):
         pygame.draw.rect (self.ecran, self.couleur,self.rect)
 
+    def __str__ (self):
+        return "Objet joueur"
+
    

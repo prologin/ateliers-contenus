@@ -1,8 +1,8 @@
 import pygame
 
-def message_render(message,police,coul):
-    mess = police.render(message,True,pygame.Color(coul))
-    return mess
+def message_render(message,police,couleur):
+    message = police.render(message,True,pygame.Color(couleur))
+    return message
 
-def make_font(font,size):
-    return pygame.font.Font(font,size)
+def police_taille(taille):
+    return pygame.font.Font("BradBunR.ttf",taille)

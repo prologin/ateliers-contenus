@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import*
 from bouton import Bouton
-from utils import make_font, message_render
+from utils import  message_render, police_taille
 from chargeur_niveau import chargeur_niveau
 
 
@@ -50,7 +50,7 @@ class Jeu ():
         self.joueur.niveau = self.niveau
         
         self.indice_txt = f"Tu dois modifier dans le fichier joueur.py la fonction mouv"
-        self.indice = message_render(self.indice_txt,make_font("BradBunR.ttf", 20),pygame.Color("black"))
+        self.indice = message_render(self.indice_txt,police_taille(20),pygame.Color("black"))
             
             
     def affiche (self):
@@ -170,4 +170,4 @@ class Jeu ():
            
 
     def __str__(self):
-        return "It's a menu bro !"
+        return "jeu avec niveau {self.niveau}"

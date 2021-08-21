@@ -14,7 +14,7 @@ p                           xx
                             xx
 xx                          xx
 xx             xx           xx
-xx             xx           xx
-xx             xx         wwxx
+xx             xx       xxxxxx
+xx       k     xx       d wwxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
