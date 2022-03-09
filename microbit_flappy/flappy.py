@@ -1,78 +1,78 @@
 from microbit import *
 from random import randint
 
-def genere_mur():
+def genere_tuyaux():
    """
-    renvoie 2 entiers correspondant aux positions du nouveau mur généré,
+    renvoie 2 entiers correspondant aux positions du nouveau tuyaux généré,
     voir le schéma sur le sujet.
    """
    pass
 
-def affiche_mur(mur_x, intensite, mur_y1, mur_y2):
+def affiche_tuyaux(tuyau_x, intensite, tuyau_y1, tuyau_y2):
     """
-    @mur_x : colonne où est situé le mur à afficher
-    @intensite : intensité des leds du mur
+    @tuyau_x : colonne où est situé le tuyaux à afficher
+    @intensite : intensité des leds du tuyaux
     
-    affiche le mur sur le microbit
+    affiche le tuyaux sur le microbit
     """
     pass
 
-def efface_mur(mur_x):
+def efface_tuyaux(tuyau_x):
     """
-    @mur_x : colonne du mur
+    @tuyau_x : colonne du tuyaux
 
-    met l'intensité de la colonne à 0.
+    met l'intensité des pixels de la colonne à 0.
     """
     pass
 
-def deplace_mur(mur_x, intensite ,mur_y1, mur_y2):
+def deplace_tuyaux(tuyau_x, intensite ,tuyau_y1, tuyau_y2):
     """
-    @mur_x ; ancienne colonne du mur
-    @intensité : intensité des leds du mur
+    @tuyau_x ; ancienne colonne du tuyaux
+    @intensité : intensité des leds du tuyaux
 
-    déplace le mur d'un cran vers la gauche
-    valeur retournée : nouvelle colonne du mur
+    déplace le tuyaux d'un cran vers la gauche
+    valeur retournée : nouvelle colonne du tuyaux
     """
     pass
 
-def affiche_joueur(joueur_x, joueur_y, intensite):
+def affiche_oiseau(oiseau_x, oiseau_y, intensite):
     """
-    @joueur_x, joueur_y : coordonnées du joueur
-    @instensite : intensité des leds du mur
+    @oiseau_x, oiseau_y : coordonnées du oiseau
+    @instensite : intensité des leds du tuyaux
 
-    affiche le joueur sur l'ecran
+    affiche le oiseau sur l'ecran
     """
     pass
 
-def collision(joueur_x, joueur_y, mur_x, mur_y1, mur_y2):
+def collision(oiseau_x, oiseau_y, tuyau_x, tuyau_y1, tuyau_y2):
     """
-    @joueur_x, joueur_y : coordonnées du joueur
-    @mur_x : colonne actuelle du mur
-    @mur_y1, mur_y2 : hauteur du mur
+    @oiseau_x, oiseau_y : coordonnées du oiseau
+    @tuyau_x : colonne actuelle du tuyaux
+    @tuyau_y1, tuyau_y2 : hauteur du tuyaux
     
-    vérifie si le joueur est en collision avec un mur
-    valeur retournee : True False 
+    vérifie si le oiseau est en collision avec un tuyaux
+    valeur retournée : True False 
     """
     pass
 
-def deplace_joueur(joueur_x, joueur_y, joueur_intensite):
+def deplace_oiseau(oiseau_x, oiseau_y, oiseau_intensite):
     """
-    @joueur_x, joueur_y : coordonnées du joueur
-    @joueur_intensité : intensité de la led représentant du joueur
+    @oiseau_x, oiseau_y : coordonnées du oiseau
+    @oiseau_intensité : intensité de la led représentant du oiseau
     
-    vérifie si le joueur a appuyé sur un bouton, et le déplace dans la direction voulue
+    vérifie si le oiseau a appuyé sur un bouton, et le déplace dans la direction voulue
     """
     pass
 
-# variables initiales du joueur
-joueur_x = 1
-joueur_y = 2
-joueur_intensite = 2
+# variables initiales du oiseau
+oiseau_x = 1
+oiseau_y = 2
+oiseau_intensite = 2
 
-# variables initiales du mur
-mur_intensite = 9
-mur_x = 5
-mur_y1, mur_y2 = genere_mur()
+# variables initiales du tuyaux
+tuyaux_intensite = 9
+tuyau_x = 5
+tuyau_y1, tuyau_y2 = genere_tuyaux()
 
 # variables initiales du jeu
 en_cours = True
@@ -84,18 +84,18 @@ min_temps = 100
 while en_cours:
     # déplace de un vers la gauche (déplacement négatif)
     
-    # déplace le joueur en fonction des boutons appuyé
+    # déplace l'oiseau en fonction des boutons appuyé
     # bouton_a peut faire monter de 1 case
     # bouton_b peut faire descendre de 1 case
 
-    if """ regarde la collision entre le joueur et le mur """:
+    if """ regarde la collision entre le oiseau et le tuyaux """:
         # met en_cours à faux
-        # efface le mur
+        # efface le tuyaux
         pass
 
-    if """verifie si le mur est derrière le joueur""":
-        # efface le mur
-        # génere un nouveau mur et le place à droite de l'écran
+    if """verifie si le tuyaux est derrière le oiseau""":
+        # efface le tuyaux
+        # génere un nouveau tuyaux et le place à droite de l'écran
         # augmente le score de 1
 
         # gestion du temps, ne pas toucher

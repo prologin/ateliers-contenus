@@ -1,56 +1,56 @@
 from microbit import *
 from random import randint
 
-def genere_mur():
-    mur_y1 = randint(0, 2)
-    mur_y2 = randint(mur_y1 + 2, 4)
-    return mur_y1, mur_y2
+def genere_tuyaux():
+    tuyau_y1 = randint(0, 2)
+    tuyau_y2 = randint(tuyau_y1 + 2, 4)
+    return tuyau_y1, tuyau_y2
 
-def affiche_mur(x, intensite, mur_y1, mur_y2):
-    for i in range(mur_y1 + 1):
+def affiche_tuyaux(x, intensite, tuyau_y1, tuyau_y2):
+    for i in range(tuyau_y1 + 1):
         display.set_pixel(x, i, intensite)
-    for i in range(mur_y2, 5):
+    for i in range(tuyau_y2, 5):
         display.set_pixel(x, i, intensite)
 
-def efface_mur(mur_x):
+def efface_tuyaux(tuyau_x):
     for i in range(5):
-        display.set_pixel(mur_x, i, 0)
+        display.set_pixel(tuyau_x, i, 0)
 
-def deplace_mur(mur_x, intensite ,mur_y1, mur_y2):
-    if mur_x < 5:
-        efface_mur(mur_x)
-    affiche_mur(mur_x - 1, intensite, mur_y1, mur_y2)
-    return mur_x - 1
+def deplace_tuyaux(tuyau_x, intensite ,tuyau_y1, tuyau_y2):
+    if tuyau_x < 5:
+        efface_tuyaux(tuyau_x)
+    affiche_tuyaux(tuyau_x - 1, intensite, tuyau_y1, tuyau_y2)
+    return tuyau_x - 1
 
-def affiche_joueur(joueur_x, joueur_y, intensite):
-    display.set_pixel(joueur_x, joueur_y, intensite)
+def affiche_oiseau(oiseau_x, oiseau_y, intensite):
+    display.set_pixel(oiseau_x, oiseau_y, intensite)
 
-def collision(joueur_x, joueur_y, mur_x, mur_y1, mur_y2):
-    return joueur_x == mur_x and not (mur_y1 < joueur_y < mur_y2)
+def collision(oiseau_x, oiseau_y, tuyau_x, tuyau_y1, tuyau_y2):
+    return oiseau_x == tuyau_x and not (tuyau_y1 < oiseau_y < tuyau_y2)
 
-def deplace_joueur(joueur_x, joueur_y, joueur_intensite):
-    affiche_joueur(joueur_x, joueur_y, 0)
+def deplace_oiseau(oiseau_x, oiseau_y, oiseau_intensite):
+    affiche_oiseau(oiseau_x, oiseau_y, 0)
     haut = button_a.get_presses()
     bas = button_b.get_presses()
-    joueur_y = joueur_y - haut
-    joueur_y = joueur_y + bas
-    if joueur_y < 0:
-        joueur_y = 0
+    oiseau_y = oiseau_y - haut
+    oiseau_y = oiseau_y + bas
+    if oiseau_y < 0:
+        oiseau_y = 0
 
-    if joueur_y > 4:
-        joueur_y = 4
+    if oiseau_y > 4:
+        oiseau_y = 4
 
-    affiche_joueur(joueur_x, joueur_y, joueur_intensite)
+    affiche_oiseau(oiseau_x, oiseau_y, oiseau_intensite)
 
-    return joueur_y
+    return oiseau_y
 
-joueur_x = 1
-joueur_y = 2
-joueur_intensite = 2
+oiseau_x = 1
+oiseau_y = 2
+oiseau_intensite = 2
 
-mur_intensite = 9
-mur_x = 5
-mur_y1, mur_y2 = genere_mur()
+tuyaux_intensite = 9
+tuyau_x = 5
+tuyau_y1, tuyau_y2 = genere_tuyaux()
 
 
 en_cours = True
@@ -60,19 +60,19 @@ reduction_temps = 50
 min_temps = 100
 
 while en_cours:
-    mur_x = deplace_mur(mur_x, mur_intensite, mur_y1, mur_y2)
-    joueur_y = deplace_joueur(joueur_x, joueur_y, joueur_intensite)
-    if collision(joueur_x, joueur_y, mur_x, mur_y1, mur_y2):
+    tuyau_x = deplace_tuyaux(tuyau_x, tuyaux_intensite, tuyau_y1, tuyau_y2)
+    oiseau_y = deplace_oiseau(oiseau_x, oiseau_y, oiseau_intensite)
+    if collision(oiseau_x, oiseau_y, tuyau_x, tuyau_y1, tuyau_y2):
         en_cours = False
-        affiche_mur(mur_x, 0, mur_y1, mur_y2)
-    if mur_x < joueur_x:
+        affiche_tuyaux(tuyau_x, 0, tuyau_y1, tuyau_y2)
+    if tuyau_x < oiseau_x:
         score = score + 1
-        mur_y1, mur_y2 = genere_mur()
-        efface_mur(mur_x)
+        tuyau_y1, tuyau_y2 = genere_tuyaux()
+        efface_tuyaux(tuyau_x)
         temps = temps - reduction_temps
         if temps < min_temps:
             temps = min_temps
-        mur_x = 5
+        tuyau_x = 5
 
     sleep(temps)
 
