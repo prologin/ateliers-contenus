@@ -83,13 +83,12 @@ tuyau_x = 5
 tuyau_y1, tuyau_y2 = genere_tuyaux()
 
 # variables initiales du jeu
-en_cours = True
 temps = 1000
 score = 0
 reduction_temps = 50
 min_temps = 100
 
-while en_cours:
+while True:
     # déplace le tuyau mde un vers la gauche (déplacement négatif)
 
     # déplace l'oiseau en fonction des boutons appuyé
@@ -97,8 +96,7 @@ while en_cours:
     # bouton_b peut faire descendre de 1 case
 
     if """ regarde la collision entre le oiseau et le tuyaux """:
-        # met en_cours à faux
-        # efface le tuyaux
+        # arrête tout
         pass
 
     if """verifie si le tuyaux est derrière le oiseau""":
