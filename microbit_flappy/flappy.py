@@ -1,21 +1,24 @@
 from microbit import *
 from random import randint
 
+
 def genere_tuyaux():
-   """
+    """
     renvoie 2 entiers correspondant aux positions du nouveau tuyaux généré,
     voir le schéma sur le sujet.
-   """
-   pass
+    """
+    pass
+
 
 def affiche_tuyaux(tuyau_x, intensite, tuyau_y1, tuyau_y2):
     """
     @tuyau_x : colonne où est situé le tuyaux à afficher
     @intensite : intensité des leds du tuyaux
-    
+
     affiche le tuyaux sur le microbit
     """
     pass
+
 
 def efface_tuyaux(tuyau_x):
     """
@@ -25,7 +28,8 @@ def efface_tuyaux(tuyau_x):
     """
     pass
 
-def deplace_tuyaux(tuyau_x, intensite ,tuyau_y1, tuyau_y2):
+
+def deplace_tuyaux(tuyau_x, intensite, tuyau_y1, tuyau_y2):
     """
     @tuyau_x ; ancienne colonne du tuyaux
     @intensité : intensité des leds du tuyaux
@@ -34,6 +38,7 @@ def deplace_tuyaux(tuyau_x, intensite ,tuyau_y1, tuyau_y2):
     valeur retournée : nouvelle colonne du tuyaux
     """
     pass
+
 
 def affiche_oiseau(oiseau_x, oiseau_y, intensite):
     """
@@ -44,32 +49,35 @@ def affiche_oiseau(oiseau_x, oiseau_y, intensite):
     """
     pass
 
+
 def collision(oiseau_x, oiseau_y, tuyau_x, tuyau_y1, tuyau_y2):
     """
     @oiseau_x, oiseau_y : coordonnées du oiseau
     @tuyau_x : colonne actuelle du tuyaux
     @tuyau_y1, tuyau_y2 : hauteur du tuyaux
-    
+
     vérifie si le oiseau est en collision avec un tuyaux
-    valeur retournée : True False 
+    valeur retournée : True False
     """
     pass
+
 
 def deplace_oiseau(oiseau_x, oiseau_y, oiseau_intensite):
     """
     @oiseau_x, oiseau_y : coordonnées du oiseau
     @oiseau_intensité : intensité de la led représentant du oiseau
-    
+
     vérifie si le oiseau a appuyé sur un bouton, et le déplace dans la direction voulue
     """
     pass
 
-# variables initiales du oiseau
+
+# variables initiales de l'oiseau
 oiseau_x = 1
 oiseau_y = 2
 oiseau_intensite = 2
 
-# variables initiales du tuyaux
+# variables initiales du tuyau
 tuyaux_intensite = 9
 tuyau_x = 5
 tuyau_y1, tuyau_y2 = genere_tuyaux()
@@ -82,8 +90,8 @@ reduction_temps = 50
 min_temps = 100
 
 while en_cours:
-    # déplace de un vers la gauche (déplacement négatif)
-    
+    # déplace le tuyau mde un vers la gauche (déplacement négatif)
+
     # déplace l'oiseau en fonction des boutons appuyé
     # bouton_a peut faire monter de 1 case
     # bouton_b peut faire descendre de 1 case
@@ -102,7 +110,7 @@ while en_cours:
         temps = temps - reduction_temps
         if temps < min_temps:
             temps = min_temps
-    
+
     # arrete le program pendant 'temps' millisecondes
     sleep(temps)
 
