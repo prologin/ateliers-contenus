@@ -49,8 +49,6 @@ display.clear()
 
 ### Les boutons
 
-> TODO: Expliquer les fonctions pour les boutons A et B.
-
 Afin de pouvoir diriger notre oiseau, nous allons utiliser les boutons A et B sur les côtés de l'écran.Quand on tient la carte `micro:bit` dans le bon sens, le bouton A est à gauche et le bouton B est à droite. On souhaite que l'appui sur le bouton A fasse monter l'oiseau d'un monter d'un pixel, et le B le fait descendre.
 
 Reste à savoir comment savoir dans notre code qu'un bouton a été appuyé. Il existe pour cela 3 fonctions principales.
