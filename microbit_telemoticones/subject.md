@@ -108,7 +108,7 @@ Pour détecter les mouvements du micro:bit, on utilise la fonction `acceleromete
 
 ```py
 accelerometer.was_gesture('shake')  # Détecte si le micro:bit a été secoué.
-accelerometer.was_gesture('face_down') # Détecte si le micro:bit a été retourné
+accelerometer.was_gesture('face down') # Détecte si le micro:bit a été retourné
 ```
 
 Pour envoyer notre émoticône, nous testerons donc si le micro:bit a été secoué, et pour changer de mode, nous vérifierons s'il a été retourné.
