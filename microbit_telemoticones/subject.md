@@ -91,6 +91,12 @@ Voici une liste des images (émoticônes ou non) que vous pouvez afficher à l'�
 * `Image.UMBRELLA`
 * `Image.SNAKE`
 
+Vous pouvez également créer des images à partir de texte, c'est d'ailleurs ce que vous ferez pour transformer le message radio en émoticône :
+
+```py
+emoji = Image(message_texte)
+```
+
 ### Les boutons
 
 Afin de pouvoir choisir notre émoticône, nous allons utiliser les boutons A et B sur les côtés de l'écran. Quand on tient la carte `micro:bit` dans le bon sens, le bouton A est à gauche et le bouton B est à droite.
