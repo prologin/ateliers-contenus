@@ -1,7 +1,6 @@
+# Importer les fonctions pour pouvoir communiquer avec le micro:bit
 from microbit import *
 import radio
-
-from random import randint
 
 # Configurer la radio
 radio.config(channel=3)
@@ -9,7 +8,7 @@ radio.on()
 
 # Créer une liste d'emojis
 
-# Indique l'émoticône séléctionné dans la liste
+# Indique l'émoticône sélectionné dans la liste
 i = 0
 
 # La fonction qui permet d'envoyer des messages
@@ -40,6 +39,6 @@ while True:
         # Effacer l'écran et changer le mode d'exécution
 
     if """ en mode envoi """:
-        # appeler la fonction send
+        # Appeler la fonction `send`
     elif """ en mode réception """:
-        # appeler la fonction receive
+        # Appeler la fonction `receive`
