@@ -129,5 +129,3 @@ Le programme est constitué essentiellement d'une boucle infinie au cours de laq
 Il faudra vérifier en continu si le micro:bit a été retourné pour savoir s'il est nécessaire de changer de mode.
 
 Ensuite, suivant le mode il faudra appeler la fonction correspondante.
-
-### Les emojis

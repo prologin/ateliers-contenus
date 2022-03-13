@@ -3,6 +3,8 @@ from microbit import *
 import radio
 
 # Configurer la radio
+# Si vous n'arrivez pas à communiquer avec vos amis, essayez de changer la
+# valeur de channel! Il est possible qu'il y ait des interférences sur la radio
 radio.config(channel=3)
 radio.on()
 
