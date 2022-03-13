@@ -8,7 +8,7 @@ author: Dorian 'Renji' Péron
 
 Le but de cet exercice est de coder le célèbre jeu [Snake](https://fr.wikipedia.org/wiki/Snake_(genre_de_jeu_vid%C3%A9o)) sur une carte `micro:bit`.
 
-![Snake sur Nokia](imgs/snake.jpg){height=5cm}
+![Snake sur Nokia](imgs/snake.jpg)
 
 ## Principe du jeu
 
