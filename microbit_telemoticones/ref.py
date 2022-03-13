@@ -4,7 +4,7 @@ import radio
 from random import randint
 
 # Configurer la radio
-radio.config(channel=3)
+radio.config(channel=34)
 radio.on()
 
 # Crée une liste d'emojis

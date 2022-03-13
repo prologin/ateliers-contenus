@@ -15,6 +15,9 @@ i = 0
 
 # La fonction qui permet d'envoyer des messages
 def send():
+    # 'global' permet d'indiquer que la variable i est définie en dehors de la fonction
+    global i
+
     # Vérifier si l'utilisateur a appuyé sur le bouton A ou le bouton B
     # Si c'est le cas, modifier la valeur de i
 
