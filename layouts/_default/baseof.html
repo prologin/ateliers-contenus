@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}
+      {{ .Site.Title }}
+    {{ end }}</title>
+    <link rel="stylesheet" href="/css/base.css">
+  </head>
+  <body>
+    <!-- Code that all your templates share, like a header -->
+    <header class="site-header">
+      <a href="/" class="header-home-link">
+        <img src="https://prologin.org/static/img/logo_cube.png" alt="Prologin Cube Logo">
+        <h1 class="site-title">Ateliers Prologin</h1>
+      </a>
+    </header>
+    <main>
+    {{ block "main" . }}
+      <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+    </main>
+    <br><br><br><br>
+    {{ block "footer" . }}
+    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+    {{ end }}
+  </body>
+</html>
