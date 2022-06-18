@@ -3,13 +3,14 @@ title: Télémoticônes
 subtitle: Messagerie d'émoticônes sur micro:bit
 date: 2022
 authors: Kenji '켄지' Gaillac, Mélanie '미야우' Tchéou
+code_stub_url: "./telemoticones.py"
 ---
 
 # Télémoticônes
 
 Le but de cette exercice est de coder une messagerie d'émoticônes sur `micro:bit`.
 
-![](img/telemoticones.png)
+![](./images/telemoticones.png)
 
 ## Objectif
 

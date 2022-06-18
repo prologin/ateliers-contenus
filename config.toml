@@ -1,4 +1,4 @@
-baseURL = 'https://ateliers.prologin.org/'
-languageCode = 'fr-fr'
-title = 'Ateliers Prologin'
-staticDir = [ "static" ]
+baseURL = "https://ateliers.prologin.org/"
+languageCode = "fr-fr"
+title = "Ateliers Prologin"
+theme = "prologin"

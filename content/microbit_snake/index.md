@@ -3,14 +3,14 @@ title: Jeu de Snake
 date: 2021
 author: Dorian 'Renji' Péron
 subtitle: Codez un snake sur micro:bit
-code_stub_url: "/tps/microbit_snake/snake.py"
+code_stub_url: "./snake.py"
 ---
 
 # Le jeu de Snake
 
 Le but de cet exercice est de coder le célèbre jeu [Snake](https://fr.wikipedia.org/wiki/Snake_(genre_de_jeu_vid%C3%A9o)) sur une carte `micro:bit`.
 
-![Snake sur Nokia](/tps/microbit_snake/snake.jpg)
+![Snake sur Nokia](./images/snake.jpg)
 
 ## Principe du jeu
 
@@ -80,7 +80,7 @@ snake_len = 4 # Le serpent a une taille de 4 cases
 
 L'exemple ci-dessus correspond au serpent en Figure \ref{step0} (la tête est le carré plein).
 
-![Étape 0\label{step0}](/tps/microbit_snake/snake_0.png)
+![Étape 0\label{step0}](./images/snake_0.png)
 
 Nous nous intéressons au déplacement du serpent. Pour cela,
 il faut savoir dans quelle direction il va. C'est à ça que sert la variable `direction` que l'on initialise par défaut à `UP`. Au début de la partie, le serpent ira donc vers le haut.
@@ -105,7 +105,7 @@ LEFT = 3
 
 Après avoir trouvé la direction du serpent, il faut le déplacer. Imaginons que dans l'exemple précédent, le serpent aille vers la gauche. Après s'être déplacé, l'écran ressemblera à la Figure \ref{step1}.
 
-![Étape 1\label{step1}](/tps/microbit_snake/snake_1.png)
+![Étape 1\label{step1}](./images/snake_1.png)
 
 Comme tu peux le voir, la tête du serpent s'est déplacée d'une case vers la gauche, et le bout de la queue du serpent a disparu !
 

@@ -2,13 +2,15 @@
 title: Flappy bird
 date: 2022
 authors: Paul 'Roux' Leroux, Mathieu 'Plot' Merienne
+subtitle: Codez votre Flappy Bird sur micro:bit
+code_stub_url: ./flappy.py
 ---
 
 # Le Flappy Bird
 
 Le but de cette exercice est de coder une version très simplifié du jeu Flappy bird sur un `micro:bit`.
 
-![Flappy Bird](images/flappy.png)
+![Flappy Bird](./images/flappy.png)
 
 ## Principe du jeu
 
@@ -24,7 +26,7 @@ Ils constituent les obstacles principaux du jeu. Ils se déplacent horizontaleme
 
 ### Fin de la partie
 
-La partie s'arrête lorsque l'oiseau percute un tuyau. Le score correspond au nombre de tuyaux qui auront été évités tout le long de la partie. 
+La partie s'arrête lorsque l'oiseau percute un tuyau. Le score correspond au nombre de tuyaux qui auront été évités tout le long de la partie.
 
 Pour coder notre jeu Flappy bird, nous allons utiliser une carte `micro:bit`. Sur la carte, nous nous intéresserons aux 2 boutons (A et B) ainsi qu'à l'écran. Ce dernier est composé de 25 pixels rouges répartis sur 5 lignes et 5 colonnes. Les sections suivantes expliquent comment les utiliser.
 
@@ -75,12 +77,12 @@ Ici, l'oiseau est représenté par un pixel. Ses coordonnées d'orgine sont donn
 
 Pour simplifier l'exercice, plusieurs variables sont fournies dans le code. Elles représentent les informations importantes sur l'oiseau et la partie en cours.
 
-![Flappy Bird](images/tuyaux_explications.png)
+![Flappy Bird](./images/tuyaux_explications.png)
 
 
 ### Les tuyaux
 
-Pour les représenter, nous avons fait le choix d'utiliser 2 coordonnées en y, `tuyau_y1` et `tuyau_y2` et une en x, `tuyau_x`. 
+Pour les représenter, nous avons fait le choix d'utiliser 2 coordonnées en y, `tuyau_y1` et `tuyau_y2` et une en x, `tuyau_x`.
 
 `tuyau_y1` correspond à la hauteur de la fin du tuyau du haut. Ce tuyau va donc de 0 à `tuyau_y1`. La deuxième correspond à la hauteur du début du tuyau du bas. Ce tuyau va donc de `tuyau_y2` à 4.
 
