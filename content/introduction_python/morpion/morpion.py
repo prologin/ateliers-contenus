@@ -1,0 +1,75 @@
+def nouvelleGrille():
+    """Renvoie une grille de morpion vierge."""
+    pass
+
+def afficherGrille(grille):
+    """Affiche la grille de morpion donnee en parametre."""
+    for i in range(len(grille)):
+        for j in range(len(grille[i])):
+            print(grille[i][j], end="")
+            # Pour ne pas avoir de | a la fin de la ligne
+            if j != 2:
+                print("|", end="")
+            else:
+                print()
+        if i != len(grille) - 1:
+            print("─┼─┼─")
+
+
+def verifierGrille(grille):
+    """Verifie si dans la grille donnee parametre,
+    un joueur est gagnant.
+    Si un joueur est gagnant, on renvoie son symbole associe, 
+    sinon on renvoie un espace " ". """
+    # verification horizontale
+
+    # verification verticale
+
+    # verification diagonale
+
+    # cas sans gagnant
+
+    pass
+
+
+def verifierCoordonnee(grille, coord):
+    """Verifie si les coordonnees sont valides avec la grille
+    donnee en parametre.
+    Si les coordonnees sont invalides, on renvoie False, sinon True."""
+    # si les coordonnees sont bien des nombres
+    
+    # si les coordonnees sont dans le tableau
+
+    # si la case est deja occupee
+
+    # si les coordonnees sont valides
+
+    pass
+
+def demanderCoordonnees(grille, joueur):
+    """Demande au joueur d'entrer les coordonnees horizontales
+    et verticales de l'endroit ou il souhaite jouer. Renvoie un
+    couple de coordonnees (horizontal, vertical)"""
+    pass
+
+def morpion():
+    """Fonction qui permet de jouer au morpion."""
+    print(
+        "Bienvenue sur le jeu du morpion !\n"
+        "Les règles sont simples : chaque joueur choisit des coordonnées sur la grille\n"
+        "où il souhaite que son symbole soit placé."
+    )
+    # variables du jeu
+    gagnant = False
+    verif = None
+    grille = nouvelleGrille()
+    while not gagnant:
+        # enchainement d'instructions pour que les joueurs
+        # placent leur symbole
+        pass
+
+    # annonce du joueur victorieux
+
+
+if __name__ == "__main__":
+    morpion()
