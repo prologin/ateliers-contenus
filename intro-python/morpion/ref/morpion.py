@@ -1,0 +1,99 @@
+def nouvelleGrille():
+    grille = [ [ ' ', ' ', ' ' ], [ ' ', ' ', ' ' ], [ ' ', ' ', ' ' ] ]
+    return grille
+
+def afficherGrille( grille ):
+    for i in range( len( grille ) ):
+        for j in range( len( grille[ i ] ) ):
+            print( grille[ i ][ j ], end="" )
+            # Pour ne pas avoir de | a la fin de la ligne
+            if j != 2:
+                print( '|', end="" )
+            else:
+                print()
+        print( '-----' )
+
+def verifierGrille( grille ):
+    # verification horizontale
+    for ligne in grille:
+        if ligne[ 0 ] == ligne[ 1 ] and ligne[ 1 ] == ligne[ 2 ] \
+                and ligne[ 0 ] != ' ':
+                    return ligne[ 0 ]
+
+    # verification verticale
+    for i in range ( len( grille ) ):
+        if grille[ 0 ][ i ] == grille[ 1 ][ i ] and grille[ 1 ][ i ] == grille[ 2 ][ i ] \
+                and grille[ 0 ][ i ] != ' ':
+                    return grille[ 0 ][ i ]
+
+    # verification diagonale
+    if grille[ 0 ][ 0 ] == grille[ 1 ][ 1 ] and grille[ 1 ][ 1 ] == grille[ 2 ][ 2 ] \
+            and grille[ 0 ][ 0 ] != ' ':
+                return grille[ 0 ][ 0 ]
+    if grille[ 0 ][ 2 ] == grille[ 1 ][ 1 ] and grille[ 1 ][ 1 ] == grille[ 2 ][ 0 ] \
+            and grille[ 0 ][ 2 ] != ' ':
+                return grille[ 0 ][ 2 ]
+
+    # cas sans gagnant
+    return ' ' 
+
+def verifierCoordonnee( grille, coord ):
+    # si la coordonnee est possible
+    if not coord[0].isnumeric() or not coord[1].isnumeric():
+        return False
+
+    coord = int(coord[0]), int(coord[1])
+    if coord[0] < 0 or coord[0] > 2 or coord[1] < 0 or coord[1] > 2:
+        return False
+
+    # si la case est deja occupee
+    if grille[ coord[0] ][ coord[1] ] != ' ':
+        return False
+    
+    return True
+
+
+def morpion():
+    print("Bienvenue sur le jeu du morpion !\n"
+          "Les regles sont simples : chaque joueur choisit des coordonnees sur la grille\n"
+          "ou il souhaite que son signe soit place.")
+    gagnant = False
+    verif = None
+    grille = nouvelleGrille()
+    while not gagnant:
+        afficherGrille(grille)
+        print("Au tour du joueur 1 !\n")
+
+        validCoord = False
+        hori = None
+        verti = None 
+        while not validCoord:
+            hori = input("Coordonnee horizontale :")
+            verti = input("Coordonne verticale:")
+            validCoord = verifierCoordonnee(grille, (hori, verti))
+
+        grille[int(hori)][int(verti)] = 'O'
+        verif = verifierGrille(grille)
+        if verif != ' ':
+            break 
+
+        afficherGrille( grille )
+        print("Au tour du joueur 2")
+        validCoord = False 
+        while not validCoord:
+            hori = input("Coordonnee horizontale :")
+            verti = input("Coordonne verticale:")
+            validCoord = verifierCoordonnee(grille, (hori, verti))
+        grille[int(hori)][int(verti)] = 'X'
+        verif = verifierGrille(grille)
+        if verif != ' ':
+            gagnant = True 
+
+    afficherGrille( grille )
+    if verif == 'X':
+        print("Victoire du joueur 2 !")
+    else:
+        print("Victoire du joueur 1 !")
+
+morpion()
+
