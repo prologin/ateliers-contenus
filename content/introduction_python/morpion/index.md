@@ -123,4 +123,24 @@ N'oublie de renvoyer ta nouvelle grille dans cette fonction !
 ### Verifier si la grille a un gagnant : `verifierGrille(grille)`
 Apres chaque modification dans la grille, il va falloir verifier si un joueur est gagnant. C'est a dire, verifier s'il y a 3 symboles identiques alignes de maniere horizontale, verticale ou diagonale. Il y a donc 3 cas a gerer.
 
+Pour cela tu vas avoir besoin de boucles `for`, qui est un type de boucle different des boucles `while` vues dans l'exercice precedent. Les boucles `for` sont notamment tres pratiques pour iterer sur des listes.
+
+```py
+liste = [1, 2, 3]
+for i in range(len(liste)):
+    print(liste[i])
+
+for element in liste:
+    print(element)
+```
+Dans l'exemple precedent, on itere sur la liste de deux manieres differentes. On obtient neanmoins le meme affichage. Le choix de la maniere d'iterer va dependre des instructions que l'on va utiliser dans la boucle, si par exemple on a besoin de `i` ou non par exemple.
+
+Il est possible d'imbriquer des boucles `for` comme ceci:
+```py
+liste = [[1, 2], [3, 4]]
+for l in liste:
+    for element in l:
+        print(element)
+```
+
 
