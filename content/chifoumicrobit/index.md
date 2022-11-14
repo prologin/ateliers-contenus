@@ -17,7 +17,7 @@ Pour faire cela, nous allons t'aider et pour créer le code étapes par étapes.
 
 Si tu as des questions particulières, n'hésite pas à demander à un organisateur autour de toi, ils sont là pour ça !
 
-## Mais dis moi Jammy, un micro quoi ?
+## Mais dis moi Jammy, c'est quoi un `micro:bit` ?
 
 Les `micro:bit` sont des cartes programmables qu'on te fournit tout au long de l'atelier.
 Avec celles-ci, tu vas pouvoir intéragir avec ses composants comme les LEDs ou les boutons.
