@@ -3,7 +3,8 @@ def nouvelleGrille():
     pass
 
 def afficherGrille(grille):
-    """Affiche la grille de morpion donnee en parametre."""
+    """Affiche la grille de morpion donnee en parametre.
+    @grille : un tableau de taille 3x3, liste de listes"""
     for i in range(len(grille)):
         for j in range(len(grille[i])):
             print(grille[i][j], end="")
@@ -20,7 +21,8 @@ def verifierGrille(grille):
     """Verifie si dans la grille donnee parametre,
     un joueur est gagnant.
     Si un joueur est gagnant, on renvoie son symbole associe, 
-    sinon on renvoie un espace " ". """
+    sinon on renvoie un espace " ". 
+    @grille : un tableau de taille 3x3, liste de listes"""
     # verification horizontale
 
     # verification verticale
@@ -32,10 +34,13 @@ def verifierGrille(grille):
     pass
 
 
-def verifierCoordonnee(grille, coord):
+def verifierCoordonnees(grille, coord):
     """Verifie si les coordonnees sont valides avec la grille
     donnee en parametre.
-    Si les coordonnees sont invalides, on renvoie False, sinon True."""
+    Si les coordonnees sont invalides, on renvoie False, sinon True.
+    @grille : un tableau de taille 3x3, liste de listes
+    @coord : couple de coordonnees (horizontal, vertical)"""
+
     # si les coordonnees sont bien des nombres
     
     # si les coordonnees sont dans le tableau
@@ -49,7 +54,10 @@ def verifierCoordonnee(grille, coord):
 def demanderCoordonnees(grille, joueur):
     """Demande au joueur d'entrer les coordonnees horizontales
     et verticales de l'endroit ou il souhaite jouer. Renvoie un
-    couple de coordonnees (horizontal, vertical)"""
+    couple de coordonnees (horizontal, vertical)
+    @grille : un tableau de taille 3x3, liste de listes
+    @joueur : chaine de caracteres representant le symbole du joueur,
+    "O" ou "X" """
     pass
 
 def morpion():

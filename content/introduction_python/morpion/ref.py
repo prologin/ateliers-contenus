@@ -49,8 +49,8 @@ def verifierGrille(grille):
     return " "
 
 
-def verifierCoordonnee(grille, coord):
-    # si la coordonnee est possible
+def verifierCoordonnees(grille, coord):
+    # si les coordonnees sont possibles
     if not coord[0].isnumeric() or not coord[1].isnumeric():
         print("Ces coordonnées ne sont pas des nombres !")
         return False
