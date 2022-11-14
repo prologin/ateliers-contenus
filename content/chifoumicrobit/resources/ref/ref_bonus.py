@@ -54,10 +54,14 @@ while rejouer:
         display.show("Égalité !")
 
     # Tu as gagné si notre choix bat celui du microbit
-    elif choix_joueur == 0 and choix_microbit == 1 or \
-         choix_joueur == 1 and choix_microbit == 2 or \
-         choix_joueur == 2 and choix_microbit == 0:
-             display.show("Tu as gagné !")
+    elif choix_joueur == 0 and choix_microbit == 1:
+        display.show("Tu as gagné !")
+
+    elif choix_joueur == 1 and choix_microbit == 2:
+        display.show("Tu as gagné !")
+
+    elif choix_joueur == 2 and choix_microbit == 0:
+        display.show("Tu as gagné !")
 
     # Tu as perdu sinon
     else:
