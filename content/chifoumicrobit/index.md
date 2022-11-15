@@ -15,17 +15,17 @@ le jeu, mais, en cliquant sur le bouton, il a été téléporté dans l'univers 
 
 En arrivant, il croise Pacman et un fantôme qui s'ennuyaient. Skeleton
 leur propose de faire un chifoumi... mais ils n'ont pas de mains,
-donc il ne peuvent pas mimer les symboles ! Skeleton a besoin de t'aide !
-Il te demande de créer un programme leur permettant de jouer sur des `micro:bit` !
+donc ils ne peuvent pas mimer les symboles ! Skeleton a besoin de ton aide !
+Il te demande de créer un programme leur permettant de jouer sur des `micro:bit` ! Peux-tu aider notre ami ?
 
 Pour faire cela, nous allons t'aider et pour créer le code étapes par étapes.
 Si tu as des questions particulières, n'hésite pas à demander à un
 organisateur autour de toi, ils sont là pour ça !
 
-## Mais dis moi Jammy, c'est quoi un `micro:bit` ?
+## Mais dis-moi Jammy, c'est quoi un `micro:bit` ?
 
 Les `micro:bit` sont des cartes programmables qu'on te fournit tout
-au long de l'atelier. Avec celles-ci, tu vas pouvoir intéragir avec ses
+au long de l'atelier. Avec celles-ci, tu vas pouvoir interagir avec ses
 composants comme les 25 LEDs au milieu ou les boutons.
 
 {{< figure src=resources/images/microbit.png height=50% width=50% alt="Micro:bit">}}
@@ -42,7 +42,7 @@ en Python. Si tu as la moindre question, n'hésite pas à la poser à un organis
 
 La plupart du temps, on va vouloir stocker des informations dans notre code.
 On parle alors de variables. Elles vont nous permettre de ranger des choses
-et de pouvoir les resortir quand on le souhaite. C'est comme si on utilisait
+et de pouvoir les ressortir quand on le souhaite. C'est comme si on utilisait
 des boîtes pour ranger des éléments !
 
 Pour déclarer une variable en Python, on va faire comme ça :
