@@ -89,10 +89,12 @@ if 1 == 1:
 *Mais pourquoi on rajoute des espaces ?*
 
 Python suit ligne par ligne ton programme, donc pour lui expliquer ce que tu veux
-faire sous certaines conditions, il faut rajouter des espaces avant les lignes.
-Pour faire ça, on va utiliser la touche de tabulation (Tab) sur ton clavier.
+faire sous certaines conditions, il faut rajouter des espaces avant les lignes
+pour créer des blocs. Cela permet à Python de savoir quand est-ce que s'arrêter.
+Pour faire ça, on va utiliser la touche de tabulation (Tab) sur ton clavier, elle
+ressemble à ça :
 
-<!-- TODO: Image de la touche Tab -->
+{{< figure src=resources/images/tab.png height=30% width=30% alt="La touche tabulation">}}
 
 On peut également utiliser les mots clés `sinon` et `sinon si`. Un petit exemple
 en français : Si je mange japonnais, je n'aurais plus faim. Sinon si je mange
@@ -118,7 +120,37 @@ else:
     print("Lait")
 ```
 
+### Exercice 1
+
+Skeleton souhaite afficher dans la console 
+
+## Les boucles en Python, les boucles en Python
+
+Les boucles nous permettent de répéter plusieurs tâches. En Python,
+il y a deux types de boucle ; cependant, dans cet atelier, seul un type
+nous suffira : les boucles `while`.
+
+On peut traduire `while` par `tant que` en français. On va pouvoir utiliser
+les conditions dans les boucles `while` pour pouvoir répéter des choses
+tant qu'une condition est toujours vraie. Par exemple, tant que le bébé dort,
+nous ne devons pas faire de bruit.
+
+Un exemple en Python serait celui ci :
+
+```python
+# Tant que i est inférieur à 3
+while i < 3:
+    # Afficher "Bonjour!"
+    print("Bonjour!")
+
+    # Ajouter 1 à i à chaque tour de boucle
+    i = i + 1
+```
+
 <!-- TODO: Boucles, listes, random -->
+
+
+
 <!-- TODO: Rajouter des exos -->
 
 # Programmons avec des `micro:bit` !
