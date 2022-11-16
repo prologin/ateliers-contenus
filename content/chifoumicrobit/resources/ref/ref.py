@@ -48,18 +48,18 @@ sleep(2000)
 
 # Égalité si les joueurs ont fait le même choix
 if choix_joueur == choix_microbit:
-    display.show("Egalite !")
+    display.scroll("Egalite !")
 
 # Tu as gagné si notre choix bat celui du microbit
 elif choix_joueur == 0 and choix_microbit == 1:
-    display.show("Tu as gagne !")
+    display.scroll("Tu as gagne !")
 
 elif choix_joueur == 1 and choix_microbit == 2:
-    display.show("Tu as gagne !")
+    display.scroll("Tu as gagne !")
 
 elif choix_joueur == 2 and choix_microbit == 0:
-    display.show("Tu as gagne !")
+    display.scroll("Tu as gagne !")
 
 # Tu as perdu sinon
 else:
-    display.show("Tu as perdu...")
+    display.scroll("Tu as perdu...")
