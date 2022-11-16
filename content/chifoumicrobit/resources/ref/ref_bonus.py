@@ -39,6 +39,9 @@ while rejouer:
 
         sleep(100)
 
+    # Éteint toutes les LEDs
+    display.clear()
+
     # Affiche le choix du joueur
     display.show(possibilites[choix_joueur])
     sleep(1000)
