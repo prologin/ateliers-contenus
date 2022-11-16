@@ -38,6 +38,7 @@ while not (button_a.is_pressed() and button_b.is_pressed()):
 
 # Éteint toutes les led de l'écran
 display.clear()
+sleep(500)
 
 # Affiche le choix du joueur
 display.show(possibilites[choix_joueur])
