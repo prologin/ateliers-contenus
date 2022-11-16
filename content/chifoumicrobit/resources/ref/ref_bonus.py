@@ -13,7 +13,7 @@ rejouer = True
 while rejouer:
     # Choix aléatoire du microbit
     # entre 0 et `NB_POSSIBILITES + 1` exclu
-    choix_microbit = randint(NB_POSSIBILITES + 1)
+    choix_microbit = randint(0, NB_POSSIBILITES - 1)
 
     # Le choix du joueur
     # C'est le choix 0 par défaut
@@ -26,13 +26,13 @@ while rejouer:
         display.show(possibilites[choix_joueur])
 
         # Si A est appuyé
-        if button_a.is_pressed():
+        if button_a.was_pressed():
             # On ajoute 1 au choix du joueur
             # Le modulo permet de revenir au début de la liste des choix
             choix_joueur = (choix_joueur - 1) % NB_POSSIBILITES
 
         # Si B est appuyé
-        if button_b.is_pressed():
+        if button_b.was_pressed():
             # On ajoute 1 au choix du joueur
             # Le modulo permet de revenir au début de la liste des choix
             choix_joueur = (choix_joueur + 1) % NB_POSSIBILITES
@@ -41,27 +41,27 @@ while rejouer:
 
     # Affiche le choix du joueur
     display.show(possibilites[choix_joueur])
-    sleep(500)
+    sleep(1000)
 
     display.scroll("VS")
 
     # Affiche le choix du microbit
     display.show(possibilites[choix_microbit])
-    sleep(500)
+    sleep(1000)
 
     # Égalité si les joueurs ont fait le même choix
     if choix_joueur == choix_microbit:
-        display.show("Égalité !")
+        display.show("Egalite !")
 
     # Tu as gagné si notre choix bat celui du microbit
     elif choix_joueur == 0 and choix_microbit == 1:
-        display.show("Tu as gagné !")
+        display.show("Tu as gagne !")
 
     elif choix_joueur == 1 and choix_microbit == 2:
-        display.show("Tu as gagné !")
+        display.show("Tu as gagne !")
 
     elif choix_joueur == 2 and choix_microbit == 0:
-        display.show("Tu as gagné !")
+        display.show("Tu as gagne !")
 
     # Tu as perdu sinon
     else:
