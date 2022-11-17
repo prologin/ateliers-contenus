@@ -22,7 +22,7 @@ Peux-tu aider notre ami ?
 <!-- TODO: ajouter le but du jeu -->
 <!-- TODO: ajouter l'image du but du jeu -->
 
-Pour faire cela, nous allons t'aider et pour créer le code étapes par étapes.
+Pour faire cela, nous allons t'aider à créer le code étapes par étapes.
 Si tu as des questions particulières, n'hésite pas à demander à un
 organisateur autour de toi, ils sont là pour ça !
 
