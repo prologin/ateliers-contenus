@@ -19,7 +19,7 @@ Au cours de cette initiation au langage Python, tu vas te familiariser avec les 
 - Exécuter du code en boucle
 
 ## Prerequis 
-Avoir realise l'exercice `Introduction au Python - Juste Prix`.
+Avoir realisé l'exercice `Introduction au Python - Juste Prix`.
 
 ## Les fonctions
 Pour cet exercice, tu vas avoir besoin des notions vues dans l'exercices precedent, donc n'hesite pas a revenir dessus si besoin. Tu auras egalement besoin d'une nouvelle notion : les **fonctions**.
@@ -125,6 +125,8 @@ for l in liste:
 **But du jeu :** sur une grille 3x3, deux joueurs vont chacun leur tour, placer sur la grille un symbole qui leur est attribue (O ou X). Le but est de reussir a aligner 3 de ses symboles de maniere horizontale, verticale ou diagonale. 
 
 Pour coder notre jeu du Morpion, nous pouvons decomposer notre programme en plusieurs etapes et fonctions. Tu vas pouvoir trouver ces differentes fonctions a completer dans le fichier `morpion.py`. 
+
+N'hésite pas à appeler un orga si tu as la moindre question sur ce fichier.
 
 ### Creer une grille vierge : `nouvelleGrille()`
 Dans cette fonction, il va falloir creer une grille vierge de Morpion, de dimension 3x3. Pour modeliser une grille de morpion, on va utiliser des listes des listes. 

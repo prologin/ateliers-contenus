@@ -24,7 +24,7 @@ Au cours de cette initiation au langage Python, tu vas te familiariser avec les 
 
 Python est un langage de programmation créé en 1991 par Guido van Rossum. Il existe des centaines de langages de programmation, avec des vocabulaires différents, mais tous partagent un point commun : l’utilisation de phrases. En informatique, nous appelons ces phrases des **instructions**. Une instruction est tout simplement une consigne que l'on fait exécuter à l'ordinateur.
 
-Ces instructions sont écrites par un programmeur dans un fichier texte que l'on appelle le **code source**. Le code source consiste en une **succession d'instructions** (un **programme**) qui seront interprétées et exécutées par l'ordinateur. Pour un fichier Python, il faut un nommage specifique l'extension du fichier sera "py" : `fichier.py` par exemple.
+Ces instructions sont écrites par un programmeur dans un fichier texte que l'on appelle le **code source**. Le code source consiste en une **succession d'instructions** (un **programme**) qui seront interprétées et exécutées par l'ordinateur. Pour un fichier Python, il faut un nommage spécifique l'extension du fichier sera "py" : `fichier.py` par exemple.
 
 Le Python est un des langages les plus populaires : aujourd'hui, il est utilisé dans pratiquement tous les domaines tels que le développement web, l'intelligence artificielle, ou encore la science des données.
 
@@ -40,12 +40,12 @@ Un langage de programmation nous permet de faire beaucoup de choses, mais nous v
 print("Hello world!")
 ```
 
-Ici, notre programme est constitué d'une seule instruction : il s'agit d'un *print* (“imprimer” en anglais). Cela permet d'afficher à l'écran le texte spécifié entre les guillemets. C’est très pratique pour informer l’utilisateur du programme de toutes sortes de choses.
-Tu peux écrire ta propre instruction print sur la ligne suivante afin d'afficher le texte de ton choix. Il ne faut pas oublier les guillemets !
+Ici, notre programme est constitué d'une seule instruction : il s'agit d'un *print* (“imprimer” en anglais). Cela permet d'afficher à l'écran le texte spécifié entre les guillemets. C’est très pratique pour informer l’utilisateur du programme de toute sorte de choses.
+Tu peux écrire ta propre instruction `print` sur la ligne suivante afin d'afficher le texte de ton choix. Il ne faut pas oublier les guillemets !
 
 En lançant le programme, tu peux voir que les phrases sont affichées dans l'ordre dans lequel tu les as écrites. En effet, en Python, les instructions sont exécutées les unes à la suite des autres.
 
-### Lire/recuperer du texte
+### Lire/récupérer du texte
 
 Maintenant que tu sais écrire du texte à l'écran, il serait intéressant d'avoir un moyen d'intéragir avec l'utilisateur du programme.
 
@@ -62,20 +62,20 @@ Pour l’instant, ton programme ne fait rien de la réponse qu’on lui donne. A
 
 ### Variables
 
-Une **variable** est un élément qui associe un nom à une valeur. Elle peut être de plusieurs types différents:
+Une **variable** est un élément qui associe un nom à une valeur. Elle peut être de plusieurs types différents :
 
 - Un nombre entier : `ma_variable = 5`
-- Une chaine de caracteres : `ma_variable = "bonjour !"` (on reconnait une telle variable grâce aux guillemets)
+- Une chaîne de caractères : `ma_variable = "bonjour !"` (on reconnait une telle variable grâce aux guillemets)
 - Un nombre à virgule : `ma_variable = 1.05` (on utilise un point et non une virgule)
 - Un booléen : `ma_variable = True` (deux valeurs possibles : `True` ou `False`, vrai ou faux, bien penser à mettre la majuscule !)
 
-**Attention :** Il ne faut pas mélanger les types : `ma_variable = 5` est le nombre entier 5 tandis que `ma_variable = "5"` est une chaine de caractères contenant le chiffre 5.
+**Attention :** Il ne faut pas mélanger les types : `ma_variable = 5` est le nombre entier 5 tandis que `ma_variable = "5"` est une chaîne de caractères contenant le chiffre 5.
 
 ```py
 prenom = input("Comment t'appelles-tu ?")
 ```
 
-Ici, nous associons le texte rentré par l'utilisateur dans une variable que nous nommons `prenom`. Nous aurions très bien pu nommer cette variable autrement (à condition de ne pas mettre d’espace, ni de "-" dans le nom, ni de numéro en début du nom de la variable) . En revanche, il est une bonne pratique d'utiliser un nom simple qui facilite la lecture du code pour les autres programmeurs.
+Ici, nous associons le texte rentré par l'utilisateur dans une variable que nous nommons `prenom`. Nous aurions très bien pu nommer cette variable autrement (à condition de ne pas mettre d’espace, ni de "-" dans le nom, ni de numéro en début du nom de la variable). En revanche, il est une bonne pratique d'utiliser un nom simple et explicite qui facilite la lecture du code pour les autres programmeurs.
 
 Pour afficher le contenu de la variable `prenom` tu peux utiliser à nouveau l'instruction `print()`. Attention cette fois-ci à ne pas mettre de guillemets, comme ceci :
 
@@ -92,17 +92,17 @@ prenom = input("Comment t'appelles-tu?")
 print("Tu t'appelles ", prenom)
 ```
 
-Si tu lances ce programme et réponds à la question, tu verras que le contenu de la variable `prenom` s'est rajouté à la suite de la chaine de caracteres "Tu t'appelles ".
+Si tu lances ce programme et réponds à la question, tu verras que le contenu de la variable `prenom` s'est rajouté à la suite de la chaîne de caractères "Tu t'appelles ".
 
-**Info :** Dans une instruction print, la virgule permet d'afficher plusieurs éléments les uns à la suite des autres en les séparant par un espace.
+**Info :** Dans une instruction `print`, la virgule permet d'afficher plusieurs éléments les uns à la suite des autres en les séparant par un espace.
 
-### Les operateurs
+### Les opérateurs
 
 Les opérateurs sont une notion essentielle en informatique, on les retrouve dans tous les langages de programmation. Comme leur nom l'indique, les opérateurs permettent de réaliser des opérations, aussi bien mathématiques que logiques.
 
 En Python, les principaux opérateurs dont tu auras besoin sont les suivants : `+`, `-`, `*`, `/`, `//`, `==`, `>`, `<`, `<=`, `>=`, `and`, `or`, `not`. Leur fonctionnement est expliqué en-dessous.
 
-#### **Les operateurs mathematiques**
+#### **Les opérateurs mathématiques**
 
 Ce sont les opérateurs les plus simples à comprendre. Il manipulent des nombres. Pour chacun des opérateurs dans le tableau, tu peux vérifier le fonctionnement en tapant :
 
@@ -114,36 +114,36 @@ puis en comparant le résultat de ton programme et celui du tableau.
 
 |Operateur|Exemple|Resultat|
 |---|---|---|
-|Addition:`+`|`5 + 5`|`10`|
-|Soustraction: `-`|`10-5`|`5`|
-|Multiplication: `*`|`5*5`|`25`|
-|Division: `/`|`6 / 4` <br/> `9 / 3`| `1.5` <br/> `3`|
-|Division euclidienne: `//`|`6 // 4` <br/> `9 // 3`|`1` <br/> `3`|
+|Addition :`+`|`5 + 5`|`10`|
+|Soustraction : `-`|`10 - 5`|`5`|
+|Multiplication : `*`|`5 * 5`|`25`|
+|Division : `/`|`6 / 4` <br/> `9 / 3`| `1.5` <br/> `3`|
+|Division euclidienne : `//`|`6 // 4` <br/> `9 // 3`|`1` <br/> `3`|
 
-#### **Les operateurs de comparaison**
+#### **Les opérateurs de comparaison**
 
-Les opérateurs de comparaison permettent de comparer deux nombres, et créent une valeur booléenne (vrai ou faux). Comme pour les opérateurs mathématiques, tu peux expérimenter le fonctionnement de ces opérateurs directement dans ton programme.
+Les opérateurs de comparaison permettent de comparer deux nombres, et renvoient une valeur booléenne (vrai ou faux). Comme pour les opérateurs mathématiques, tu peux expérimenter le fonctionnement de ces opérateurs directement dans ton programme.
 
-|Operateur|Exemple|Resultat|
+|Opérateur|Exemple|Résultat|
 |---|---|---|
-|Egal: `==`| `5 ==5` <br/> `1 == 2`|`True` <br/> `False`|
-|Inegal: `!=`|`5 != 5` <br/> `1 != 2`|`False` <br/> `True`|
-|Superieur:`>`|`1 > 2` <br/> `2 > 1`|`False` <br/> `True`|
-|Inferieur:`<`|`1 < 2` <br/> `2 < 1`|`True` <br/> `False`|
-|Superieur ou egal:`>=`|`5 >= 5` <br/> `2 >= 5`|`True` <br/> `False`|
-|Inferieur ou egal:`<=`|`4 <= 4` <br/> `4 <= 3`|`True` <br/> `False`|
+|Égal : `==`| `5 == 5` <br/> `1 == 2`|`True` <br/> `False`|
+|Inégal : `!=`|`5 != 5` <br/> `1 != 2`|`False` <br/> `True`|
+|Supérieur :`>`|`1 > 2` <br/> `2 > 1`|`False` <br/> `True`|
+|Inférieur :`<`|`1 < 2` <br/> `2 < 1`|`True` <br/> `False`|
+|Supérieur ou égal :`>=`|`5 >= 5` <br/> `2 >= 5`|`True` <br/> `False`|
+|Inférieur ou égal :`<=`|`4 <= 4` <br/> `4 <= 3`|`True` <br/> `False`|
 
-#### **Les operateurs logiques**
+#### **Les opérateurs logiques**
 
-Les opérateurs permettent d’associer des valeurs booléennes (vrai ou faux), et de les transformer en autres valeurs booléennes (vrai ou faux). Voici les plus utiles :
+Les opérateurs permettent de combiner des valeurs booléennes (vrai ou faux), et de renvoyer un autre booléen dont le résultat dépend de l'opération choisie. Voici les plus utiles :
 
-|Operateur|Description|Exemple|Resultat|
+|Opérateur|Description|Exemple|Résultat|
 |---|---|---|---|
-|ET : `and`|Repond vrai si <br/> les valeurs a gauche et <br/> a droite sont vraies |`True and False` <br/> `False and True` <br/> `False and False` <br/> `True and True`| `False` <br/> `False` <br/> `False` <br/> `True`|
-|OU : `or`|Repond vrai si <br/> au moins un des deux <br/> est vrai|`True or False` <br/> `False or True` <br/> `False or False` <br/> `True or True`|`True` <br/> `True` <br/> `False` <br/> `True`|
-|NON : `not`|Repond l'inverse <br/> de ce qu'on lui donne|`not True` <br/> `not False`|`False` <br/> `True`|
+|ET : `and`|Renvoie vrai si <br/> les valeurs à gauche et <br/> à droite sont vraies |`True and False` <br/> `False and True` <br/> `False and False` <br/> `True and True`| `False` <br/> `False` <br/> `False` <br/> `True`|
+|OU : `or`|Renvoie vrai si <br/> au moins un des deux <br/> est vrai|`True or False` <br/> `False or True` <br/> `False or False` <br/> `True or True`|`True` <br/> `True` <br/> `False` <br/> `True`|
+|NON : `not`|Renvoie l'inverse <br/> de ce qu'on lui donne|`not True` <br/> `not False`|`False` <br/> `True`|
 
-#### **Utilisation des operateurs avec les conditions**
+#### **Utilisation des opérateurs avec les conditions**
 
 Grâce à ces opérateurs, il est possible de créer des **conditions** capables de vérifier si une expression est vraie ou fausse. Voici un exemple :
 
@@ -162,14 +162,14 @@ if 14 < 13:
 elif 5 != 3:
     print("5 != 3 est vrai")
 else:
-    print("Les conditions precedentes sont fausses")
+    print("Les conditions précédentes sont fausses")
 ```
 
-**Attention :** Quand tu utilises ces mots clés, il faut faire attention à bien *indenter* les instructions qui sont concernées ensuite. Cela veut dire qu'il faut les décaler à gauche, en utilisant un symbole *tabulation*. Tu peux écrire ce symbole en appuyant sur la touche au dessus de *verrouillage majuscule*.
+**Attention :** Quand tu utilises ces mots clés, il faut faire attention à bien *indenter* les instructions qui sont concernées ensuite. Cela veut dire qu'il faut les décaler à droite, en utilisant un symbole *tabulation*. Tu peux écrire ce symbole en appuyant sur la touche au dessus de *verrouillage majuscule*.
 
 N'hésite pas à recopier les exemples et à les exécuter pour mieux comprendre. Tu peux aussi changer les conditions pour voir si le comportement est changé.
 
-Il est également possible de créer des expressions mathematiques avec ces opérateurs.
+Il est également possible de créer des expressions mathématiques avec ces opérateurs.
 
 ```py
 nombre = 5
@@ -186,9 +186,9 @@ Pour cela, nous pouvons décomposer notre programme en plusieurs étapes.
 
 ### Choisir un nombre entre 1 et 1000
 
-Pour générer un nombre aléatoire en Python, des programmes sont déjà existants. Ainsi, il faut ajouter le programme déjà existant à notre code. Cela se fait en rajoutant au debut de notre fichier la ligne suivante :  `import random`.
+Pour générer un nombre aléatoire en Python, des programmes sont déjà existants. Ainsi, il faut ajouter le programme déjà existant à notre code. Cela se fait en rajoutant au début de notre fichier la ligne suivante :  `import random`.
 
-Ensuite, pour générer un nombre aléatoire, il existe l'instruction:
+Ensuite, pour générer un nombre aléatoire, il existe l'instruction :
 
 ```py
 nombre_aleatoire = random.randint(x, y)
@@ -199,13 +199,13 @@ nombre_aleatoire = random.randint(x, y)
 print(nombre_aleatoire)
 ```
 
-Comme nous voulons pouvoir facilement a ce nombre aleatoire, il va falloir le stocker dans une variable que tu vas pouvoir nommer `nombre_aleatoire`
+Comme nous voulons pouvoir facilement accéder ce nombre aléatoire, il va falloir le stocker dans une variable que tu vas pouvoir nommer `nombre_aleatoire`
 
 ### Créer un score
 
-Pour garder l'avancement du joueur dans le jeu du juste prix, tu peux créer une nouvelle variable nommee `score`. Elle devra valoir `0` au debut du jeu. À chaque fois que le joueur proposera une valeur, ce score devra etre augmenté de 1.
+Pour garder l'avancement du joueur dans le jeu du juste prix, tu peux créer une nouvelle variable nommée `score`. Elle devra valoir `0` au début du jeu. À chaque fois que le joueur proposera une valeur, ce score devra être augmenté de 1.
 
-### Récupérer une entree du joueur
+### Récupérer une entrée du joueur
 
 Maintenant que l'on a choisi un nombre entre 1 et 1000, le joueur va devoir le deviner en proposant des nombres.
 
@@ -217,19 +217,19 @@ Tu peux stocker l'entrée du joueur dans une variable nommée `nombre`.
 
 ### Vérifier l'entrée du joueur
 
-Une fois que l'entrée du joueur a été récupérée, il faut vérifier si elle correspond à notre nombre compris entre 1 et 1000. Si ce n'est pas le cas, il faut determiner si l'entrée est supérieure ou inférieure à notre nombre. Nous avons donc 3 cas à prendre en compte.
+Une fois que l'entrée du joueur a été récupérée, il faut vérifier si elle correspond à notre nombre aléatoire définit précédemment. Si ce n'est pas le cas, il faut déterminer si l'entrée est supérieure ou inférieure à notre nombre. Nous avons donc 3 cas à prendre en compte.
 
-- Dans le cas ou le nombre du joueur est égal au nombre aleatoire, il faut afficher `Gagné !`, le nombre aléatoire, ainsi que le score du joueur.
+- Dans le cas où le nombre du joueur est égal au nombre aléatoire, il faut afficher `Gagné !`, le nombre aléatoire, ainsi que le score du joueur.
 - Si le nombre du joueur est supérieur au nombre aléatoire, il faut afficher `Moins !`
 - Si le nombre du joueur est inférieur au nombre aléatoire, il faut afficher `Plus !`
 
-**Conseil :** on a vu au debut de l'atelier qu'il était possible de créer des conditions capables de vérifier si une expression est vraie ou fausse, cela avec l'aide d'opérateurs.
+**Conseil :** on a vu au début de l'atelier qu'il était possible de créer des conditions capables de vérifier si une expression est vraie ou fausse, cela avec l'aide d'opérateurs.
 
 ### Continuer le jeu tant que le joueur ne trouve pas le nombre aléatoire
 
-En programmation, il existe un moyen d'exécuter un certain nombre de fois un même ensemble d'instructions. On appelle cela des **boucles**. Il en existe de deux types principalement: les boucles `for` et les boucles `while`. Ici, on va s'interesser à la boucle `while`.
+En programmation, il existe un moyen d'exécuter un certain nombre de fois un même ensemble d'instructions. On appelle cela des **boucles**. Il en existe de deux types principalement : les boucles `for` et les boucles `while`. Ici, on va s'intéresser à la boucle `while`.
 
-La boucle `while` va exécuter un ensemble d'instruction jusqu'à ce qu'une condition donnée devienne vraie. Voici un exemple :
+La boucle `while` va exécuter un ensemble d'instructions tant qu'une condition donnée est vraie. Voici un exemple :
 
 ```py
 nombre = 0
@@ -240,7 +240,7 @@ print(nombre)
 
 Dans cet exemple, Python va répéter l'instruction `nombre = nombre + 2` jusqu'à ce que `nombre` soit supérieure à 12.
 
-Dans notre juste prix, on veut que les instructions suivantes soient répétées jusqu'à ce que le joueur ait trouvé `nombre_aleatoire`:
+Dans notre Juste Prix, on veut que les instructions suivantes soient répétées tant que le joueur n'a pas trouvé `nombre_aleatoire`:
 
 - Récupérer l'entrée du joueur
 - Mettre à jour le score
@@ -250,9 +250,9 @@ Tu vas donc devoir ajouter une boucle `while` à ton code de manière à ce que 
 
 ### Dernière étape
 
-Bravo pour avoir complété ces étapes ! Tu devrais à présent avoir un jeu du juste prix fonctionnel.
+Bravo pour avoir complété ces étapes ! Tu devrais à présent avoir un jeu du Juste Prix fonctionnel.
 
-Si tu le souhaites, tu peux faire des améliorations à ton jeu et lui ajouter des fonctionnalités. Voici quelques idees :
+Si tu le souhaites, tu peux faire des améliorations à ton jeu et lui ajouter des fonctionnalités. Voici quelques idées :
 
 - Faire en sorte que le joueur ait un nombre précis d'essais à jouer avant de perdre
 - Faire en sorte que le joueur choisisse au début du jeu l'intervalle dans lequel le nombre aléatoire être compris
