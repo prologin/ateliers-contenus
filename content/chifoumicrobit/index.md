@@ -193,7 +193,21 @@ Par exemple, en Python :
 
 ```python
 # Liste des nombres de 0 à 5
-ma_liste = [0, 1, 2, 3, 4, 5]
+ma_liste_nombres = [0, 1, 2, 3, 4, 5]
+```
+
+La liste est numérotée de 0 à la longueur de la liste moins 1. Pour accéder
+à un élément d'une liste en Python, tu peux utiliser les index ! Les index sont
+compris entre 0 et la longueur de la liste moins 1.
+
+En Python, pour accéder à un élément à l'index 2, tu peux faire comme ceci :
+
+```python
+# Liste de lettres
+ma_liste_lettres = ["a", "b", "c", "d"]
+
+# `ma_valeur` est l'élément à l'index 2 de `liste` ("c")
+ma_valeur = liste[2]
 ```
 
 ### Exercice 2
