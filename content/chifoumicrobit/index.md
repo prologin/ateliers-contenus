@@ -13,10 +13,14 @@ Notre ami Skeleton le squelette était en train de jouer à son jeu préféré,
 [Pacman](https://fr.wikipedia.org/wiki/Pac-Man). Il a voulu mettre en pause
 le jeu, mais, en cliquant sur le bouton, il a été téléporté dans l'univers du jeu.
 
-En arrivant, il croise Pacman et un fantôme qui s'ennuyaient. Skeleton
+En arrivant, il croise Pacman et le fantôme Bouh qui s'ennuyaient. Skeleton
 leur propose de faire un chifoumi... mais ils n'ont pas de mains,
 donc ils ne peuvent pas mimer les symboles ! Skeleton a besoin de ton aide !
-Il te demande de créer un programme leur permettant de jouer sur des `micro:bit` ! Peux-tu aider notre ami ?
+Il te demande de créer un programme leur permettant de jouer sur des `micro:bit` !
+Peux-tu aider notre ami ?
+
+<!-- TODO: ajouter le but du jeu -->
+<!-- TODO: ajouter l'image du but du jeu -->
 
 Pour faire cela, nous allons t'aider et pour créer le code étapes par étapes.
 Si tu as des questions particulières, n'hésite pas à demander à un
@@ -42,14 +46,33 @@ en Python. Si tu as la moindre question, n'hésite pas à la poser à un organis
 
 La plupart du temps, on va vouloir stocker des informations dans notre code.
 On parle alors de variables. Elles vont nous permettre de ranger des choses
-et de pouvoir les ressortir quand on le souhaite. C'est comme si on utilisait
-des boîtes pour ranger des éléments !
+et de pouvoir les ressortir quand on le souhaite. Les variables sont des éléments
+qui associent un nom à une valeur. C'est comme si on utilisait des boîtes pour
+ranger des éléments !
+
+<!-- TODO: ajouter les images -->
 
 Pour déclarer une variable en Python, on va faire comme ça :
 
 ```python
 # `ma_variable` stocke la valeur 42
 ma_variable = 42
+```
+
+Tu vas pouvoir afficher les valeurs de tes variables ou du texte avec la fonction
+`print()`.
+
+```python
+# `ma_variable` stocke la valeur 42
+ma_variable = 42
+
+# Affiche la valeur de `ma_variable` dans la console
+print(ma_variable)
+
+# Affiche le texte "Hello world!" dans la console
+# N'oublie pas les `"` pour écrire du texte en Python,
+# sinon, cela ne fonctionnera pas !
+print("Hello world!")
 ```
 
 En programmation, tu peux évaluer certaines phrases par vrai ou faux. Par exemple,
@@ -69,11 +92,13 @@ print(preposition_deux)
 Tu remarqueras sûrement que Python te renvoie `True` et `False`. C'est les termes
 en anglais pour dire vrai et faux.
 
-## Les conditions en Python
+## Les conditions en Python : si, sinon si, sinon
 
 Prenons un exemple, si Skeleton mange, il n'aura plus faim pour une glace.
 Le début de cette phrase est une condition, qu'on peut identifier à l'aide
 du mot `si`. La condition ici est : Skeleton mange. Elle peut être vraie ou fausse.
+
+<!-- TODO: rajouter les images -->
 
 C'est la même chose en Python. On va pouvoir définir des conditions qui
 s'évaluent à vrai ou faux et pouvoir exécuter des lignes de codes en conséquence.
@@ -90,11 +115,13 @@ if 1 == 1:
 
 Python suit ligne par ligne ton programme, donc pour lui expliquer ce que tu veux
 faire sous certaines conditions, il faut rajouter des espaces avant les lignes
-pour créer des blocs. Cela permet à Python de savoir quand est-ce que s'arrêter.
-Pour faire ça, on va utiliser la touche de tabulation (Tab) sur ton clavier, elle
-ressemble à ça :
+pour créer des blocs. On parle alors d'indentation. Cela permet à Python de
+savoir quand est-ce que s'arrêter. Pour faire ça, on va utiliser la
+touche de tabulation (`Tab`) sur ton clavier, elle ressemble à ça :
 
-{{< figure src=resources/images/tab.png height=30% width=30% alt="La touche tabulation">}}
+{{< figure src=resources/images/tab.png height=20% width=20% alt="La touche tabulation">}}
+
+<!-- COMMENT: est-ce qu'on rajoute une image pour expliquer l'identaiton ? -->
 
 On peut également utiliser les mots clés `sinon` et `sinon si`. Un petit exemple
 en français : Si je mange japonnais, je n'aurais plus faim. Sinon si je mange
@@ -122,9 +149,15 @@ else:
 
 ### Exercice 1
 
-Skeleton souhaite afficher dans la console 
+Pacman et le fantôme Bouh veulent tester tes capacités à écrire du code !
+Pour cela, tu dois créer une variable `x`, et en fonction de sa valeur tu dois
+afficher un texte dans la console, en suivant ces conditions :
+- si x est inférieur à 10, tu dois afficher "Glace"
+- sinon si x est inférieur à 20, tu dois afficher "Pizza"
+- sinon si x est inférieur à 30, tu dois afficher "Crêpe"
+- sinon, tu dois afficher "Gaufre"
 
-## Les boucles en Python, les boucles en Python
+## Les boucles en Python, les boucles en Python, les boucles en Python
 
 Les boucles nous permettent de répéter plusieurs tâches. En Python,
 il y a deux types de boucle ; cependant, dans cet atelier, seul un type
@@ -147,11 +180,28 @@ while i < 3:
     i = i + 1
 ```
 
-<!-- TODO: Boucles, listes, random -->
+## Les listes en Python
+
+Lorsqu'on veut stocker de nombreuse valeurs pour pouvoir les réutiliser
+par la suite, on ne va pas créer par exemple 20 variables.
+Ce que l'on va utiliser sont les listes. Les listes vont nous permettre de stocker
+plusieurs valeurs dans une seule variable.
+
+<!-- TODO: rajouter des images -->
+
+Par exemple, en Python :
+
+```python
+# Liste des nombres de 0 à 5
+ma_liste = [0, 1, 2, 3, 4, 5]
+```
+
+### Exercice 2
+
+<!-- TODO: trouver un exercice -->
 
 
-
-<!-- TODO: Rajouter des exos -->
+<!-- TODO: random -->
 
 # Programmons avec des `micro:bit` !
 
@@ -185,7 +235,7 @@ les LEDs du `micro:bit`. `Image.HAPPY` est une image déjà définie par
 la bibliothèque des `micro:bit`. Tu peux y retrouver la liste des images
 disponibles [ici](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html).
 
-### Exercice 1
+### Exercice 3
 
 Pour voir si tu as bien compris comment on manipule les images, Skeleton
 souhaiterait que tu affiches un coeur (heart en anglais) sur ton `micro:bit`.
