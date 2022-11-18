@@ -255,7 +255,7 @@ print(nombre)
 
 Dans cet exemple, Python va répéter l'instruction `nombre = nombre + 2` jusqu'à ce que `nombre` soit supérieure à 12.
 
-Dans notre Juste Prix, on veut que les instructions suivantes soient répétées tant que le joueur n'a pas trouvé `nombre_aleatoire`:
+Dans notre Juste Prix, on veut que les instructions suivantes soient répétées tant que le joueur n'a pas trouvé `nombre_aleatoire` :
 
 - Récupérer l'entrée du joueur
 - Mettre à jour le score
