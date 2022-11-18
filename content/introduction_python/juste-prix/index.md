@@ -3,7 +3,6 @@ title: Introduction au Python - Juste Prix
 date: 2022
 authors: Dorian 'renji' Péron, Gaetan 'Downvot_ED' Mouisset, Clarisse 'Nyota' Blanco
 subtitle: Code ton jeu du juste prix
-code_stub_url: ./juste-prix.py
 ---
 # Introduction au Python - Juste Prix
 
@@ -24,9 +23,9 @@ Au cours de cette initiation au langage Python, tu vas te familiariser avec les 
 
 Python est un langage de programmation créé en 1991 par Guido van Rossum. Il existe des centaines de langages de programmation, avec des vocabulaires différents, mais tous partagent un point commun : l’utilisation de phrases. En informatique, nous appelons ces phrases des **instructions**. Une instruction est tout simplement une consigne que l'on fait exécuter à l'ordinateur.
 
-Ces instructions sont écrites par un programmeur dans un fichier texte que l'on appelle le **code source**. Le code source consiste en une **succession d'instructions** (un **programme**) qui seront interprétées et exécutées par l'ordinateur. Pour un fichier Python, il faut un nommage spécifique l'extension du fichier sera "py" : `fichier.py` par exemple.
+Ces instructions sont écrites par un programmeur dans un fichier texte que l'on appelle le **code source**. Le code source consiste en une **succession d'instructions** (un **programme**) qui seront interprétées et exécutées par l'ordinateur. Pour un fichier Python, il faut un nommage spécifique. L'extension du fichier sera "py" : `fichier.py` par exemple.
 
-Le Python est un des langages les plus populaires : aujourd'hui, il est utilisé dans pratiquement tous les domaines tels que le développement web, l'intelligence artificielle, ou encore la science des données.
+Le Python est un des langages les plus populaires : aujourd'hui, il est utilisé dans pratiquement tous les domaines tels que le développement web, l'intelligence artificielle, ou encore la science des données. On l'utilise aussi parfois pour faire des jeux, et c'est ce que tu vas faire aujourd'hui !
 
 ## Quelques notions pratiques
 
@@ -69,7 +68,19 @@ Une **variable** est un élément qui associe un nom à une valeur. Elle peut ê
 - Un nombre à virgule : `ma_variable = 1.05` (on utilise un point et non une virgule)
 - Un booléen : `ma_variable = True` (deux valeurs possibles : `True` ou `False`, vrai ou faux, bien penser à mettre la majuscule !)
 
-**Attention :** Il ne faut pas mélanger les types : `ma_variable = 5` est le nombre entier 5 tandis que `ma_variable = "5"` est une chaîne de caractères contenant le chiffre 5.
+**Attention :** Il ne faut pas mélanger les types : `ma_variable = 5` est le nombre entier 5 tandis que `ma_variable = "5"` est une chaîne de caractères contenant le chiffre 5. Par contre, c'est utile de pouvoir passer de l'un à l'autre, et très simple à faire :
+
+```py
+mon_nombre = 5
+ma_chaine = str(5)
+
+mon_autre_chaine = "4"
+mon_autre_nombre = int(4)
+```
+
+Les instructions `int` et `str` permettent de transformer le type d'une variable en un autre.
+
+Tu peux maintenant stocker la réponse à une instruction `input` dans une variable :
 
 ```py
 prenom = input("Comment t'appelles-tu ?")
@@ -77,7 +88,7 @@ prenom = input("Comment t'appelles-tu ?")
 
 Ici, nous associons le texte rentré par l'utilisateur dans une variable que nous nommons `prenom`. Nous aurions très bien pu nommer cette variable autrement (à condition de ne pas mettre d’espace, ni de "-" dans le nom, ni de numéro en début du nom de la variable). En revanche, il est une bonne pratique d'utiliser un nom simple et explicite qui facilite la lecture du code pour les autres programmeurs.
 
-Pour afficher le contenu de la variable `prenom` tu peux utiliser à nouveau l'instruction `print()`. Attention cette fois-ci à ne pas mettre de guillemets, comme ceci :
+Pour afficher le contenu de la variable `prenom` tu peux utiliser à nouveau l'instruction `print`. Attention cette fois-ci à ne pas mettre de guillemets, comme ceci :
 
 ```py
 print(prenom)
@@ -85,7 +96,7 @@ print(prenom)
 
 Le texte que tu as rentré s'affiche maintenant à l'écran.
 
-À présent, reprenons notre exemple avec la météo :
+À présent, reprenons notre exemple :
 
 ```py
 prenom = input("Comment t'appelles-tu?")
@@ -100,7 +111,7 @@ Si tu lances ce programme et réponds à la question, tu verras que le contenu d
 
 Les opérateurs sont une notion essentielle en informatique, on les retrouve dans tous les langages de programmation. Comme leur nom l'indique, les opérateurs permettent de réaliser des opérations, aussi bien mathématiques que logiques.
 
-En Python, les principaux opérateurs dont tu auras besoin sont les suivants : `+`, `-`, `*`, `/`, `//`, `==`, `>`, `<`, `<=`, `>=`, `and`, `or`, `not`. Leur fonctionnement est expliqué en-dessous.
+En Python, les principaux opérateurs dont tu auras besoin sont les suivants : `+`, `-`, `*`, `/`, `//`, `==`, `!=`, `>`, `<`, `<=`, `>=`, `and`, `or`, `not`. Leur fonctionnement est expliqué en-dessous.
 
 #### **Les opérateurs mathématiques**
 
@@ -112,7 +123,7 @@ print(exemple)
 
 puis en comparant le résultat de ton programme et celui du tableau.
 
-|Operateur|Exemple|Resultat|
+|Opérateur|Exemple|Resultat|
 |---|---|---|
 |Addition :`+`|`5 + 5`|`10`|
 |Soustraction : `-`|`10 - 5`|`5`|
@@ -154,20 +165,22 @@ else:
     print("C'est faux")
 ```
 
+Si l'affirmation écrite après `if` est vraie, alors Python va exécuter le code après le `if`. Sinon, il exécutera le code après le `else`.
+
 Il est également possible de mettre plusieurs conditions à la suite avec le mot clé `elif`, qui est une contraction de "else if", et qu'on traduirait en français par "sinon, si ...".
 
 ```py
-if 14 < 13:
-    print("14 < 13 est vrai")
-elif 5 != 3:
-    print("5 != 3 est vrai")
-else:
-    print("Les conditions précédentes sont fausses")
+if 14 < 13:                     # Si 14 est inférieur à 13,
+    print("14 < 13 est vrai")       # On fait ceci !
+elif 5 != 3:                    # Sinon, si 5 est différent de 3,
+    print("5 != 3 est vrai")        # On fait cela !
+else:                           # Sinon,
+    print("Les conditions précédentes sont fausses") # On fait ça
 ```
 
-**Attention :** Quand tu utilises ces mots clés, il faut faire attention à bien *indenter* les instructions qui sont concernées ensuite. Cela veut dire qu'il faut les décaler à droite, en utilisant un symbole *tabulation*. Tu peux écrire ce symbole en appuyant sur la touche au dessus de *verrouillage majuscule*.
+**Attention :** Quand tu utilises ces mots clés, il faut faire attention à bien *indenter* les instructions qui sont concernées ensuite. Cela veut dire qu'il faut les décaler à droite, en utilisant un symbole *tabulation*. Tu peux écrire ce symbole en appuyant sur la touche au dessus de *verrouillage majuscule* sur ton clavier.
 
-N'hésite pas à recopier les exemples et à les exécuter pour mieux comprendre. Tu peux aussi changer les conditions pour voir si le comportement est changé.
+N'hésite pas à recopier les exemples et à les exécuter pour mieux comprendre. Tu peux aussi changer les conditions pour voir si le comportement est différent.
 
 Il est également possible de créer des expressions mathématiques avec ces opérateurs.
 
@@ -175,6 +188,8 @@ Il est également possible de créer des expressions mathématiques avec ces op�
 nombre = 5
 somme = (nombre - 2) * 3
 ```
+
+Dans cet exemple, la variable `somme` contient le nombre `9`. Comprends-tu pourquoi ?
 
 Avec ces notions de base, tu vas pouvoir te lancer dans la réalisation du jeu du juste prix !
 
@@ -219,9 +234,9 @@ Tu peux stocker l'entrée du joueur dans une variable nommée `nombre`.
 
 Une fois que l'entrée du joueur a été récupérée, il faut vérifier si elle correspond à notre nombre aléatoire définit précédemment. Si ce n'est pas le cas, il faut déterminer si l'entrée est supérieure ou inférieure à notre nombre. Nous avons donc 3 cas à prendre en compte.
 
-- Dans le cas où le nombre du joueur est égal au nombre aléatoire, il faut afficher `Gagné !`, le nombre aléatoire, ainsi que le score du joueur.
-- Si le nombre du joueur est supérieur au nombre aléatoire, il faut afficher `Moins !`
-- Si le nombre du joueur est inférieur au nombre aléatoire, il faut afficher `Plus !`
+- Dans le cas où le nombre du joueur est égal au nombre aléatoire, il faut afficher `"Gagné !"`, le nombre aléatoire, ainsi que le score du joueur.
+- Si le nombre du joueur est supérieur au nombre aléatoire, il faut afficher `"Moins !"`
+- Si le nombre du joueur est inférieur au nombre aléatoire, il faut afficher `"Plus !"`
 
 **Conseil :** on a vu au début de l'atelier qu'il était possible de créer des conditions capables de vérifier si une expression est vraie ou fausse, cela avec l'aide d'opérateurs.
 
