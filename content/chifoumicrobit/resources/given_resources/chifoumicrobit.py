@@ -1,19 +1,18 @@
 from microbit import *
 from random import randint
 
-# TODO: Creer la liste des possibilités
+# TODO: Créer la liste des possibilités
 possibilites = 
 
-# Le nombre de possibilités
-# La fonction `len` renvoie la longueur d'une liste
-NB_POSSIBILITES = len(possibilites)
+# TODO: Créer une variable pour avoir la longueur
+# de la liste `possibilites`
+NB_POSSIBILITES =
 
-# TODO: Choix aléatoire du microbit
+# TODO: Choix aléatoire du micro:bit
 # entre 0 et `NB_POSSIBILITES + 1` exclu
 choix_microbit =
 
-# Le choix du joueur
-# C'est le choix 0 par défaut
+# Le choix du joueur à 0 par défaut
 choix_joueur = 0
 
 #TODO: Ajouter la condition d'arrêt de la boucle avant les `:`
