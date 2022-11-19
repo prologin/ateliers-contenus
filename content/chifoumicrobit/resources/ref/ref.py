@@ -10,7 +10,7 @@ NB_POSSIBILITES = len(possibilites)
 
 # Choix aléatoire du microbit
 # entre 0 et `NB_POSSIBILITES + 1` exclu
-choix_microbit = randint(0, NB_POSSIBILITES - 1)
+choix_adversaire = randint(0, NB_POSSIBILITES - 1)
 
 # Le choix du joueur
 # C'est le choix 0 par défaut
@@ -47,21 +47,21 @@ sleep(2000)
 display.scroll("VS")
 
 # Affiche le choix du microbit
-display.show(possibilites[choix_microbit])
+display.show(possibilites[choix_adversaire])
 sleep(2000)
 
 # Égalité si les joueurs ont fait le même choix
-if choix_joueur == choix_microbit:
+if choix_joueur == choix_adversaire:
     display.scroll("Egalite !")
 
 # Tu as gagné si notre choix bat celui du microbit
-elif choix_joueur == 0 and choix_microbit == 1:
+elif choix_joueur == 0 and choix_adversaire == 1:
     display.scroll("Tu as gagne !")
 
-elif choix_joueur == 1 and choix_microbit == 2:
+elif choix_joueur == 1 and choix_adversaire == 2:
     display.scroll("Tu as gagne !")
 
-elif choix_joueur == 2 and choix_microbit == 0:
+elif choix_joueur == 2 and choix_adversaire == 0:
     display.scroll("Tu as gagne !")
 
 # Tu as perdu sinon
