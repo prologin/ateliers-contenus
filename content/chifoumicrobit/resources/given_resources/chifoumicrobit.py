@@ -8,11 +8,11 @@ possibilites =
 # de la liste `possibilites`
 NB_POSSIBILITES =
 
-# TODO: Choix aléatoire du micro:bit
-# entre 0 et `NB_POSSIBILITES + 1` exclu
-choix_microbit =
+# TODO: Générer le choix du micro:bit
+# entre 0 et `NB_POSSIBILITES` exclu
+choix_aversaire =
 
-# Le choix du joueur à 0 par défaut
+# Le choix du joueur est à 0 par défaut
 choix_joueur = 0
 
 #TODO: Ajouter la condition d'arrêt de la boucle avant les `:`
@@ -23,13 +23,19 @@ while :
 
     # TODO: Que faire si B est appuyé ?
 
+    # Permet de mettre en pause le programme le
+    # temps de lire l'entrée du joueur
+    sleep(100)
 
+# Éteint toutes les LEDs de l'écran
+display.clear()
+sleep(500)
 
 # TODO: Afficher le choix du joueur
 
 display.scroll("VS")
 
-# TODO: Afficher le choix du microbit
+# TODO: Afficher le choix du micro:bit
 
 # TODO: Si égalité, afficher "Égalité !"
 

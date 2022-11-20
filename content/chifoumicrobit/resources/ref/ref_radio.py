@@ -9,9 +9,12 @@ possibilites = [Image.SKULL, Image.PACMAN, Image.GHOST]
 # La fonction `len` renvoie la longueur d'une liste
 NB_POSSIBILITES = len(possibilites)
 
+# On rajoute une valeur bouléenne pour savoir si
+# on veut jouer avec la radio ou non
 multijoueur = False
+
 while True:
-    display.scroll("Multijoueur (A) ou contre le microbit (B) ?")
+    display.scroll("Multijoueur (A) ou contre le micro:bit (B) ?")
     if button_a.was_pressed():
         multijoueur = True
         break
@@ -22,11 +25,10 @@ while True:
 
 if not multijoueur:
     # Choix aléatoire du microbit
-    # entre 0 et `NB_POSSIBILITES + 1` exclu
+    # entre 0 et `NB_POSSIBILITES` exclu
     choix_adversaire = randint(0, NB_POSSIBILITES - 1)
 
-# Le choix du joueur
-# C'est le choix 0 par défaut
+# Le choix du joueur est à 0 par défaut
 choix_joueur = 0
 
 # On affiche le choix actuel le temps qu'il n'est pas validé
@@ -37,7 +39,7 @@ while not (button_a.is_pressed() and button_b.is_pressed()):
 
     # Si A est appuyé
     if button_a.was_pressed():
-        # On ajoute 1 au choix du joueur
+        # On enlève 1 au choix du joueur
         # Le modulo permet de revenir au début de la liste des choix
         choix_joueur = (choix_joueur - 1) % NB_POSSIBILITES
 
@@ -47,6 +49,8 @@ while not (button_a.is_pressed() and button_b.is_pressed()):
         # Le modulo permet de revenir au début de la liste des choix
         choix_joueur = (choix_joueur + 1) % NB_POSSIBILITES
 
+    # Permet de mettre en pause le programme
+    # le temps de lire l'entrée du joueur
     sleep(100)
 
 
@@ -60,7 +64,10 @@ if multijoueur:
 
     display.scroll("Attente de l'autre joueur")
 
+    # Initialise une variable pour recevoir
+    # un message de notre adversaire
     message_adversaire = None
+
     while message_adversaire == None:
         # Essaye de recevoir un message
         message_adversaire = radio.receive()
@@ -69,38 +76,38 @@ if multijoueur:
         radio.send(str(choix_joueur))
 
     # Nous avons donc reçu le choix du joueur 2
-    # Il faut le convertir en entier pour l'utiliser ensuite
-    choix_joueur_adverse = int(message_adversaire)
+    # Il faut le convertir en entier pour ensuite l'utiliser
+    choix_adversaire = int(message_adversaire)
 
     # Éteindre la radio
     radio.off()
 
-# Éteint toutes les LEDs
+# Éteint toutes les LEDs de l'écran
 display.clear()
 sleep(500)
 
 # Affiche le choix du joueur
 display.show(possibilites[choix_joueur])
-sleep(1000)
+sleep(2000)
 
 display.scroll("VS")
 
-# Affiche le choix du microbit
-display.show(possibilites[choix_joueur_adverse])
-sleep(1000)
+# Affiche le choix du micro:bit
+display.show(possibilites[choix_adversaire])
+sleep(2000)
 
 # Égalité si les joueurs ont fait le même choix
-if choix_joueur == choix_joueur_adverse:
+if choix_joueur == choix_adversaire:
     display.scroll("Egalite !")
 
 # Tu as gagné si notre choix bat celui du microbit
-elif choix_joueur == 0 and choix_joueur_adverse == 1:
+elif choix_joueur == 0 and choix_adversaire == 1:
     display.scroll("Tu as gagne !")
 
-elif choix_joueur == 1 and choix_joueur_adverse == 2:
+elif choix_joueur == 1 and choix_adversaire == 2:
     display.scroll("Tu as gagne !")
 
-elif choix_joueur == 2 and choix_joueur_adverse == 0:
+elif choix_joueur == 2 and choix_adversaire == 0:
     display.scroll("Tu as gagne !")
 
 # Tu as perdu sinon

@@ -8,12 +8,11 @@ possibilites = [Image.SKULL, Image.PACMAN, Image.GHOST]
 # La fonction `len` renvoie la longueur d'une liste
 NB_POSSIBILITES = len(possibilites)
 
-# Choix aléatoire du microbit
-# entre 0 et `NB_POSSIBILITES + 1` exclu
+# Choix aléatoire du micro:bit
+# entre 0 et `NB_POSSIBILITES` exclu
 choix_adversaire = randint(0, NB_POSSIBILITES - 1)
 
-# Le choix du joueur
-# C'est le choix 0 par défaut
+# Le choix du joueur est à 0 par défaut
 choix_joueur = 0
 
 # On affiche le choix actuel le temps qu'il n'est pas validé
@@ -23,20 +22,22 @@ while not (button_a.is_pressed() and button_b.is_pressed()):
     display.show(possibilites[choix_joueur])
 
     # Si A est appuyé
-    if button_a.was_pressed() >= 1:
-        # On ajoute 1 au choix du joueur
+    if button_a.was_pressed():
+        # On enlève 1 au choix du joueur
         # Le modulo permet de revenir au début de la liste des choix
         choix_joueur = (choix_joueur - 1) % NB_POSSIBILITES
 
     # Si B est appuyé
-    if button_b.was_pressed() >= 1:
+    if button_b.was_pressed():
         # On ajoute 1 au choix du joueur
         # Le modulo permet de revenir au début de la liste des choix
         choix_joueur = (choix_joueur + 1) % NB_POSSIBILITES
 
+    # Permet de mettre en pause le programme
+    # le temps de lire l'entrée du joueur
     sleep(100)
 
-# Éteint toutes les led de l'écran
+# Éteint toutes les LEDs de l'écran
 display.clear()
 sleep(500)
 
@@ -46,7 +47,7 @@ sleep(2000)
 
 display.scroll("VS")
 
-# Affiche le choix du microbit
+# Affiche le choix du micro:bit
 display.show(possibilites[choix_adversaire])
 sleep(2000)
 
@@ -54,7 +55,7 @@ sleep(2000)
 if choix_joueur == choix_adversaire:
     display.scroll("Egalite !")
 
-# Tu as gagné si notre choix bat celui du microbit
+# Tu as gagné si notre choix bat celui de l'adversaire
 elif choix_joueur == 0 and choix_adversaire == 1:
     display.scroll("Tu as gagne !")
 
