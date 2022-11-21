@@ -9,7 +9,7 @@ possibilites = [Image.SKULL, Image.PACMAN, Image.GHOST]
 # La fonction `len` renvoie la longueur d'une liste
 NB_POSSIBILITES = len(possibilites)
 
-# On rajoute une valeur bouléenne pour savoir si
+# On rajoute une valeur booléenne pour savoir si
 # on veut jouer avec la radio ou non
 multijoueur = False
 

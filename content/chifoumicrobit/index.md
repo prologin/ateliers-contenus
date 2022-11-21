@@ -83,6 +83,14 @@ print(ma_variable)
 print("Hello world!")
 ```
 
+*C'est quoi les lignes qui commencent par un `#` ?*
+
+Les lignes commençant par des `#`, ce sont des commentaires. Cela te permet
+d'expliquer ton code par des phrases pour toi ou même pour les personnes qui
+t'entourent.
+
+## Les booléens en Python
+
 En programmation, tu peux évaluer certaines phrases par vrai ou faux. Par exemple,
 la préposition `1 < 2` (1 est inférieur à 2) est vraie ; et `42 > 42`
 (42 est supérieur à 42) est faux. Tu peux essayer en Python avec le code suivant :
@@ -100,12 +108,6 @@ print(preposition_deux)
 Tu remarqueras sûrement que Python te renvoie `True` et `False`. C'est les termes
 en anglais pour dire vrai et faux.
 
-*C'est quoi les lignes qui commencent par un `#` ?*
-
-Les lignes commençant par des `#`, ce sont des commentaires. Cela te permet
-d'expliquer ton code par des phrases pour toi ou même pour les personnes qui
-t'entourent.
-
 ## Les conditions en Python : si, sinon si, sinon
 
 Prenons un exemple, si Skeleton mange, il n'aura plus faim pour une glace.
@@ -115,8 +117,8 @@ du mot "si". La condition ici est : Skeleton mange. Elle peut être vraie ou fau
 <!-- TODO: rajouter les images -->
 
 C'est la même chose en Python. On va pouvoir définir des conditions qui
-s'évaluent à vrai ou faux et pouvoir exécuter des lignes de codes en conséquence.
-Le mot clé "si" va être remplacé par son équivalent en anglais, `if`.
+s'évaluent à vrai ou faux et exécuter des lignes de code en conséquence.
+Le mot-clé "si" va être remplacé par son équivalent en anglais, `if`.
 
 ```python
 # Vérifie si 1 est égal à 1
@@ -126,14 +128,14 @@ if 1 == 1:
 ```
 
 Parfois, il va falloir que tu vérifies si deux conditions sont vérifiées en
-même temps. On va alors parler du mot clé `and` qui signifie "et" en français.
+même temps. On va alors parler du mot-clé `and` qui signifie "et" en français.
 Pour faire cela, voici un exemple en Python :
 
 ```python
 a = 5
 
 # Vérifie si 42 est inférieur à 50 et si a est égal à 5
-if 42 == 50 and a == 5:
+if 42 < 50 and a == 5:
     # Affiche dans la console "Pacman aime les chats !"
     print("Pacman aime les chats !")
 ```
@@ -156,12 +158,12 @@ if not ma_contion:
 Python suit ligne par ligne ton programme, donc pour lui expliquer ce que tu veux
 faire sous certaines conditions, il faut rajouter des espaces avant les lignes
 pour créer des blocs. On parle alors d'indentation. Cela permet à Python de
-savoir quand est-ce que s'arrêter. Pour faire ça, on va utiliser la
+savoir quand est-ce qu'il faut sortir du bloc pour s'arrêter. Pour faire ça, on va utiliser la
 touche de tabulation (`Tab`) sur ton clavier, elle ressemble à ça :
 
 {{< figure src=resources/images/tab.png height=20% width=20% alt="La touche tabulation">}}
 
-On peut également utiliser les mots clés "sinon" et "sinon si". Un petit exemple
+On peut également utiliser les mots-clés "sinon" et "sinon si". Un petit exemple
 en français : Si je mange japonnais, je n'aurais plus faim. Sinon si je mange
 italien, j'aurais encore un peu faim. Sinon, j'aurais trop faim. On peut alors
 utiliser `else` pour "sinon" et `elif` pour "sinon si".
@@ -179,7 +181,7 @@ elif ma_variable == 2:
     # Affiche dans la console "Soda"
     print("Soda")
 
-# Si les conditions au dessus ne sont pas vérifiées, je fais cette partie
+# Si les conditions au-dessus ne sont pas vérifiées, je fais cette partie
 else:
     # Affiche dans la console "Lait"
     print("Lait")
@@ -206,7 +208,7 @@ les conditions dans les boucles `while` pour pouvoir répéter des choses
 tant qu'une condition est toujours vraie. Par exemple, tant que le bébé dort,
 nous ne devons pas faire de bruit.
 
-Un exemple en Python serait celui ci :
+Un exemple en Python serait celui-ci :
 
 ```python
 # Tant que i est inférieur à 3
@@ -234,9 +236,11 @@ Par exemple, en Python :
 ma_liste_nombres = [0, 1, 2, 3, 4, 5]
 ```
 
-La liste est numérotée de 0 à la longueur de la liste moins 1. Pour accéder
-à un élément d'une liste en Python, tu peux utiliser les index ! Les index sont
-compris entre 0 et la longueur de la liste moins 1.
+La liste est numérotée de 0 à la longueur de la liste moins 1. Tu peux accéder
+aux éléments d'une liste à l'aide d'index. Ce sont des nombres qui désignent
+l'emplacement de la case que tu veux regarder. Attention, en programmation, les
+index commencent à 0. Si on nomme la longueur de la liste `longueur`,
+les index peuvent prendre des valeurs entre `0` et `longueur - 1`.
 
 En Python, pour accéder à un élément à l'index 2, tu peux faire comme ceci :
 
@@ -268,7 +272,7 @@ longueur = len(derniers_scores)
 ## L'aléAtOiRE eN PYthOn
 
 En Python, on peut simuler de l'aléatoire, comme dans un lancé de dé. Pour faire
-cela, il faut alors donner deux nombres, qui va être notre intevalle lequel on
+cela, il faut alors donner deux nombres, qui formeront l'intervalle dans lequel on
 veut générer le nombre aléatoire.
 
 En Python, pour générer notre nombre aléatoire, il va d'abord falloir importer
@@ -282,7 +286,7 @@ travailler sur nos entrées pour ressortir un élément.
 # Importe la bibliothèque pour générer des nombres aléatoires
 from random import randint
 
-# `ma_variable` va contenir une valeur entre 0 et 4
+# `ma_variable` va contenir une valeur entre 0 et 4 inclus
 # Les valeurs possibles sont alors : 0, 1, 2, 3 et 4
 ma_variable = randint(0, 4)
 
@@ -413,9 +417,9 @@ else:
 
 *Mais c'est quoi ça `sleep(200)` ?*
 
-`sleep(100)`, permet de mettre en pause le programme le temps que tu puisses
-appuyer sur les boutons. Il peut alors vérifier si tu appuies sur les boutons
-pendant ce laps de temps.
+`sleep(100)`, permet de mettre en pause le programme pendant ici, 100 millisecondes.
+Cela te laisse le temps d'appuyer sur les boutons. Il peut alors vérifier si
+tu as appuyé sur les boutons pendant ce laps de temps.
 
 ### Exercice 5
 
