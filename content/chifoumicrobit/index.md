@@ -14,12 +14,20 @@ Notre ami Skeleton le squelette était en train de jouer à son jeu préféré,
 le jeu, mais, en cliquant sur le bouton, il a été téléporté dans l'univers du jeu.
 
 En arrivant, il croise Pacman et le fantôme Bouh qui s'ennuyaient. Skeleton
-leur propose de faire un chifoumi... mais ils n'ont pas de mains,
+leur propose de faire un chifoumi revisité... mais ils n'ont pas de mains,
 donc ils ne peuvent pas mimer les symboles ! Skeleton a besoin de ton aide !
 Il te demande de créer un programme leur permettant de jouer sur des `micro:bit` !
 Peux-tu aider notre ami ?
 
-<!-- TODO: ajouter le but du jeu -->
+Skeleton souhaiterait pouvoir choisir un élément parmi trois choix sur un
+`micro:bit` avec les boutons et que l'ordinateur choisisse aussi un élément
+et que l'on affiche le résultat. Les choix seront les suivants : Skeleton,
+Pacman et Bouh !
+
+Skeleton, faisant peur à Pacman, va gagner contre Pacman. Pacman, quant à lui,
+mange des fantômes, donc il gagnera contre Bouh. Bouh le fantôme voudra attraper
+Skeleton, donc il gagnera contre notre ami le squelette.
+
 <!-- TODO: ajouter l'image du but du jeu -->
 
 Pour faire cela, nous allons t'aider à créer le code étapes par étapes.
@@ -130,6 +138,19 @@ if 42 == 50 and a == 5:
     print("Pacman aime les chats !")
 ```
 
+De plus, tu pourras avoir l'occasion de chercher le contraire d'une expression.
+Par exemple, si Skeleton ne travaille pas aujourd'hui, il aura du mal pour son
+contrôle. Ici, on a une négation, et la négation en Python se traduit comme suit :
+
+```python
+# `ma_condition` est évaluée à `False` car 42 n'est pas égal à 0
+ma_condition = 42 == 0
+
+# Si `ma_condition` n'est pas vraie (si `ma_condition` est fausse)
+if not ma_contion:
+    print("Bouh aime les carottes")
+```
+
 *Mais pourquoi on rajoute des espaces avant les lignes ?*
 
 Python suit ligne par ligne ton programme, donc pour lui expliquer ce que tu veux
@@ -180,7 +201,7 @@ Les boucles nous permettent de répéter plusieurs tâches. En Python,
 il y a deux types de boucle ; cependant, dans cet atelier, seul un type
 nous suffira : les boucles `while`.
 
-On peut traduire `while` par `tant que` en français. On va pouvoir utiliser
+On peut traduire `while` par "tant que" en français. On va pouvoir utiliser
 les conditions dans les boucles `while` pour pouvoir répéter des choses
 tant qu'une condition est toujours vraie. Par exemple, tant que le bébé dort,
 nous ne devons pas faire de bruit.
@@ -201,8 +222,8 @@ while i < 3:
 
 Lorsqu'on veut stocker de nombreuse valeurs pour pouvoir les réutiliser
 par la suite, on ne va pas créer par exemple 20 variables.
-Ce que l'on va utiliser sont les listes. Les listes vont nous permettre de stocker
-plusieurs valeurs dans une seule variable.
+Ce qui sera plus pratique pour nous, ce sont les listes. Les listes vont
+nous permettre de stocker plusieurs valeurs dans une seule variable.
 
 <!-- TODO: rajouter des images -->
 
@@ -261,8 +282,8 @@ travailler sur nos entrées pour ressortir un élément.
 # Importe la bibliothèque pour générer des nombres aléatoires
 from random import randint
 
-# `ma_variable` va contenir une valeur entre 0 et 4 exclu
-# Les valeurs possibles sont alors : 0, 1, 2 et 3
+# `ma_variable` va contenir une valeur entre 0 et 4
+# Les valeurs possibles sont alors : 0, 1, 2, 3 et 4
 ma_variable = randint(0, 4)
 
 # Affiche `ma_variable` dans la console
@@ -283,6 +304,7 @@ d'afficher ce choix. On te donne alors la liste suivante :
 # Liste des choix
 liste_choix = ["Frites", "Salade", "Riz"]
 ```
+
 
 # Programmons avec des `micro:bit` !
 
@@ -342,6 +364,9 @@ tu peux utiliser les fonctions `button_a.is_pressed()` et `button_a.was_pressed(
 Tu peux retrouver les mêmes fonctions pour le bouton `b` juste en remplaçant
 `button_a` par `button_b`.
 
+Essaye les codes suivants pour comprendre la différence entre les deux fonctions !
+Si tu as une question, n'hésite pas à appeler un organisateur !
+
 ```python
 # Importe la bibliothèque pour les micro:bit
 from microbit import *
@@ -391,6 +416,96 @@ else:
 `sleep(100)`, permet de mettre en pause le programme le temps que tu puisses
 appuyer sur les boutons. Il peut alors vérifier si tu appuies sur les boutons
 pendant ce laps de temps.
+
+### Exercice 5
+
+Pour tester si le `micro:bit` fonctionne bien, Skeleton voudrait que lorsqu'on
+appuie sur les deux boutons en même temps, l'image sourire s'affiche.
+Aide le en créant le programme !
+
+
+# Passons à la pratique !
+
+Il va falloir maintenant que tu écrives le programme pour Skeleton ! Ne t'inquiète
+pas, nous allons te guider pour rédiger ton code ! Si tu as la moindre question,
+n'hésite pas à la poser aux organisateurs présents !
+
+Nous t'invitons d'abord à télécharger le code source à modifier en cliquant
+sur le bouton `Code à compléter` en haut de la page ! Tu retrouveras dans
+le fichier donné un code non complet que tu ne peux pas encore lancer. Il va
+falloir le remplir avec tes nouvelles connaissances.
+
+## Les possibilités d'affichage et le choix de l'ordinateur
+
+Dans la variable `possibilites`, il faut que tu rajoutes une liste de toutes
+les images possibles que tu devras afficher à l'écran. Les images qui doivent
+apparaître sont `Image.SKULL` (pour Skeleton), `Image.PACMAN` (pour Pacman)
+et `Image.GHOST` (pour Bouh).
+
+Tu vas devoir également trouver la longueur de ta liste `possibilites`
+(avec une fonction que l'on a vu précédemment). Tu dois mettre ce nombre
+dans la variable `NB_POSSIBILITES`.
+
+Le choix de l'ordinateur doit se faire de manière aléatoire. Il doit être un
+nombre compris entre 0 et la longueur de ta liste `possibilites` moins 1.
+
+## La boucle du jeu pour la sélection du personnage
+
+### La condition de la boucle
+
+L'utilisateur du `micro:bit` doit choisir son personnage. Pour faire cela,
+on va utiliser une boucle `while` (tant que). Il va falloir alors trouver
+une condition pour rester dans la sélection. Pour valider, le joueur devra
+appuyer sur les deux boutons du `micro:bit` en même temps.
+
+Dans la condition de ta boucle, il faut vérifier si les boutons A et B ne
+sont pas pressés. Tu vas devoir alors utiliser le `and` et le `not` que
+nous avons vu précédemment.
+
+### Afficher le choix du joueur
+
+Tant qu'on reste dans notre boucle `while`, il va falloir afficher le choix
+qui est actuellement sélectionné. Pour se faire, tu peux utiliser la fonction
+`display.show()` avec comme paramètre l'image dans la liste `possibilites` à
+l'index du choix du joueur défini par la variable `choix_joueur`.
+
+### Appuis sur les boutons
+
+Si le bouton A a été appuyé, il faut enlever 1 au nombre désignant le choix du
+joueur. Par la suite, sur ce nouveau nombre, il te faut rester dans l'intervalle
+des index de notre liste `possibilites`. Il va alors falloir rajouter un `%`
+(modulo) !
+
+*Un modu-quoi ?*
+
+Le modulo, il faut le prendre comme le reste d'une division euclidienne.
+Par exemple, quand tu souhaites diviser 5 par 2, tu auras le quotient qui est
+égal à 2 et le reste qui est égal à 1.
+
+On va utiliser le même procédé. On ne peut pas accéder au cinquième élément
+d'une liste de longueur 3. On va donc revenir à 0 lorsqu'on dépasse la liste.
+
+Par exemple, lorsque tu es à l'index 3 dans une liste de longueur 3 : les index
+possibles sont 0, 1 et 2. On voudrait que revenir à l'index 0. En Python,
+tu peux le faire comme ceci :
+
+```python
+# Une liste de nombres
+ma_liste = [42, 56, 98]
+
+# On est à l'index 3
+mon_index = 3
+
+# Le nouveau index est 3 modulo 3 = 0
+# car le reste de la division euclidienne de 3 par 3 est égal à 0
+mon_nouveau_index = 3 % 3
+
+# L'élément à l'index 0 (3 % 3)
+mon_element = ma_liste[mon_nouveau_index]
+
+# Affiche `mon_element`
+print(mon_element)
+```
 
 <!-- TODO: explication de comment faire le TP -->
 
