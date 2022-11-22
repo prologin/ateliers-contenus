@@ -80,7 +80,7 @@ class Prolobot:
         """
         Tourne le prolobot a une vitesse donnee
         direction: 0 pour aller a gauche et 1 pour aller a droite
-        vitesse: vitesse des roues entre -1 et 1
+        vitesse: vitesse des roues entre 0 et 1
         """
         if direction == 0:
             self.deplacer(0, vitesse)
@@ -91,7 +91,7 @@ class Prolobot:
         """
         Pivote le prolobot sur lui meme a une vitesse donnee
         direction: 0 pour aller a gauche et 1 pour aller a droite
-        vitesse: vitesse des roues entre -1 et 1
+        vitesse: vitesse des roues entre 0 et 1
         """
         if direction == 0:
             self.deplacer(-vitesse, vitesse)
