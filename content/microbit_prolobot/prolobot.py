@@ -4,6 +4,7 @@
 import microbit
 import machine
 import time
+import neopixel
 
 GAUCHE = 0
 DROITE = 1
@@ -46,6 +47,7 @@ class Prolobot:
     def __init__(self, freq=100000):
         microbit.i2c.init(freq=freq, sda=microbit.pin20,
                 scl=microbit.pin19)
+        self.__rgbleds = neopixel.NeoPixel(microbit.pin15, 4)
         self.__left_wheel = Wheel(0x00)
         self.__right_wheel = Wheel(0x02)
 
@@ -127,13 +129,28 @@ class Prolobot:
         else:
             return microbit.pin14.read_digital()
 
-    def allumer_led(self, led, statut):
+    def allumer_phares(self, phare, statut):
         """
-        Allumer la led correspondante
+        Allumer la led avant correspondante
         param led: 0 pour la led de gauche et 1 pour la led de droite
         param statut: 0 pour eteindre et 1 pour allumer
         """
-        if led == 0:
+        if phare == 0:
             microbit.pin8.write_digital(statut)
         else:
             microbit.pin12.write_digital(statut)
+
+    def allumer_led(self, led, couleur):
+        """
+        Allume la led correspondante
+        led: va de 0 a 3
+        couleur: un tuple (r, v, b)
+        """
+        self.__rgbleds[led] = couleur
+        self.__rgbleds.show()
+
+    def eteindre_led(self):
+        """
+        Eteint toutes les leds de couleur
+        """
+        self.__rgbleds.clear()
