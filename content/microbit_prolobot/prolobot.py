@@ -79,6 +79,17 @@ class Prolobot:
         vitesse: vitesse des roues entre -1 et 1
         """
         if direction == 0:
+            self.__run(0, vitesse)
+        else:
+            self.__run(vitesse, 0)
+
+    def pivoter(self, direction, vitesse):
+        """
+        Pivote le prolobot sur lui meme a une vitesse donnee
+        direction: 0 pour aller a gauche et 1 pour aller a droite
+        vitesse: vitesse des roues entre -1 et 1
+        """
+        if direction == 0:
             self.__run(-vitesse, vitesse)
         else:
             self.__run(vitesse, -vitesse)
