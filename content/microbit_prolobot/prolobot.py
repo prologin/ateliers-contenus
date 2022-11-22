@@ -54,15 +54,15 @@ class Prolobot:
         vl: left motor speed coeff
         vr: right motor speed coeff
         """
-        vl = max(min(vl, 1), 0)
-        vr = max(min(vr, 1), 0)
-        self.roue_gauche.move(self.__max_speed * vl)
-        self.roue_droite.move(self.__max_speed * vr)
+        vl = max(min(vl, 1), -1)
+        vr = max(min(vr, 1), -1)
+        self.roue_gauche.move(int(self.__max_speed * vl))
+        self.roue_droite.move(int(self.__max_speed * vr))
 
     def avancer(self, vitesse):
         """
         Fait avancer les 2 roues a une vitesse donnee
-        vitesse: nombre entre 0 et 1
+        vitesse: nombre entre -1 et 1
         """
         self.__run(vitesse, vitesse)
 
@@ -76,7 +76,7 @@ class Prolobot:
         """
         Tourne le prolobot a une vitesse donnee
         direction: 0 pour aller a gauche et 1 pour aller a droite
-        vitesse: vitesse des roues entre 0 et 1
+        vitesse: vitesse des roues entre -1 et 1
         """
         if direction == 0:
             self.__run(-vitesse, vitesse)
