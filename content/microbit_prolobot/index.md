@@ -18,11 +18,11 @@ Pour utiliser le robot, commence par télécharger le fichier donné.
 
 Appuie ensuite sur le bouton 'Open...' en bas de l'écran puis 
 choisis le fichier que tu viens de télécharger.
-![Bouton Open]("img/open_button.png")
+![]("img/open_button.png")
 
 Appuie enfin sur le bouton a côté du nom du fichier et sélectionne 'Ajouter le
 fichier' avant de valider.
-![Bouton Charger]("img/load_button.png")
+![]("img/load_button.png")
 
 ## La Doc
 
