@@ -5,6 +5,9 @@ import microbit
 import machine
 import time
 
+GAUCHE = 0
+DROITE = 1
+
 class Wheel:
     def __init__(self, moteur):
         self.speed = 0
