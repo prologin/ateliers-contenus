@@ -46,12 +46,12 @@ class Prolobot:
     def __init__(self, freq=100000):
         microbit.i2c.init(freq=freq, sda=microbit.pin20,
                 scl=microbit.pin19)
-        self.roue_gauche = Wheel(0x00)
-        self.roue_droite = Wheel(0x02)
+        self.__left_wheel = Wheel(0x00)
+        self.__right_wheel = Wheel(0x02)
 
         self.__max_speed = 255
 
-    def __run(self, vl, vr):
+    def deplacer(self, vl, vr):
         """
         Run wheels with given speed
         vl: left motor speed coeff
@@ -59,21 +59,22 @@ class Prolobot:
         """
         vl = max(min(vl, 1), -1)
         vr = max(min(vr, 1), -1)
-        self.roue_gauche.move(int(self.__max_speed * vl))
-        self.roue_droite.move(int(self.__max_speed * vr))
+        self.__left_wheel.move(int(self.__max_speed * vl))
+        self.__right_wheel.move(int(self.__max_speed * vr))
 
     def avancer(self, vitesse):
         """
         Fait avancer les 2 roues a une vitesse donnee
-        vitesse: nombre entre -1 et 1
+        vitesse: nombre entre 0 et 1
         """
-        self.__run(vitesse, vitesse)
+        self.deplacer(vitesse, vitesse)
 
     def reculer(self, vitesse):
         """
-        Fait reculer les 2 roues a une speed donnee
+        Fait reculer les 2 roues a une vitesse donnee
+        vitesse: nombre entre 0 et 1
         """
-        self.__run(vitesse, vitesse)
+        self.deplacer(-vitesse, -vitesse)
 
     def tourner(self, direction, vitesse):
         """
@@ -82,9 +83,9 @@ class Prolobot:
         vitesse: vitesse des roues entre -1 et 1
         """
         if direction == 0:
-            self.__run(0, vitesse)
+            self.deplacer(0, vitesse)
         else:
-            self.__run(vitesse, 0)
+            self.deplacer(vitesse, 0)
 
     def pivoter(self, direction, vitesse):
         """
@@ -93,16 +94,16 @@ class Prolobot:
         vitesse: vitesse des roues entre -1 et 1
         """
         if direction == 0:
-            self.__run(-vitesse, vitesse)
+            self.deplacer(-vitesse, vitesse)
         else:
-            self.__run(vitesse, -vitesse)
+            self.deplacer(vitesse, -vitesse)
 
     def stop(self):
         """
         Arrete les 2 roues
         """
-        self.roue_droite.stop()
-        self.roue_gauche.stop()
+        self.__right_wheel.stop()
+        self.__left_wheel.stop()
 
     def distance(self):
         """
