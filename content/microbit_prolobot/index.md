@@ -1,14 +1,28 @@
+---
+title: Prolobot
+date: 2022
+authors: Julie 'DaiF' Fiadino, Hippolyte Pik
+subtitle: Codez avec le Robot Microbit
+code_stub_url: "./prolobot.py"
+---
+
 # Prolobot
 
 <!-- TODO: Introduction -->
 
-## Utiliser avec Mu-editor
+## Utiliser avec l'éditeur
 
-- Déplacer le fichier `prolobot.py` dans le dossier source de mu-editor
-- Appuyer sur le bouton fichier
-- Glisser le fichier de `Sur mon ordinateur` a `Sur le microbit`
-- Flasher le microbit
-- Brancher le microbit au robot et l'allumer
+<!-- NOTE: tuto pour l'editeur python du site microbit -->
+
+Pour utiliser le robot, commence par télécharger le fichier donné.
+
+Appuie ensuite sur le bouton 'Open...' en bas de l'écran puis 
+choisis le fichier que tu viens de télécharger.
+![Bouton Open]("img/open_button.png")
+
+Appuie enfin sur le bouton a côté du nom du fichier et sélectionne 'Ajouter le
+fichier' avant de valider.
+![Bouton Charger]("img/load_button.png")
 
 ## La Doc
 
