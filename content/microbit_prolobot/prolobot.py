@@ -62,21 +62,21 @@ class Prolobot:
         self.__left_wheel.move(int(self.__max_speed * vl))
         self.__right_wheel.move(int(self.__max_speed * vr))
 
-    def avancer(self, vitesse):
+    def avancer(self, vitesse=0.2):
         """
         Fait avancer les 2 roues a une vitesse donnee
         vitesse: nombre entre 0 et 1
         """
         self.deplacer(vitesse, vitesse)
 
-    def reculer(self, vitesse):
+    def reculer(self, vitesse=0.2):
         """
         Fait reculer les 2 roues a une vitesse donnee
         vitesse: nombre entre 0 et 1
         """
         self.deplacer(-vitesse, -vitesse)
 
-    def tourner(self, direction, vitesse):
+    def tourner(self, direction, vitesse=0.2):
         """
         Tourne le prolobot a une vitesse donnee
         direction: 0 pour aller a gauche et 1 pour aller a droite
@@ -87,7 +87,7 @@ class Prolobot:
         else:
             self.deplacer(vitesse, 0)
 
-    def pivoter(self, direction, vitesse):
+    def pivoter(self, direction, vitesse=0.2):
         """
         Pivote le prolobot sur lui meme a une vitesse donnee
         direction: 0 pour aller a gauche et 1 pour aller a droite
