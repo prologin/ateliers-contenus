@@ -13,8 +13,10 @@ NB_POSSIBILITES = len(possibilites)
 # on veut jouer avec la radio ou non
 multijoueur = False
 
+# Cette image indique au joueur de choisir un mode de jeu
+display.show(Image.SWORD)
+
 while True:
-    display.scroll("Multijoueur (A) ou contre le micro:bit (B) ?")
     if button_a.was_pressed():
         multijoueur = True
         break
@@ -62,7 +64,8 @@ if multijoueur:
     # Configure le channel de la radio (entre [0, 83])
     radio.config(channel=42)
 
-    display.scroll("Attente de l'autre joueur")
+    # Cette image indique le début de la transmission radio
+    display.show(Image.BUTTERFLY)
 
     # Initialise une variable pour recevoir
     # un message de notre adversaire
