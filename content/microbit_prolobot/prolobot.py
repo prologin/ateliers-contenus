@@ -129,7 +129,7 @@ class Prolobot:
         else:
             return microbit.pin14.read_digital()
 
-    def allumer_phares(self, phare, statut):
+    def set_phares(self, phare, statut):
         """
         Allumer la led avant correspondante
         param led: 0 pour la led de gauche et 1 pour la led de droite

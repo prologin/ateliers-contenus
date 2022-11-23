@@ -83,7 +83,7 @@ bot = Prolobot()
 
 #### LEDs
 
-`bot.allumer_phares(phare, statut)`: allume ou eteint un des phares avant,
+`bot.set_phares(phare, statut)`: allume ou eteint un des phares avant,
 - On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer quel capteur utiliser.
 - Le statut est a 1 pour allumer et 0 pour eteindre la led
 
