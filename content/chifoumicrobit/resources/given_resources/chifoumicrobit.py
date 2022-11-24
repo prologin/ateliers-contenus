@@ -2,7 +2,7 @@ from microbit import *
 from random import randint
 
 # TODO: Créer la liste des possibilités
-possibilites = 
+possibilites =
 
 # TODO: Créer une variable pour avoir la longueur
 # de la liste `possibilites`
@@ -10,7 +10,7 @@ NB_POSSIBILITES =
 
 # TODO: Générer le choix du micro:bit
 # entre 0 et `NB_POSSIBILITES` exclu
-choix_aversaire =
+choix_adversaire =
 
 # Le choix du joueur est à 0 par défaut
 choix_joueur = 0

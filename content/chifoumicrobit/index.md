@@ -455,8 +455,9 @@ Tu vas devoir également trouver la longueur de ta liste `possibilites`
 (avec une fonction que l'on a vu précédemment). Tu dois mettre ce nombre
 dans la variable `NB_POSSIBILITES`.
 
-Le choix de l'ordinateur doit se faire de manière aléatoire. Il doit être un
-nombre compris entre 0 et la longueur de ta liste `possibilites` moins 1.
+Le choix de l'ordinateur doit se faire de manière aléatoire. La valeur de la
+variable `choix_adversaire` doit être un nombre compris entre 0 et la longueur
+de ta liste `possibilites` moins 1.
 
 ## La boucle du jeu pour la sélection du personnage
 
