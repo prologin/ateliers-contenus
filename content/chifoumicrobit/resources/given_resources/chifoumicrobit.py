@@ -29,16 +29,26 @@ while :
 
 # Éteint toutes les LEDs de l'écran
 display.clear()
+
+# Met en pause le programme pendant 500 millisecondes
 sleep(500)
 
 # TODO: Afficher le choix du joueur
+
+
+# Met en pause le programme pendant 2 secondes
+sleep(2000)
 
 display.scroll("VS")
 
 # TODO: Afficher le choix du micro:bit
 
-# TODO: Si égalité, afficher "Égalité !"
 
-# TODO: Sinon si tu as gagné, afficher "Tu as gagné !"
+# Met en pause le pause le programme pendant 2 secondes
+sleep(2000)
+
+# TODO: Si égalité, afficher "Egalite !"
+
+# TODO: Sinon si tu as gagné, afficher "Tu as gagne !"
 
 # TODO: Sinon, tu as perdu, afficher "Tu as perdu..."

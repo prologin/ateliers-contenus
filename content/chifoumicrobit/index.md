@@ -48,7 +48,9 @@ Nous verrons un peu plus tard comment manipuler les `micro:bit`.
 # Programmer en Python
 
 Pour pouvoir créer notre jeu pour Skeleton, il va te falloir quelques connaissances
-en Python. Si tu as la moindre question, n'hésite pas à la poser à un organisateur !
+en Python. En programmation, les intructions sont lues ligne par ligne.
+Chaque instruction est décrite sur une ligne. On va alors t'aider à écrire ses lignes.
+Si tu as la moindre question, n'hésite pas à la poser à un organisateur !
 
 ## Les variables en Python
 
@@ -511,6 +513,53 @@ mon_element = ma_liste[mon_nouveau_index]
 print(mon_element)
 ```
 
-<!-- TODO: explication de comment faire le TP -->
+Il faut maintenant que tu fasses la même chose pour le bouton B, seulement,
+cette fois-ci, si le bouton B a été appuyé, il faut rajouter 1 au nombre
+désignant le choix du joueur. N'oublie pas le modulo !
+
+## Aficher le choix du joueur
+
+Comme pour le début de la boucle, il faut que tu réaffiches le choix du joueur
+après le `display.clear()` qui éteint tous les pixels.
+
+Après l'affichage du texte "VS", il faut que tu affiches maintenant le choix
+de l'adversaire en prenant une image dans la liste `possibilites` à l'index
+`choix_adversaire`.
+
+## Gagnant et perdant
+
+Il faut maintenant trouver qui a gagné et qui a perdu ! Pour ce faire, on
+va d'abord vérifier si il y a égalité entre les deux joueurs.
+
+Il y a égalité entre les deux joueurs dans notre jeu quand le choix de
+notre adversaire et le même que le nôtre. Il faut alors vérifier l'égalité
+entre `choix_joueur` et `choix_adversaire`. Il faut alors afficher sur le
+`micro:bit` "Egalite !".
+
+Sinon, s'il n'y a pas égalité, il faut vérifier les conditions pour savoir
+si on a gagné. Atention, il faudra alors afficher "Tu as gagne !". Les
+conditions sont les suivantes :
+
+- Si `choix_joueur` est égal à 0 et `choix_adversaire` est égal à 1
+(Skeleton fait peur à Pacman)
+
+- Si `choix_joueur` est égal à 1 et `choix_adversaire` est égal à 2
+(Pacman mange Bouh)
+
+- Si `choix_joueur` est égal à 2 et `choix_adversaire` est égal à 0
+(Bouh fait peur à Skeleton)
+
+Enfin, sinon, si toutes les conditions au-desus ne sont pas remplies,
+cela veut dire que tu as perdu et il faut que tu affiches "Tu as perdu...".
+
+# C'est déjà fini ?
+
+Normalement, en suivant les instructions de la partie d'avant, tu devrais
+avoir un jeu fini ! Si cela ne fonctionne pas, essaye d'appeler un organisateur
+pour qu'il vienne t'aider !
+
+Maintenant que tu as un prototype, Skeleton est très content ! Cependant, il
+voudrait maintenant pouvoir jouer contre ses nouveaux amis ! Viens alors la
+prochaine partie sur la radio pour communiquer entre deux `micro:bit` !
 
 <!-- TODO: Bonus : radio -->
