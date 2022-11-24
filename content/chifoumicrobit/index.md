@@ -565,4 +565,171 @@ Maintenant que tu as un prototype, Skeleton est très content ! Cependant, il
 voudrait maintenant pouvoir jouer contre ses nouveaux amis ! Viens alors la
 prochaine partie sur la radio pour communiquer entre deux `micro:bit` !
 
-<!-- TODO: Bonus : radio -->
+
+# Un mode multijoueur ?
+
+Bien joué, tu as terminé la partie principale de ce TP, et tu as maintenant un
+chifoumi complètement fonctionnel pour aider notre ami Skeleton. 
+Comme c'est un très bon ami, nous nous sommes dit qu'il serait sympa de lui
+ajouter une fonctionnalité surprise : un mode multijoueur. 
+
+Avant de commencer cette partie, il faut que ton programme fonctionne et que tu
+ais compris tout ce que nous t'avons expliqué plus tôt. 
+Si tu as une quelconque question ou qu'il y a quelque chose que tu n'as pas
+compris, n'hésite pas à demander de l'aide aux organisateurs. 
+
+## Un peu de théorie
+
+Pour faire un jeu multijoueur, nous allons avoir besoin de faire communiquer les
+`micro:bit` ensemble. Pour ce faire, nous allons utiliser la radio. 
+
+Avant tout, tout comme il faut importer les fonctions pré-écrites en ajoutant
+cette ligne au début de ton fichier : 
+
+```py
+import radio
+```
+
+## Choix du mode de jeu
+
+Pour commencer, nous voulons que Skeleton puisse s'entraîner contre
+l'ordinateur, ou bien jouer en multijoueur avec ses amis. 
+Pour stocker le mode de jeu choisi, nous allons utiliser une variable entière,
+que nous appelerons `multijoueur`. 
+Cette variable va prendre trois états différents : 
+- `-1` si le joueur n'a pas encore fait son choix
+- `0` si le joueur veut jouer contre l'ordinateur (mode _local_)
+- `1` si le joueur veut jouer avec ses amis (mode _multijoueur_)
+
+Par ailleurs, le joueur veut aussi savoir quand est-ce qu'il doit choisir son
+mode de jeu. Pour faire ça, il nous suffit d'afficher l'image `Image.SWORD`
+(_épée_ en anglais). N'importe quelle image fonctionnerait, le principe est de
+montrer au joueur que notre programme attend son choix. 
+
+Ensuite, il faut attendre que le joueur fasse son choix et enregistrer son
+choix. 
+Tu peux utiliser une boucle qui s'arrête lorsque le joueur a fait son choix. 
+Par convention, on dira qu'un appui sur le bouton A activera le mode
+_multijoueur_, et un appui sur B activera le mode _local_. 
+
+## Choix de l'ordinateur
+
+Ici, une toute petite modification est nécessaire pour le choix de l'ordinateur.
+En effet, le `micro:bit` doit faire un choix seulement si le programme est en
+mode _local_. 
+
+## Ton choix
+
+En ce qui concerne ton propre choix, tu n'as rien besoin de changer. 
+
+## Et l'adversaire ?
+
+Si le mode choisi est _multijoueur_, juste après avoir fait notre choix, 
+nous allons devoir l'envoyer à l'adversaire, et recevoir le sien. 
+
+### Activons la radio
+
+Avant de pouvoir envoyer ou recevoir des informations, nous devons allumer et
+configurer la radio. Pour ce faire, nous devons l'allumer et choisir un cannal
+de communication. Un cannal de communication, est un peu comme un tunnel. Si les
+deux joueurs ont des cannaux différents, alors ils ne pourront pas s'entendre.
+
+```py
+# Allume la radio
+radio.on()
+
+# Configure la radio pour communiquer sur le channel 42
+# Tu peux changer 42 par une valeur entre 0 et 83 si besoin
+radio.config(channel=42)
+```
+
+Pour montrer au joueur que tout s'est bien passé jusqu'ici, tu peux afficher une
+image de ton choix (toutes les images sont disponibles [ici](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html)).
+
+
+### Envoie et réception du message
+
+Avant de recevoir le message, nous avons besoin d'une variable pour le stocker.
+Nous allons nommer cette variable `message_adversaire` par la suite pour s'y
+retrouver. Nous allons aussi lui associer une valeur un peu particulières :
+`None` (_personne_ en français). Cette valeur veut dire _"Il n'y a rien dans 
+cette variable"_, tout simplement. 
+
+Pour essayer de recevoir un message, il faut faire : 
+
+```py
+# `message_adversaire` vaudra None si aucun message n'est reçu
+message_adversaire = radio.receive()
+```
+
+Pour envoyer un message, il faut faire : 
+
+```py
+radio.send(str(choix_joueur))
+```
+
+{{% exemple %}}
+#### C'est quoi ça, `str()` ?
+
+C'est quelque chose que nous n'avons pas abordés, mais toute de même important. 
+En effet, les variables sont _typées_. Cela veut dire qu'elles ne peuvent
+stocker qu'un type de valeur : des entiers, du texte, des nombres décimaux, ...
+La fonction `str(entier)` permet simplement de convertir l'entier _`entier`_ en
+texte. Le texte peut être différencié des entiers par la présence de simple
+guillemets (`'`) ou double guillemets (`"`). 
+
+Par exemple :
+```codepython
+entier = 12
+texte = str(entier)
+
+# Affiche le texte "12"
+print(texte)
+```
+
+Pour convertir un texte en entier, il faut utiliser la fonction `int()`, qui
+fonctionne de la même façon : 
+
+```codepython
+texte = "12"
+entier = int(texte)
+
+# Affiche l'entier 12
+print(entier)
+```
+
+Cette partie est un peu complexe, si jamais tu n'as pas compris quelque chose,
+n'hésite pas à demander de l'aide aux organisateurs. 
+
+{{% \exemple %}}
+
+
+Nous voulons donc que, tant qu'aucun message n'est reçu, on envoie notre choix
+et on essaye de recevoir celui de l'adversaire. 
+
+### J'ai reçu son choix !
+
+Une dernière étape pour ce qui concerne le multijoueur est de convertir le choix
+de l'adversaire en entier et le stocker dans la variable `choix_adversaire` afin 
+de pouvoir l'utiliser par la suite. 
+
+Une fois que l'utilisation de la radio est terminée, pense à l'éteindre avec la
+fonction :
+
+```py
+radio.off()
+```
+
+## Afficher le résultat
+
+Tu n'as normalement pas besoin de modifier la fin de ton code, il devrait
+afficher correctement ton choix et celui de l'adversaire. 
+
+Si jamais tu as une question ou un problème, n'hésite pas à demander de l'aide
+aux organisateurs.
+
+# C'est la fin
+
+Bien joué, tu as réussi à faire un mode _multijoueur_ dans ton programme !
+
+
