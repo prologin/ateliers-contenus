@@ -64,7 +64,7 @@ ranger des éléments !
 
 Pour déclarer une variable en Python, on va faire comme ça :
 
-```python
+```codepython
 # `ma_variable` stocke la valeur 42
 ma_variable = 42
 ```
@@ -72,7 +72,7 @@ ma_variable = 42
 Tu vas pouvoir afficher les valeurs de tes variables ou du texte avec la fonction
 `print()`.
 
-```python
+```codepython
 # `ma_variable` stocke la valeur 42
 ma_variable = 42
 
@@ -97,7 +97,7 @@ En programmation, tu peux évaluer certaines phrases par vrai ou faux. Par exemp
 la préposition `1 < 2` (1 est inférieur à 2) est vraie ; et `42 > 42`
 (42 est supérieur à 42) est faux. Tu peux essayer en Python avec le code suivant :
 
-```python
+```codepython
 preposition_une = 1 < 2
 # Affiche dans la console le résultat de `1 < 2` (vrai)
 print(preposition_une)
@@ -122,7 +122,7 @@ C'est la même chose en Python. On va pouvoir définir des conditions qui
 s'évaluent à vrai ou faux et exécuter des lignes de code en conséquence.
 Le mot-clé "si" va être remplacé par son équivalent en anglais, `if`.
 
-```python
+```codepython
 # Vérifie si 1 est égal à 1
 if 1 == 1:
     # Affiche dans la console "Skeleton est trop fort !"
@@ -134,7 +134,7 @@ même temps. On va alors parler du mot-clé `and` qui signifie "et" en français
 
 En voici un exemple :
 
-```python
+```codepython
 a = 5
 
 # Vérifie si 42 est inférieur à 50 et si a est égal à 5
@@ -147,7 +147,7 @@ De plus, tu pourras avoir l'occasion de chercher le contraire d'une expression.
 Par exemple, si Skeleton ne travaille pas aujourd'hui, il aura du mal pour son
 contrôle. Ici, on a une négation, et la négation en Python se traduit comme suit :
 
-```python
+```codepython
 # `ma_condition` est évaluée à `False` car 42 n'est pas égal à 0
 ma_condition = 42 == 0
 
@@ -171,7 +171,7 @@ en français : Si je mange japonnais, je n'aurais plus faim. Sinon si je mange
 italien, j'aurais encore un peu faim. Sinon, j'aurais trop faim. On peut alors
 utiliser `else` pour "sinon" et `elif` pour "sinon si".
 
-```python
+```codepython
 ma_variable = 2
 
 # Vérifie si `ma_variable` est égale à 1
@@ -213,7 +213,7 @@ nous ne devons pas faire de bruit.
 
 Un exemple serait celui-ci :
 
-```python
+```codepython
 # Tant que i est inférieur à 3
 while i < 3:
     # Afficher "Bonjour !"
@@ -247,7 +247,7 @@ les index peuvent prendre des valeurs entre `0` et `longueur - 1`.
 
 En Python, pour accéder à un élément à l'index 2, tu peux faire comme ceci :
 
-```python
+```codepython
 # Liste de lettres
 ma_liste_lettres = ["a", "b", "c", "d"]
 
@@ -264,7 +264,7 @@ Pacman a stocké dans une liste ses derniers scores dans le jeu. Il voudrait
 les afficher un à un, ligne par ligne. Pour faire cela, il te donne la liste et
 sa longueur, et c'est à toi d'afficher les éléments de la liste avec une boucle !
 
-```python
+```codepython
 # Liste des scores
 derniers_scores = [4242, 3942, 5832, 6048, 3891]
 
@@ -287,7 +287,7 @@ Si tu ne connais pas les fonctions, il faut les considérer comme des machines
 dans lequelles on entre des valeurs et qui nous en ressortent d'autre. Elles vont
 travailler sur nos entrées pour ressortir un élément.
 
-```python
+```codepython
 # Importe la bibliothèque pour générer des nombres aléatoires
 from random import randint
 
