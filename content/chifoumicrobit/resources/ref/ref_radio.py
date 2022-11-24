@@ -11,21 +11,19 @@ NB_POSSIBILITES = len(possibilites)
 
 # On rajoute une valeur booléenne pour savoir si
 # on veut jouer avec la radio ou non
-multijoueur = False
+multijoueur = -1
 
 # Cette image indique au joueur de choisir un mode de jeu
 display.show(Image.SWORD)
 
-while True:
+while multijoueur == -1:
     if button_a.was_pressed():
-        multijoueur = True
-        break
+        multijoueur = 1
 
-    if button_b.was_pressed():
-        multijoueur = False
-        break
+    elif button_b.was_pressed():
+        multijoueur = 0
 
-if not multijoueur:
+if multijoueur == 0:
     # Choix aléatoire du microbit
     # entre 0 et `NB_POSSIBILITES` exclu
     choix_adversaire = randint(0, NB_POSSIBILITES - 1)
@@ -57,7 +55,7 @@ while not (button_a.is_pressed() and button_b.is_pressed()):
 
 
 # Gérer la radio si on est en mode `multijoueur`
-if multijoueur:
+if multijoueur == 1:
     # Allume la radio
     radio.on()
 
