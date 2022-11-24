@@ -34,7 +34,7 @@ Pour faire cela, nous allons t'aider à créer le code étapes par étapes.
 Si tu as des questions particulières, n'hésite pas à demander à un
 organisateur autour de toi, ils sont là pour ça !
 
-## Mais dis-moi Jammy, c'est quoi un `micro:bit` ?
+## Mais dis-moi Jamy, c'est quoi un `micro:bit` ?
 
 Les `micro:bit` sont des cartes programmables qu'on te fournit tout
 au long de l'atelier. Avec celles-ci, tu vas pouvoir interagir avec ses
@@ -89,7 +89,7 @@ print("Hello world!")
 
 Les lignes commençant par des `#`, ce sont des commentaires. Cela te permet
 d'expliquer ton code par des phrases pour toi ou même pour les personnes qui
-t'entourent.
+t'entourent. Python ne prend pas en compte les commentaires dans son exécution.
 
 ## Les booléens en Python
 
@@ -276,7 +276,8 @@ longueur = len(derniers_scores)
 
 En Python, on peut simuler de l'aléatoire, comme dans un lancé de dé. Pour faire
 cela, il faut alors donner deux nombres, qui formeront l'intervalle dans lequel on
-veut générer le nombre aléatoire.
+veut générer le nombre aléatoire. Par exemple, dans un dé, l'intervalle sur lequel
+le dé peut tomber est [1; 6].
 
 Afin de générer notre nombre aléatoire, il va d'abord falloir importer
 une bibliothèque. Cela va nous permettre d'utiliser des fonctions déjà écrites
@@ -284,7 +285,7 @@ dans la bibliothèque. Ici, on va juste utiliser la fonction `randint` de la
 bibliothèque `random`.
 
 Si tu ne connais pas les fonctions, il faut les considérer comme des machines
-dans lequelles on entre des valeurs et qui nous en ressortent d'autre. Elles vont
+dans lequelles on entre des valeurs et qui nous en ressortent d'autres. Elles vont
 travailler sur nos entrées pour ressortir un élément.
 
 ```codepython
@@ -363,11 +364,11 @@ display.scroll("Chifoumicro:bit")
 ### Exercice 4
 
 Pour voir si tu as bien compris comment on manipule les images, Skeleton
-souhaiterait que tu affiches un coeur (heart en anglais) sur ton `micro:bit`.
+souhaiterait que tu affiches un cœur (heart en anglais) sur ton `micro:bit`.
 
 ### Mais il y a des boutons à côté des LEDs !
 
-A côté des 25 LEDs du `micro:bit`, tu peux retrouver à gauche, le bouton `A`,
+À côté des 25 LEDs du `micro:bit`, tu peux retrouver à gauche, le bouton `A`,
 et à droite, le bouton B. Pour connaître le nombre d'appuis sur les boutons,
 tu peux utiliser les fonctions `button_a.is_pressed()` et `button_a.was_pressed()`.
 Tu peux retrouver les mêmes fonctions pour le bouton `b` juste en remplaçant
@@ -430,7 +431,7 @@ tu as appuyé sur les boutons pendant ce laps de temps.
 
 Pour tester si le `micro:bit` fonctionne bien, Skeleton voudrait que lorsqu'on
 appuie sur les deux boutons en même temps, l'image sourire s'affiche.
-Aide le en créant le programme !
+Aide-le en créant le programme !
 
 
 # Passons à la pratique !
@@ -475,7 +476,7 @@ nous avons vu précédemment.
 ### Afficher le choix du joueur
 
 Tant qu'on reste dans notre boucle `while`, il va falloir afficher le choix
-qui est actuellement sélectionné. Pour se faire, tu peux utiliser la fonction
+qui est actuellement sélectionné. Pour ce faire, tu peux utiliser la fonction
 `display.show()` avec comme paramètre l'image dans la liste `possibilites` à
 l'index du choix du joueur défini par la variable `choix_joueur`.
 
@@ -533,7 +534,7 @@ de l'adversaire en prenant une image dans la liste `possibilites` à l'index
 ## Gagnant et perdant
 
 Il faut maintenant trouver qui a gagné et qui a perdu ! Pour ce faire, on
-va d'abord vérifier si il y a égalité entre les deux joueurs.
+va d'abord vérifier s'il y a égalité entre les deux joueurs.
 
 Il y a égalité entre les deux joueurs dans notre jeu quand le choix de
 notre adversaire et le même que le nôtre. Il faut alors vérifier l'égalité
@@ -553,7 +554,7 @@ conditions sont les suivantes :
 - Si `choix_joueur` est égal à 2 et `choix_adversaire` est égal à 0
 (Bouh fait peur à Skeleton)
 
-Enfin, sinon, si toutes les conditions au-desus ne sont pas remplies,
+Enfin, sinon, si toutes les conditions au-dessus ne sont pas remplies,
 cela veut dire que tu as perdu et il faut que tu affiches "Tu as perdu...".
 
 
@@ -565,7 +566,7 @@ Comme c'est un très bon ami, nous nous sommes dit qu'il serait sympa de lui
 ajouter une fonctionnalité surprise : un mode multijoueur.
 
 Avant de commencer cette partie, il faut que ton programme fonctionne et que tu
-ais compris tout ce que nous t'avons expliqué plus tôt.
+aies compris tout ce que nous t'avons expliqué plus tôt.
 Si tu as une quelconque question ou qu'il y a quelque chose que tu n'as pas
 compris, n'hésite pas à demander de l'aide aux organisateurs.
 
@@ -621,9 +622,9 @@ nous allons devoir l'envoyer à l'adversaire, et recevoir le sien.
 ### Activons la radio
 
 Avant de pouvoir envoyer ou recevoir des informations, nous devons allumer et
-configurer la radio. Pour ce faire, nous devons l'allumer et choisir un cannal
-de communication. Un cannal de communication, est un peu comme un tunnel. Si les
-deux joueurs ont des cannaux différents, alors ils ne pourront pas s'entendre.
+configurer la radio. Pour ce faire, nous devons l'allumer et choisir un canal
+de communication. Un canal de communication, est un peu comme un tunnel. Si les
+deux joueurs ont des canaux différents, alors ils ne pourront pas s'entendre.
 
 ```py
 # Allume la radio
@@ -643,7 +644,7 @@ image de ton choix (toutes les images sont disponibles
 
 Avant de recevoir le message, nous avons besoin d'une variable pour le stocker.
 Nous allons nommer cette variable `message_adversaire` par la suite pour s'y
-retrouver. Nous allons aussi lui associer une valeur un peu particulières :
+retrouver. Nous allons aussi lui associer une valeur un peu particulière :
 `None` (_rien_ en français). Cette valeur veut dire _"Il n'y a rien dans
 cette variable"_, tout simplement.
 
@@ -663,12 +664,12 @@ radio.send(str(choix_joueur))
 {{% exemple %}}
 #### C'est quoi ça, `str()` ?
 
-C'est quelque chose que nous n'avons pas abordés, mais toute de même important.
-En effet, les variables sont _typées_. Cela veut dire qu'elles ne peuvent
-stocker qu'un type de valeur : des entiers, du texte, des nombres décimaux...
-La fonction `str(entier)` permet simplement de convertir l'entier _`entier`_ en
-texte. Le texte peut être différencié des entiers par la présence de simple
-guillemets (`'`) ou double guillemets (`"`).
+C'est quelque chose que nous n'avons pas abordé, mais toute de même important.
+En effet, les variables sont _typées_. Cela veut dire qu'elles ne peuvent stocker
+qu'un type de valeur : des nombres entiers, du texte, des nombres décimaux...
+La fonction `str(entier)` permet simplement de convertir le nombre entier _`entier`_
+en texte. Le texte peut être différencié des nombres entiers par la présence
+de simple guillemets (`'`) ou double guillemets (`"`).
 
 Par exemple :
 ```codepython
@@ -679,14 +680,14 @@ texte = str(entier)
 print(texte)
 ```
 
-Pour convertir un texte en entier, il faut utiliser la fonction `int()`, qui
-fonctionne de la même façon :
+Pour convertir un texte en nombre entier, il faut utiliser la fonction `int()`,
+qui fonctionne de la même façon :
 
 ```codepython
 texte = "12"
 entier = int(texte)
 
-# Affiche l'entier 12
+# Affiche le nombre entier 12
 print(entier)
 ```
 
@@ -701,8 +702,8 @@ et on essaye de recevoir celui de l'adversaire.
 ### J'ai reçu son choix !
 
 Une dernière étape pour ce qui concerne le multijoueur est de convertir le choix
-de l'adversaire en entier et le stocker dans la variable `choix_adversaire` afin
-de pouvoir l'utiliser par la suite.
+de l'adversaire en nombre entier et le stocker dans la variable `choix_adversaire`
+afin de pouvoir l'utiliser par la suite.
 
 Une fois que l'utilisation de la radio est terminée, pense à l'éteindre avec la
 fonction :
