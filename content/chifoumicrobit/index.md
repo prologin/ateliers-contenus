@@ -240,18 +240,18 @@ ma_liste_nombres = [0, 1, 2, 3, 4, 5]
 ```
 
 La liste est numérotée de 0 à la longueur de la liste moins 1. Tu peux accéder
-aux éléments d'une liste à l'aide d'index. Ce sont des nombres qui désignent
+aux éléments d'une liste à l'aide de l'indice. Ce sont des nombres qui désignent
 l'emplacement de la case que tu veux regarder. Attention, en programmation, les
-index commencent à 0. Si on nomme la longueur de la liste `longueur`,
-les index peuvent prendre des valeurs entre `0` et `longueur - 1`.
+indeices commencent à 0. Si on nomme la longueur de la liste `longueur`,
+les indices peuvent prendre des valeurs entre `0` et `longueur - 1`.
 
-En Python, pour accéder à un élément à l'index 2, tu peux faire comme ceci :
+En Python, pour accéder à un élément à l'indice 2, tu peux faire comme ceci :
 
 ```codepython
 # Liste de lettres
 ma_liste_lettres = ["a", "b", "c", "d"]
 
-# `ma_variable` est l'élément à l'index 2 de `liste` ("c")
+# `ma_variable` est l'élément à l'indice 2 de `liste` ("c")
 ma_variable = liste[2]
 
 # Affiche `ma_variable` dans la console
@@ -478,13 +478,13 @@ nous avons vu précédemment.
 Tant qu'on reste dans notre boucle `while`, il va falloir afficher le choix
 qui est actuellement sélectionné. Pour ce faire, tu peux utiliser la fonction
 `display.show()` avec comme paramètre l'image dans la liste `possibilites` à
-l'index du choix du joueur défini par la variable `choix_joueur`.
+l'indice du choix du joueur défini par la variable `choix_joueur`.
 
 ### Appuis sur les boutons
 
 Si le bouton A a été appuyé, il faut enlever 1 au nombre désignant le choix du
 joueur. Par la suite, sur ce nouveau nombre, il te faut rester dans l'intervalle
-des index de notre liste `possibilites`. Il va alors falloir rajouter un `%`
+des indices de notre liste `possibilites`. Il va alors falloir rajouter un `%`
 (modulo) !
 
 *Un modu-quoi ?*
@@ -496,23 +496,23 @@ Par exemple, quand tu souhaites diviser 5 par 2, tu auras le quotient qui est
 On va utiliser le même procédé. On ne peut pas accéder au cinquième élément
 d'une liste de longueur 3. On va donc revenir à 0 lorsqu'on dépasse la liste.
 
-Par exemple, lorsque tu es à l'index 3 dans une liste de longueur 3 : les index
-possibles sont 0, 1 et 2. On voudrait que revenir à l'index 0. En Python,
+Par exemple, lorsque tu es à l'indice 3 dans une liste de longueur 3 : les indices
+possibles sont 0, 1 et 2. On voudrait que revenir à l'indice 0. En Python,
 tu peux le faire comme ceci :
 
 ```python
 # Une liste de nombres
 ma_liste = [42, 56, 98]
 
-# On est à l'index 3
-mon_index = 3
+# On est à l'indice 3
+mon_indice = 3
 
-# Le nouveau index est 3 modulo 3 = 0
+# Le nouveau indice est 3 modulo 3 = 0
 # car le reste de la division euclidienne de 3 par 3 est égal à 0
-mon_nouveau_index = 3 % 3
+mon_nouveau_indice = 3 % 3
 
-# L'élément à l'index 0 (3 % 3)
-mon_element = ma_liste[mon_nouveau_index]
+# L'élément à l'indice 0 (3 % 3)
+mon_element = ma_liste[mon_nouveau_indice]
 
 # Affiche `mon_element`
 print(mon_element)
@@ -528,7 +528,7 @@ Comme pour le début de la boucle, il faut que tu réaffiches le choix du joueur
 après le `display.clear()` qui éteint tous les pixels.
 
 Après l'affichage du texte "VS", il faut que tu affiches maintenant le choix
-de l'adversaire en prenant une image dans la liste `possibilites` à l'index
+de l'adversaire en prenant une image dans la liste `possibilites` à l'indice
 `choix_adversaire`.
 
 ## Gagnant et perdant
