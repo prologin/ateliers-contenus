@@ -34,7 +34,34 @@ TABULATION !
 ## Le Prolobot
 
 ### Avancer
-Attention: Ca active le moteur mais ca l'arrete pas
+
+Pour faire avancer le robot, tu peux écrire `bot.avancer()`.
+
+Cette ligne va permettre d'activer les moteurs du robot.
+> Attention : Cette instruction ne le fait pas arrêter ! Pour cela, il faut
+> écrire `bot.stop()`
+
+Tu peux également préciser la vitesse du robot en mettant un nombre entre 0 et 1
+entre les parenthèses. Si tu ne précise pas, le robot ira à la vitesse 0,2.
+
+Voici par exemple comment tu peux le faire avancer.
+
+```py
+bot.avancer()
+sleep(1000)
+bot.avancer(0.5)
+sleep(2000)
+bot.stop()
+```
+
+Ici, la ligne `sleep(1000)` va indiquer au programme qu'il doit attendre pendant
+1000 millisecondes, soit 1 seconde.
+Le robot va donc activer les moteurs, puis attendre 1 seconde et activer les
+moteurs à la vitesse 0.5, puis il attends 2 secondes avant de s'arrêter.
+
+Le robot peut aussi reculer en écrivant `bot.reculer()`. Tout comme pour avancer,
+on peut préciser la vitesse des roues entre les parenthèses.
+
 
 ### Ca tourne
 #### Le sleep
@@ -45,6 +72,8 @@ Attention: Ca active le moteur mais ca l'arrete pas
 ### Capteurs
 
 ## La Doc
+
+La doc répertorie toutes les fonctions qui permettent de contrôler le robot.
 
 <!-- NOTE: La doc est temporaire, si elle reste ca sera juste a la fin pour
     en tant que recap -->
