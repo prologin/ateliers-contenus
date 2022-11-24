@@ -20,13 +20,13 @@ Il te demande de créer un programme leur permettant de jouer sur des `micro:bit
 Peux-tu aider notre ami ?
 
 Skeleton souhaiterait pouvoir choisir un élément parmi trois choix sur un
-`micro:bit` avec les boutons et que l'ordinateur choisisse aussi un élément
+`micro:bit` avec les boutons, que l'ordinateur choisisse aussi un élément
 et que l'on affiche le résultat. Les choix seront les suivants : Skeleton,
 Pacman et Bouh !
 
-Skeleton, faisant peur à Pacman, va gagner contre Pacman. Pacman, quant à lui,
-mange des fantômes, donc il gagnera contre Bouh. Bouh le fantôme voudra attraper
-Skeleton, donc il gagnera contre notre ami le squelette.
+Skeleton, faisant peur à Pacman, l'emporte contre Pacman. Pacman, quant à lui,
+mange des fantômes, il gagne en toute logique contre Bouh. Bouh le fantôme voudra attraper
+Skeleton, il gagnera donc contre notre ami le squelette.
 
 <!-- TODO: ajouter l'image du but du jeu -->
 
@@ -54,10 +54,10 @@ Si tu as la moindre question, n'hésite pas à la poser à un organisateur !
 
 ## Les variables en Python
 
-La plupart du temps, on va vouloir stocker des informations dans notre code.
-On parle alors de variables. Elles vont nous permettre de ranger des choses
-et de pouvoir les ressortir quand on le souhaite. Les variables sont des éléments
-qui associent un nom à une valeur. C'est comme si on utilisait des boîtes pour
+La plupart du temps, nous avons besoin de stocker des informations dans notre code.
+On parle alors de variables. Elles permettent de ranger des choses
+et de pouvoir les ressortir quand on le souhaite. Ce sont des éléments qui
+associent un nom à une valeur. C'est comme si on utilisait des boîtes pour
 ranger des éléments !
 
 <!-- TODO: ajouter les images -->
@@ -131,7 +131,8 @@ if 1 == 1:
 
 Parfois, il va falloir que tu vérifies si deux conditions sont vérifiées en
 même temps. On va alors parler du mot-clé `and` qui signifie "et" en français.
-Pour faire cela, voici un exemple en Python :
+
+En voici un exemple :
 
 ```python
 a = 5
@@ -210,7 +211,7 @@ les conditions dans les boucles `while` pour pouvoir répéter des choses
 tant qu'une condition est toujours vraie. Par exemple, tant que le bébé dort,
 nous ne devons pas faire de bruit.
 
-Un exemple en Python serait celui-ci :
+Un exemple serait celui-ci :
 
 ```python
 # Tant que i est inférieur à 3
@@ -231,7 +232,7 @@ nous permettre de stocker plusieurs valeurs dans une seule variable.
 
 <!-- TODO: rajouter des images -->
 
-Par exemple, en Python :
+Par exemple,
 
 ```python
 # Liste des nombres de 0 à 5
@@ -277,11 +278,13 @@ En Python, on peut simuler de l'aléatoire, comme dans un lancé de dé. Pour fa
 cela, il faut alors donner deux nombres, qui formeront l'intervalle dans lequel on
 veut générer le nombre aléatoire.
 
-En Python, pour générer notre nombre aléatoire, il va d'abord falloir importer
+Afin de générer notre nombre aléatoire, il va d'abord falloir importer
 une bibliothèque. Cela va nous permettre d'utiliser des fonctions déjà écrites
-dans la bibliothèque. Ici, on va juste utiliser la fonction `randint`. Si tu ne
-connais pas les fonctions, il faut les considérer comme des machines dans
-lequelles on entre des valeurs et qui nous en ressortent d'autre. Elles vont
+dans la bibliothèque. Ici, on va juste utiliser la fonction `randint` de la
+bibliothèque `random`.
+
+Si tu ne connais pas les fonctions, il faut les considérer comme des machines
+dans lequelles on entre des valeurs et qui nous en ressortent d'autre. Elles vont
 travailler sur nos entrées pour ressortir un élément.
 
 ```python
@@ -555,7 +558,7 @@ cela veut dire que tu as perdu et il faut que tu affiches "Tu as perdu...".
 # C'est déjà fini ?
 
 Normalement, en suivant les instructions de la partie d'avant, tu devrais
-avoir un jeu fini ! Si cela ne fonctionne pas, essaye d'appeler un organisateur
+avoir un jeu fini ! Si cela ne fonctionne pas, hésite pas à appeler un organisateur
 pour qu'il vienne t'aider !
 
 Maintenant que tu as un prototype, Skeleton est très content ! Cependant, il
