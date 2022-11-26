@@ -128,7 +128,7 @@ C'est lui que tu vas faire bouger.
 
 ### Avancer
 
-Pour faire forward le robot, tu peux écrire `bot.forward()`.
+Pour faire avancer le robot, tu peux écrire `bot.forward()`.
 
 Cette ligne va permettre d'activer les moteurs du robot.
 > Attention : Cette instruction ne le fait pas arrêter ! Pour cela, il faut
@@ -137,7 +137,7 @@ Cette ligne va permettre d'activer les moteurs du robot.
 Tu peux également préciser la vitesse du robot en mettant un nombre entre 0 et 1
 entre les parenthèses. Si tu ne précise pas, le robot ira à la vitesse 0,2.
 
-Voici par exemple comment tu peux le faire forward.
+Voici par exemple comment tu peux le faire avancer.
 
 ```py
 bot.forward()
@@ -148,31 +148,31 @@ bot.stop()
 ```
 
 #### Le sleep
-L'instruction `sleep(Temps)` est une instruction pour mettre en pause le 
-programme pour une duree de `Temps` milisecondes. 
+L'instruction `sleep(time)` est une instruction pour mettre en pause le 
+programme pour une duree de `time` milisecondes. 
 
 Dans le programme au dessus, la ligne `sleep(1000)` va donc indiquer au programme 
 qu'il doit attendre pendant 1000 millisecondes, soit 1 seconde.
 Le robot va donc activer les moteurs, puis attendre 1 seconde et activer les
 moteurs à la vitesse 0.5, puis il attends 2 secondes avant de s'arrêter.
 
-Le robot peut aussi backward en écrivant `bot.reculer()`. Tout comme pour forward,
+Le robot peut aussi reculer en écrivant `bot.backward()`. Tout comme pour forward,
 on peut préciser la vitesse des roues entre les parenthèses.
 
 
 ### Ca tourne
 
 Faire forward le robot c'est bien, le faire turn c'est encore mieux. Pour se faire plusieurs méthodes existent: 
-    `bot.rotate(direction,vitesse)`
-    `bot.turn(direction,vitesse)`
+    `bot.rotate(direction, speed)`
+    `bot.turn(direction, speed)`
 
 Ces deux instructions ont deux paramètres mais seule l'instruction direction est obligatoire. C'est à dire:
     `bot.rotate(direction)` fonctionne et aura une vitesse mise par défaut à 0.2
     `bot.turn(direction)` fonctionne et aura aussi une vitesse mise à 0.2
 
-Faisons une distinction, l'instruction `bot.turn(GAUCHE)` allume seulement le moteur de droite pour faire tourner le robot. `bot.tourner(DROITE)` fait la même chose mais allume le moteur de gauche.
+Faisons une distinction, l'instruction `bot.turn(LEFT)` allume seulement le moteur de droite pour faire tourner le robot. `bot.turn(RIGHT)` fait la même chose mais allume le moteur de gauche.
 
-Maintenant, l'instruction `bot.rotate(GAUCHE)` allume le moteur droite comme pour `bot.turn(GAUCHE)` cependant il allume aussi le moteur gauche mais dans le sens opposé à celui du moteur de droite. L'instruction `bot.pivoter(DROITE)` fait la même chose dans le sens inverse.
+Maintenant, l'instruction `bot.rotate(LEFT)` allume le moteur droite comme pour `bot.turn(GAUCHE)` cependant il allume aussi le moteur gauche mais dans le sens opposé à celui du moteur de droite. L'instruction `bot.rotate(RIGHT)` fait la même chose dans le sens inverse.
 
 Je te donne un court programme pour essayer ce que je viens de t'expliquer:
 
@@ -181,16 +181,16 @@ import prolobot
 from microbit import *
 bot = Prolobot()
 
-bot.turn(DROITE)
+bot.turn(RIGHT)
 sleep(1000)
 
-bot.rotate(GAUCHE)
+bot.rotate(LEFT)
 sleep(1000)
 
-bot.turn(DROITE)
+bot.turn(RIGHT)
 sleep(1000)
 
-bot.rotate(GAUCHE)
+bot.rotate(LEFT)
 sleep(1000)
 
 bot.stop()
@@ -203,27 +203,27 @@ Voici maintenant la partie la plus amusante de cet atelier et le moment où c'es
 Sur ce petit robot, plusieurs leds sont configurables et sont mises à votre disposition pour pouvoir s'amuser. 
 Au total le robot possède 6 leds:
     2 positionnées à l'avant (qu'on appellera dans cet atelier "Phare") qu'on utilise avec la commande:
-        `bot.set_headlight(Phare,État)`
-            `Phare` : DROITE (led avant droite) / GAUCHE (led avant gauche).
-            `État` : 1 (pour allumer) / 0 (pour éteindre).
+        `bot.set_headlight(led, state)`
+            `led` : RIGHT (led avant droite) / LEFT (led avant gauche).
+            `state` : 1 (pour allumer) / 0 (pour éteindre).
     4 positionnées en dessous qu'on utilise avec la commande:
-        `bot.turn_on_led(Led, Couleur)`
-            `Led` : correspond à un chiffre entre 0 et 3.
+        `bot.turn_on_led(led, color)`
+            `led` : correspond à un chiffre entre 0 et 3.
                 0 : en haut à gauche.
                 1 : en bas à gauche.
                 2 : en bas à droite.
                 3 : en haut à droite.
-            `Couleur` : c'est un paramètre de la forme (rouge, vert, bleu) (aussi appelé rgb).
+            `color` : c'est un paramètre de la forme (rouge, vert, bleu) (aussi appelé rgb).
                 Les valeurs de `rouge`, `vert` et `bleu` sont entre 0 et 255.
                 (0,0,0) correspond au noir.
                 (255,255,255) correspond au blanc.
         `bot.turn_off_led()` permet d'éteindre toutes les leds du dessous.
 
 Voici quelques exemples:
-    `bot.set_headlight(DROITE,1)` allume le phare de droite
-    `bot.set_headlight(GAUCHE,0)` éteint le phare de gauche
+    `bot.set_headlight(RIGHT,1)` allume le phare de droite
+    `bot.set_headlight(LEFT,0)` éteint le phare de gauche
     `bot.turn_on_led(0,(0,0,0))` allume la led en haut à gauche avec la couleur noire
-    `bot.turn_on_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleue ciel
+    `bot.turn_on_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleu ciel
     `bot.turn_off_led()` éteint toutes les leds du dessous.
 
 ### Les boucles
@@ -266,7 +266,7 @@ Il y 3 capteurs différents sur le robot:
     1 capteur de distance situé à l'avant qui permet de savoir la distance entre un objet et lui même.
         `bot.distance()` est l'instruction qui permet de renvoyer la distance entre le robot l'obstacle devant lui
     2 capteurs de ligne permettant de détecter les lignes sous le robot
-        `bot.floor_sensor(capteur)` est l'instruction qui permet de savoir si le capteur GAUCHE ou DROITE détecte une ligne noire. Si il en détecte une, il renvoie True sinon il renvoie False (True se traduit par "Vrai" et False par "Faux")
+        `bot.floor_sensor(capteur)` est l'instruction qui permet de savoir si le capteur LEFT ou RIGHT détecte une ligne noire. Si il en détecte une, il renvoie True sinon il renvoie False (True se traduit par "Vrai" et False par "Faux")
 
 ### Conclusion
 Voilà tu as maintenant toutes les cartes en main pour pouvoir t'amuser. Tu retrouveras en dessous un resumé de toutes les instructions qui sont mises à ta disposition.
@@ -282,15 +282,15 @@ La doc répertorie toutes les fonctions qui permettent de contrôler le robot.
 ### Instantier le robot
 
 ```py
-import prolobot
+from prolobot import *
 
 bot = Prolobot()
 ```
 
 ### Variables globales
 
-`GAUCHE = 0`. A donner en parametre pour turn a gauche.
-`DROITE = 1`. A donner en parametre pour turn a droite.
+`LEFT = 0`. A donner en parametre pour turn a gauche.
+`RIGHT = 1`. A donner en parametre pour turn a droite.
 
 ### Fonctions
 
@@ -309,17 +309,17 @@ bot = Prolobot()
 - La vitesse est un float entre 0 et 1.
 
 `bot.turn(direction)`: tourne le robot dans la direction donnee. 
-- On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer la direction.
+- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer la direction.
 
 `bot.turn(direction, vitesse)`: tourne le robot dans la direction et a la vitesse donnee.
-- On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer la direction
+- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer la direction
 - La vitesse est entre 0 et 1
 
 `bot.rotate(direction)`: tourne le robot sur lui même dans la direction donnee. 
-- On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer la direction.
+- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer la direction.
 
 `bot.rotate(direction, vitesse)`: tourne le robot sur lui même dans la direction et a la vitesse donnee.
-- On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer la direction
+- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer la direction
 - La vitesse est entre 0 et 1
 
 `bot.stop()`: arrete le robot.
@@ -329,12 +329,12 @@ bot = Prolobot()
 `bot.distance()`: renvoie la distance entre le robot et les obstacles en face de lui.
 
 `bot.floor_sensor(sensor)`: renvoie 1 si le capteur detecte du noir.
-- On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer quel capteur utiliser.
+- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer quel capteur utiliser.
 
 #### LEDs
 
 `bot.set_headlight(led, status)`: allume ou eteint un des phares avant,
-- On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer quel capteur utiliser.
+- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer quel capteur utiliser.
 - Le statut est a 1 pour allumer et 0 pour eteindre la led
 
 `bot.turn_on_led(led, couleur)`: allume la led correspondante.
