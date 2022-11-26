@@ -98,7 +98,7 @@ Quand vous ferez votre programme plus tard, il sera sûrement nécessaire d'en u
 ## Le Prolobot
 
 C'est ici que les choses commencent enfin. On va maintenant t'apprendre à utiliser les fonctionnalités des petits robots que tu as devant toi. Durant cette deuxième partie n'hésite pas à essayer ton code sur les robots c'est tout l'enjeu de cet atelier.
-Commençons par avancer.
+Commençons par forward.
 
 ### Utiliser avec l'éditeur
 
@@ -128,7 +128,7 @@ C'est lui que tu vas faire bouger.
 
 ### Avancer
 
-Pour faire avancer le robot, tu peux écrire `bot.avancer()`.
+Pour faire forward le robot, tu peux écrire `bot.forward()`.
 
 Cette ligne va permettre d'activer les moteurs du robot.
 > Attention : Cette instruction ne le fait pas arrêter ! Pour cela, il faut
@@ -137,12 +137,12 @@ Cette ligne va permettre d'activer les moteurs du robot.
 Tu peux également préciser la vitesse du robot en mettant un nombre entre 0 et 1
 entre les parenthèses. Si tu ne précise pas, le robot ira à la vitesse 0,2.
 
-Voici par exemple comment tu peux le faire avancer.
+Voici par exemple comment tu peux le faire forward.
 
 ```py
-bot.avancer()
+bot.forward()
 sleep(1000)
-bot.avancer(0.5)
+bot.forward(0.5)
 sleep(2000)
 bot.stop()
 ```
@@ -152,23 +152,23 @@ Ici, la ligne `sleep(1000)` va indiquer au programme qu'il doit attendre pendant
 Le robot va donc activer les moteurs, puis attendre 1 seconde et activer les
 moteurs à la vitesse 0.5, puis il attends 2 secondes avant de s'arrêter.
 
-Le robot peut aussi reculer en écrivant `bot.reculer()`. Tout comme pour avancer,
+Le robot peut aussi backward en écrivant `bot.reculer()`. Tout comme pour forward,
 on peut préciser la vitesse des roues entre les parenthèses.
 
 
 ### Ca tourne
 
-Faire avancer le robot c'est bien, le faire tourner c'est encore mieux. Pour se faire plusieurs méthodes existent: 
-    `bot.pivoter(direction,vitesse)`
-    `bot.tourner(direction,vitesse)`
+Faire forward le robot c'est bien, le faire turn c'est encore mieux. Pour se faire plusieurs méthodes existent: 
+    `bot.rotate(direction,vitesse)`
+    `bot.turn(direction,vitesse)`
 
 Ces deux instructions ont deux paramètres mais seule l'instruction direction est obligatoire. C'est à dire:
-    `bot.pivoter(direction)` fonctionne et aura une vitesse mise par défaut à 0.2
-    `bot.tourner(direction)` fonctionne et aura aussi une vitesse mise à 0.2
+    `bot.rotate(direction)` fonctionne et aura une vitesse mise par défaut à 0.2
+    `bot.turn(direction)` fonctionne et aura aussi une vitesse mise à 0.2
 
-Faisons une distinction, l'instruction `bot.tourner(GAUCHE)` allume seulement le moteur de droite pour faire tourner le robot. `bot.tourner(DROITE)` fait la même chose mais allume le moteur de gauche.
+Faisons une distinction, l'instruction `bot.turn(GAUCHE)` allume seulement le moteur de droite pour faire tourner le robot. `bot.tourner(DROITE)` fait la même chose mais allume le moteur de gauche.
 
-Maintenant, l'instruction `bot.pivoter(GAUCHE)` allume le moteur droite comme pour `bot.tourner(GAUCHE)` cependant il allume aussi le moteur gauche mais dans le sens opposé à celui du moteur de droite. L'instruction `bot.pivoter(DROITE)` fait la même chose dans le sens inverse.
+Maintenant, l'instruction `bot.rotate(GAUCHE)` allume le moteur droite comme pour `bot.turn(GAUCHE)` cependant il allume aussi le moteur gauche mais dans le sens opposé à celui du moteur de droite. L'instruction `bot.pivoter(DROITE)` fait la même chose dans le sens inverse.
 
 Je te donne un court programme pour essayer ce que je viens de t'expliquer:
 
@@ -177,16 +177,16 @@ import prolobot
 from microbit import *
 bot = Prolobot()
 
-bot.tourner(DROITE)
+bot.turn(DROITE)
 sleep(1000)
 
-bot.pivoter(GAUCHE)
+bot.rotate(GAUCHE)
 sleep(1000)
 
-bot.tourner(DROITE)
+bot.turn(DROITE)
 sleep(1000)
 
-bot.pivoter(GAUCHE)
+bot.rotate(GAUCHE)
 sleep(1000)
 
 bot.stop()
@@ -206,7 +206,7 @@ Au total le robot possède 6 leds:
             `Phare` : DROITE (led avant droite) / GAUCHE (led avant gauche).
             `État` : 1 (pour allumer) / 0 (pour éteindre).
     4 positionnées en dessous qu'on utilise avec la commande:
-        `bot.allumer_led(Led, Couleur)`
+        `bot.turn_on_led(Led, Couleur)`
             `Led` : correspond à un chiffre entre 0 et 3.
                 0 : en haut à gauche.
                 1 : en bas à gauche.
@@ -216,14 +216,14 @@ Au total le robot possède 6 leds:
                 Les valeurs de `rouge`, `vert` et `bleu` sont entre 0 et 255.
                 (0,0,0) correspond au noir.
                 (255,255,255) correspond au blanc.
-        `bot.eteindre_led()` permet d'éteindre toutes les leds du dessous.
+        `bot.turn_off_led()` permet d'éteindre toutes les leds du dessous.
 
 Voici quelques exemples:
     `bot.set_phare(DROITE,1)` allume le phare de droite
     `bot.set_phare(GAUCHE,0)` éteint le phare de gauche
-    `bot.allumer_led(0,(0,0,0))` allume la led en haut à gauche avec la couleur noire
-    `bot.allumer_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleue ciel
-    `bot.eteindre_led()` éteint toutes les leds du dessous.
+    `bot.turn_on_led(0,(0,0,0))` allume la led en haut à gauche avec la couleur noire
+    `bot.turn_on_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleue ciel
+    `bot.turn_off_led()` éteint toutes les leds du dessous.
 
 ### Les boucles
 Comme vous avez pu le remarquer, très souvent pour la même action on copie la même ligne plusieurs fois. Ou alors votre robot avance mais quand le programme a fini d'exécuter les lignes, il s'arrête. Pour pallier à ce probleme, il y a en programmation ce que on appelle des boucles. Les boucles permettent d'exécuter un nombre de fois précis une série instructions.
@@ -232,14 +232,14 @@ Prenons cet exemple:
 #Debut du programme
 
 for i in range(5):
-    bot.avancer()
+    bot.forward()
     sleep(1000)
     bot.stop()
     sleep(1000)
 
 #Fin du programme
 ```
-Ce court programme permet à notre robot d'avancer pendant 1 seconde puis s'arrêter pendant 1 seconde et ce 5 fois avant de s'arrêter.
+Ce court programme permet à notre robot d'forward pendant 1 seconde puis s'arrêter pendant 1 seconde et ce 5 fois avant de s'arrêter.
 
 Une autre boucle existe mais celle-ci permet au programme de ne jamais s'arrêter c'est `while`
 Prenons cet exemple:
@@ -248,7 +248,7 @@ Prenons cet exemple:
 #Debut du programme
 
 while True:
-    bot.avancer()
+    bot.forward()
     sleep(1000)
     bot.stop()
     sleep(1000)
@@ -265,7 +265,7 @@ Il y 3 capteurs différents sur le robot:
     1 capteur de distance situé à l'avant qui permet de savoir la distance entre un objet et lui même.
         `bot.distance()` est l'instruction qui permet de renvoyer la distance entre le robot l'obstacle devant lui
     2 capteurs de ligne permettant de détecter les lignes sous le robot
-        `bot.capteur_sol(capteur)` est l'instruction qui permet de savoir si le capteur GAUCHE ou DROITE détecte une ligne noire. Si il en détecte une, il renvoie True sinon il renvoie False (True se traduit par "Vrai" et False par "Faux")
+        `bot.floor_sensor(capteur)` est l'instruction qui permet de savoir si le capteur GAUCHE ou DROITE détecte une ligne noire. Si il en détecte une, il renvoie True sinon il renvoie False (True se traduit par "Vrai" et False par "Faux")
 
 ### Conclusion
 Voilà tu as maintenant toutes les cartes en main pour pouvoir t'amuser. Tu retrouveras en dessous un resumé de toutes les instructions qui sont mises à ta disposition.
@@ -288,36 +288,36 @@ bot = Prolobot()
 
 ### Variables globales
 
-`GAUCHE = 0`. A donner en parametre pour tourner a gauche.
-`DROITE = 1`. A donner en parametre pour tourner a droite.
+`GAUCHE = 0`. A donner en parametre pour turn a gauche.
+`DROITE = 1`. A donner en parametre pour turn a droite.
 
 ### Fonctions
 
 #### Deplacement
 
-`bot.avancer()`: avance le robot.
+`bot.forward()`: avance le robot.
 - La vitesse par defaut est 0.2
 
-`bot.avancer(vitesse)`: avance a la vitesse donnee.
+`bot.forward(vitesse)`: avance a la vitesse donnee.
 - La vitesse est un float entre 0 et 1.
 
-`bot.reculer()`: recule le robot.
+`bot.backward()`: recule le robot.
 - La vitesse par defaut est 0.2.
 
-`bot.reculer(vitesse)`: recule le robot a la vitesse donnee.
+`bot.backward(vitesse)`: recule le robot a la vitesse donnee.
 - La vitesse est un float entre 0 et 1.
 
-`bot.tourner(direction)`: tourne le robot dans la direction donnee. 
+`bot.turn(direction)`: tourne le robot dans la direction donnee. 
 - On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer la direction.
 
-`bot.tourner(direction, vitesse)`: tourne le robot dans la direction et a la vitesse donnee.
+`bot.turn(direction, vitesse)`: tourne le robot dans la direction et a la vitesse donnee.
 - On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer la direction
 - La vitesse est entre 0 et 1
 
-`bot.pivoter(direction)`: tourne le robot sur lui même dans la direction donnee. 
+`bot.rotate(direction)`: tourne le robot sur lui même dans la direction donnee. 
 - On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer la direction.
 
-`bot.pivoter(direction, vitesse)`: tourne le robot sur lui même dans la direction et a la vitesse donnee.
+`bot.rotate(direction, vitesse)`: tourne le robot sur lui même dans la direction et a la vitesse donnee.
 - On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer la direction
 - La vitesse est entre 0 et 1
 
@@ -327,17 +327,17 @@ bot = Prolobot()
 
 `bot.distance()`: renvoie la distance entre le robot et les obstacles en face de lui.
 
-`bot.capteur_sol(capteur)`: renvoie 1 si le capteur detecte du noir.
+`bot.floor_sensor(sensor)`: renvoie 1 si le capteur detecte du noir.
 - On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer quel capteur utiliser.
 
 #### LEDs
 
-`bot.set_phares(phare, statut)`: allume ou eteint un des phares avant,
+`bot.set_headlight(led, status)`: allume ou eteint un des phares avant,
 - On peut utiliser les constantes `DROITE` et `GAUCHE` pour indiquer quel capteur utiliser.
 - Le statut est a 1 pour allumer et 0 pour eteindre la led
 
-`bot.allumer_led(led, couleur)`: allume la led correspondante.
+`bot.turn_on_led(led, couleur)`: allume la led correspondante.
 - La led est un entier de 0 a 3 servant a preciser la led a allumer
 - La couleur est de la forme (rouge, vert, bleu), avec les couleurs allant de 0 a 255
 
-`bot.eteindre_led()`: eteint toutes les leds
+`bot.turn_off_led()`: eteint toutes les leds
