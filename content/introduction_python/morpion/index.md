@@ -22,7 +22,7 @@ Au cours de cette initiation au langage Python, tu vas te familiariser avec les 
 Avoir realisé l'exercice `Introduction au Python - Juste Prix`.
 
 ## Les fonctions
-Pour cet exercice, tu vas avoir besoin des notions vues dans l'exercices precedent, donc n'hesite pas a revenir dessus si besoin. Tu auras egalement besoin d'une nouvelle notion : les **fonctions**.
+Pour cet exercice, tu vas avoir besoin des notions vues dans l'exercice précédent, donc n'hésite pas à revenir dessus si besoin. Tu auras également besoin d'une nouvelle notion : les **fonctions**.
 
 Une fonction est un **bloc de code** que l'on peut ré-utiliser à volonté sans avoir à copier/coller les instructions qui la composent. Une fonction prend des **paramètres** et peut renvoyer une valeur appelée **sortie**.
 
@@ -39,7 +39,7 @@ Ensuite, nous avons utilisé la touche TAB pour aligner le code du corps de notr
 >>> x = 6
 >>> resultat = ajouter_4(x)
 >>> print(resultat)
-10 # on obtient ce resultat car 6 + 4 = 10, meme logique pour la suite
+10 # on obtient ce resultat car 6 + 4 = 10, même logique pour la suite
 
 >>> resultat = ajouter_4(5)
 >>> print(resultat)
@@ -66,37 +66,37 @@ Résumons ce qu'il vient de se passer dans cet exemple :
 **Remarque :** il est possible d'avoir des fonctions qui ne renvoient rien. Il suffit simplement de ne pas utiliser le mot-cle `return`.
 
 ## Les listes
-Les listes sont un autre type de valeur present dans Python. Il s'agit d'un type qui va pouvoir contenir un ensemble d'autres types vus precedemment.
+Les listes sont un autre type de valeur présent dans Python. Il s'agit d'un type qui va pouvoir contenir un ensemble d'autres types vus precedemment.
 
 ```py
-liste = [] # pour creer une liste vide
-liste = [1, 2, 3, 4] # pour creer une liste avec des elements, ici des nombres
-liste = ["salut", 3, 5.4] # pour creer une liste avec des elements de differents types
-liste = [[0, 0], [1, 0]] # pour creer une liste de listes
+liste = [] # pour créer une liste vide
+liste = [1, 2, 3, 4] # pour créer une liste avec des éléments, ici des nombres
+liste = ["salut", 3, 5.4] # pour créer une liste avec des éléments de différents types
+liste = [[0, 0], [1, 0]] # pour créer une liste de listes
 ```
 
-Il est egalement possible de modifier et d'acceder a un element en particulier dans une liste.
+Il est également possible de modifier et d'acceder à un élément en particulier dans une liste.
 
 ```py
 >>> liste = [1, 2, 3, 4]
->>> print(liste[0]) # on accede ici a l'element en position 0
+>>> print(liste[0]) # on accède ici a l'élément en position 0
 1
 >>> print(liste[3])
 4
 
 >>> liste = [[1, 2], [3, 4]]
->>> print(liste[0][1]) # on accede a l'element en position 0 de liste, puis a l'element en position 1 de liste[0]
+>>> print(liste[0][1]) # on accède a l'élément en position 0 de liste, puis a l'élément en position 1 de liste[0]
 2
 
 >>> liste = ["a", "b", "c", "fin"]
->>> liste[2] = "d" # on modifie l'element en position 2
+>>> liste[2] = "d" # on modifie l'élément en position 2
 >>> print(liste[2])
 "d"
 ```
 
 ## Les boucles `for`
 
-Les boucles `for` sont un autre type de boucle, different des boucles `while` vues dans l'exercice du Juste Prix. Dans le morpion, elles vont nous etre utiles pour **iterer** dans les listes, c'est a dire, parcourir les elements. Voici un exemple d'utilisation :
+Les boucles `for` sont un autre type de boucle, différents des boucles `while` vues dans l'exercice du Juste Prix. Dans le morpion, elles vont nous être utiles pour **itérer** dans les listes, c'est-à-dire, parcourir les éléments. Voici un exemple d'utilisation :
 
 ```py
 liste = [1, 2, 3]
@@ -106,7 +106,7 @@ for i in range(len(liste)):
 for element in liste:
     print(element)
 ```
-Dans l'exemple precedent, on itere sur la liste de deux manieres differentes. On obtient neanmoins le meme affichage. Le choix de la maniere d'iterer va dependre des instructions que l'on va utiliser dans la boucle, si par exemple on a besoin de `i` ou non.
+Dans l'exemple précédent, on itère sur la liste de deux manières différentes. On obtient néanmoins le même affichage. Le choix de la maniere d'itérer va dépendre des instructions que l'on va utiliser dans la boucle, si par exemple on a besoin de `i` ou non.
 
 Il est possible d'imbriquer des boucles `for` comme ceci:
 ```py
@@ -122,50 +122,50 @@ for l in liste:
 
 ## Le jeu du Morpion
 
-**But du jeu :** sur une grille 3x3, deux joueurs vont chacun leur tour, placer sur la grille un symbole qui leur est attribue (O ou X). Le but est de reussir a aligner 3 de ses symboles de maniere horizontale, verticale ou diagonale. 
+**But du jeu :** sur une grille 3x3, deux joueurs vont chacun leur tour, placer sur la grille un symbole qui leur est attribué (O ou X). Le but est de reussir à aligner 3 de ces symboles de manière horizontale, verticale ou diagonale. 
 
 Pour coder notre jeu du Morpion, nous pouvons decomposer notre programme en plusieurs etapes et fonctions. Tu vas pouvoir trouver ces differentes fonctions a completer dans le fichier `morpion.py`. 
 
 N'hésite pas à appeler un orga si tu as la moindre question sur ce fichier.
 
-### Creer une grille vierge : `nouvelleGrille()`
-Dans cette fonction, il va falloir creer une grille vierge de Morpion, de dimension 3x3. Pour modeliser une grille de morpion, on va utiliser des listes des listes. 
+### Créer une grille vierge : `nouvelleGrille()`
+Dans cette fonction, il va falloir créer une grille vierge de Morpion, de dimension 3x3. Pour modéliser une grille de morpion, on va utiliser une liste de listes. 
 
-Chaque case de la grille aura un status particulier : `" "`, `"O"` ou `"X"`.
+Chaque case de la grille aura un statut particulier : `" "`, `"O"` ou `"X"`.
 - `" "` signifie que la case est vide
 - `"O"` signifie que le joueur O a rempli la case
 - `"X"` signifie que le joueur X a rempli la case
-On remplira notre liste des listes avec ces symboles par la suite. Ici, une grille vierge ne contient que des `" "`.
+On remplira notre liste de listes avec ces symboles par la suite. Ici, une grille vierge ne contient que des `" "`.
 
 Exemple de ce que tu vas devoir faire avec une grille en 2x2 :
 ```py
 grille = [[" ", " "], [" ", " "]]
 ```
-Cette liste de listes correspond a la grille suivante:
+Cette liste de listes correspond à la grille suivante :
 |`grille[0][0]`|`grille[0][1]`|
 |---|---|
 |`grille[1][0]`|`grille[1][1]`|
 
 N'oublie de renvoyer ta nouvelle grille dans cette fonction !
 
-### Verifier si la grille a un gagnant : `verifierGrille(grille)`
-Apres chaque modification dans la grille, il va falloir verifier si un joueur est gagnant. C'est a dire, verifier s'il y a 3 symboles identiques alignes de maniere horizontale, verticale ou diagonale. Il y a donc 3 cas a gerer.
+### Vérifier si la grille a un gagnant : `verifierGrille(grille)`
+Apres chaque modification dans la grille, il va falloir vérifier si un joueur est gagnant. C'est-à-dire, vérifier s'il y a 3 symboles identiques alignés de manière horizontale, verticale ou diagonale. Il y a donc 3 cas à gérer.
 
-Pour cela tu vas avoir besoin de boucles `for` que tu as pu voir dans une section au dessus. Elles vont t'etre utiles pour iterer dans la grille.
+Pour cela, tu vas avoir besoin de boucles `for` que tu as pu voir dans une section au-dessus. Elles vont t'être utiles pour itérer dans la grille.
 
-Si la grille n'a aucun joueur gagnant, alors il faut renvoyer `" "`, sinon il faut renvoyer le symbole associe au gagnant : `"O"` ou `"X"`.
+Si la grille n'a aucun joueur gagnant, alors il faut renvoyer `" "`, sinon il faut renvoyer le symbole associé au gagnant : `"O"` ou `"X"`.
 
-**Important :** la variable `coord` passee en parametre est un couple de variables. Dans notre cas : `coord = (coordonnee_horizontale, coordonne_verticale)`. Ainsi pour recuperer les coordonnees, il suffit de faire cela :
+**Important :** la variable `coord` passée en paramètre est un couple de variables. Dans notre cas : `coord = (coordonnee_horizontale, coordonne_verticale)`. Ainsi pour recupérer les coordonnees, il suffit de faire cela :
 ```py
 >>> coord = (4, 5)
->>> # Methode 1 : comme dans une liste !
+>>> # Méthode 1 : comme dans une liste !
 >>> coordonnee_horizontale = coord[0]
 >>> print(coordonnee_horizontale)
 4
 >>> coordonnee_verticale = coord[1]
 >>> print(coordonne_verticale)
 5
->>> # Methode 2 : a l'aide de variables
+>>> # Méthode 2 : à l'aide de variables
 >>> horizontal, vertical = coord
 >>> print(horizontal)
 4
@@ -173,10 +173,10 @@ Si la grille n'a aucun joueur gagnant, alors il faut renvoyer `" "`, sinon il fa
 5
 ```
 
-### Verifier si les coordonnees donnees par le joueur sont valides : `verifierCoordonnees(grille, coord)`
-Dans cette fonction, tu vas devoir verifier si les coordonnees passees en parametre sont valides. Entre autres, tu vas devoir verifier plusieurs choses : 
-1. si les coordonnees sont bien des nombres
-    - tu auras besoin de la fonction python `isnumeric()` pour verifier que la coordonnee donnee sous forme de chaine de caracteres est bien un nombre. Elle s'utilise de la maniere suivante :
+### Vérifier si les coordonnées données par le joueur sont valides : `verifierCoordonnees(grille, coord)`
+Dans cette fonction, tu vas devoir vérifier si les coordonnées passées en paramètre sont valides. Entre autres, tu vas devoir vérifier plusieurs choses :
+1. Si les coordonnées sont bien des nombres
+    - tu auras besoin de la fonction python `isnumeric()` pour vérifier que la coordonnée donnée sous forme de chaine de caractères est bien un nombre. Elle s'utilise de la maniere suivante :
 
 ```py
 >>> texte = "42"
@@ -187,38 +187,38 @@ True
 False
 ```
 
-2. si les coordonnees sont bien dans la grille
-    - pour cela, il faut verifier si le nombre donne par les coordonnes n'est pas trop grand et permet bien d'acceder a un element de la grille
-3. si la case dans la grille est deja occupee
-    - c'est a dire si le contenu de la case est different de `" "`
+2. si les coordonnées sont bien dans la grille
+    - pour cela, il faut vérifier si le nombre donné par les coordonnées ne sont pas trop grands et permettent bien d'accéder à un élément de la grille
+3. si la case dans la grille est deja occupée
+    - c'est-à-dire si le contenu de la case est différent de `" "`
 
-### Demander des coordonnees au joueur : `demanderCoordonnees(grille, joueur)`
-Dans cette fonction, on souhaite demander au joueur, les coordonnees de l'emplacement dans la grille ou il souhaiterait placer son symbole. Les coordonnees doivent continuer a etre demandees tant qu'elles ne sont pas valides par la fonction precedente, `verifierCoordonnees(grille, coord)`. Pour cela, tu vas pouvoir utiliser une boucle `while`.
+### Demander des coordonnées au joueur : `demanderCoordonnees(grille, joueur)`
+Dans cette fonction, on souhaite demander au joueur, les coordonnées de l'emplacement dans la grille ou il souhaiterait placer son symbole. Les coordonnées doivent continuer à etre demandées tant qu'elles ne sont pas valides par la fonction précédente, `verifierCoordonnees(grille, coord)`. Pour cela, tu vas pouvoir utiliser une boucle `while`.
 
 Voici ce que la fonction va devoir faire :
-1. Annoncer (afficher) que c'est au tour du joueur donne en parametre
-2. Demander les coordonnees en boucle, jusqu'a ce qu'elles soient valides
-    - il faudra demander les coordonnees horizontales et verticales separement
-3. Renvoyer les coordonnees valides sous forme de couple de coordonnees : `(horizontal, vertical)`
+1. Annoncer (afficher) que c'est au tour du joueur donné en paramètres
+2. Demander les coordonnées en boucle, jusqu'à ce qu'elles soient valides
+    - il faudra demander les coordonnées horizontales et verticales séparément
+3. Renvoyer les coordonnées valides sous forme de couple de coordonnées : `(horizontal, vertical)`
 
 ### Faire la fonction pour joueur au morpion : `morpion()`
-Derniere fonction de l'exercice, bravo pour etre arrive jusqu'ici ! Il ne reste plus qu'a assembler les fonctions que tu as code plus tot afin d'obtenir un jeu du morpion fonctionnel.
+Dernière fonction de l'exercice, bravo pour être arrivé jusqu'ici ! Il ne reste plus qu'à assembler les fonctions que tu as codé plus tôt afin d'obtenir un jeu du morpion fonctionnel.
 
-Dans la fonction `morpion()` tu vas devoir completer la boucle donnee dans le fichier fourni, ainsi que la fin de la fonction qui annonce le joueur vainqueur. Voici ce que la boucle devra executer a chaque tour :
+Dans la fonction `morpion()` tu vas devoir compléter la boucle donnée dans le fichier fourni, ainsi que la fin de la fonction qui annonce le joueur vainqueur. Voici ce que la boucle devra exécuter à chaque tour :
 1. Afficher la grille
-2. Demander les coordonnes au premier joueur
-3. Mettre a jour la grille
-4. Verifier si la grille a un gagnant
-    - Si la grille a un gagnant, on sort de la boucle avec le mot cle `break`
+2. Demander les coordonnées au premier joueur
+3. Mettre à jour la grille
+4. Vérifier si la grille a un gagnant
+    - Si la grille a un gagnant, on sort de la boucle avec le mot-clé `break`
     - Sinon, on continue
-5. Demander les coordonnees au deuxieme joueur
-6. Mettre a jour la grille
-7. Verifier si la grille a un gagnant
-    - Meme chose qu'au-dessus
+5. Demander les coordonnées au deuxième joueur
+6. Mettre à jour la grille
+7. Vérifier si la grille a un gagnant
+    - Même chose qu'au-dessus
 
-Voici ce qu'il doit se passer a la fin de cette fonction, apres la boucle :
+Voici ce qu'il doit se passer à la fin de cette fonction, apres la boucle :
 - Afficher la grille
 - Annoncer (afficher) qui est le joueur gagnant
 
-Une fois toutes ces etapes codees, tu devrais avoir un jeu du morpion fonctionnel, felicitations !
+Une fois toutes ces étapes codées, tu devrais avoir un jeu du morpion fonctionnel, félicitations !
 
