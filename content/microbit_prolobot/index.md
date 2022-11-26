@@ -202,7 +202,7 @@ Voici maintenant la partie la plus amusante de cet atelier et le moment où c'es
 Sur ce petit robot, plusieurs leds sont configurables et sont mises à votre disposition pour pouvoir s'amuser. 
 Au total le robot possède 6 leds:
     2 positionnées à l'avant (qu'on appellera dans cet atelier "Phare") qu'on utilise avec la commande:
-        `bot.set_phare(Phare,État)`
+        `bot.set_headlight(Phare,État)`
             `Phare` : DROITE (led avant droite) / GAUCHE (led avant gauche).
             `État` : 1 (pour allumer) / 0 (pour éteindre).
     4 positionnées en dessous qu'on utilise avec la commande:
@@ -219,8 +219,8 @@ Au total le robot possède 6 leds:
         `bot.turn_off_led()` permet d'éteindre toutes les leds du dessous.
 
 Voici quelques exemples:
-    `bot.set_phare(DROITE,1)` allume le phare de droite
-    `bot.set_phare(GAUCHE,0)` éteint le phare de gauche
+    `bot.set_headlight(DROITE,1)` allume le phare de droite
+    `bot.set_headlight(GAUCHE,0)` éteint le phare de gauche
     `bot.turn_on_led(0,(0,0,0))` allume la led en haut à gauche avec la couleur noire
     `bot.turn_on_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleue ciel
     `bot.turn_off_led()` éteint toutes les leds du dessous.
