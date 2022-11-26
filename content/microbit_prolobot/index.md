@@ -118,8 +118,8 @@ Toutes ces étapes permet à l'éditeur de reconnaitre le robot.
 Pour enfin l'utiliser, écris ces 2 lignes au début de ton fichier.
 
 ```py
-import prolobot
-bot = prolobot.Prolobot()
+from prolobot import *
+bot = Prolobot()
 ```
 
 La première ligne va permettre d'indiquer au programme que tu veux utiliser le
