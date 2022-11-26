@@ -147,8 +147,12 @@ sleep(2000)
 bot.stop()
 ```
 
-Ici, la ligne `sleep(1000)` va indiquer au programme qu'il doit attendre pendant
-1000 millisecondes, soit 1 seconde.
+#### Le sleep
+L'instruction `sleep(Temps)` est une instruction pour mettre en pause le 
+programme pour une duree de `Temps` milisecondes. 
+
+Dans le programme au dessus, la ligne `sleep(1000)` va donc indiquer au programme 
+qu'il doit attendre pendant 1000 millisecondes, soit 1 seconde.
 Le robot va donc activer les moteurs, puis attendre 1 seconde et activer les
 moteurs à la vitesse 0.5, puis il attends 2 secondes avant de s'arrêter.
 
@@ -191,9 +195,6 @@ sleep(1000)
 
 bot.stop()
 ```
-
-#### Le sleep
-L'instruction `sleep(Temps)` est une instruction pour mettre en pause le programme pour une duree de `Temps` milisecondes. 
 
 ## Les Bonus
 Voici maintenant la partie la plus amusante de cet atelier et le moment où c'est votre créativité qui va devoir parler.
