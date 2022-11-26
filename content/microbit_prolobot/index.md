@@ -6,24 +6,6 @@ subtitle: Codez avec le Robot Microbit
 code_stub_url: "./prolobot.py"
 ---
 
-# Prolobot
-
-<!-- TODO: Introduction -->
-
-## Utiliser avec l'éditeur
-
-<!-- NOTE: tuto pour l'editeur python du site microbit -->
-
-Pour utiliser le robot, commence par télécharger le fichier donné.
-
-Appuie ensuite sur le bouton 'Open...' en bas de l'écran puis 
-choisis le fichier que tu viens de télécharger.
-![]("img/open_button.png")
-
-Appuie enfin sur le bouton a côté du nom du fichier et sélectionne 'Ajouter le
-fichier' avant de valider.
-![]("img/load_button.png")
-
 ## Introduction
 Bonjour à toi jeune programmeuse, programmeur. Je me présente, je suis Joseph Marchand, et c'est moi qui t'accompagnerais au travers de cette découverte du monde de l'informatique durant cet atelier.
 Avant de commencer, laisse moi te présenter mes fidèles acolytes : les organisateurs. Ce sont eux qui t'accompagnent
@@ -117,6 +99,32 @@ Quand vous ferez votre programme plus tard, il sera sûrement nécessaire d'en u
 
 C'est ici que les choses commencent enfin. On va maintenant t'apprendre à utiliser les fonctionnalités des petits robots que tu as devant toi. Durant cette deuxième partie n'hésite pas à essayer ton code sur les robots c'est tout l'enjeu de cet atelier.
 Commençons par avancer.
+
+### Utiliser avec l'éditeur
+
+<!-- NOTE: tuto pour l'editeur python du site microbit -->
+
+Pour utiliser le robot, commence par télécharger le fichier donné.
+
+Appuie ensuite sur le bouton 'Open...' en bas de l'écran puis 
+choisis le fichier que tu viens de télécharger.
+![]("img/open_button.png")
+
+Appuie enfin sur le bouton a côté du nom du fichier et sélectionne 'Ajouter le
+fichier' avant de valider.
+![]("img/load_button.png")
+
+Toutes ces étapes permet à l'éditeur de reconnaitre le robot.
+Pour enfin l'utiliser, écris ces 2 lignes au début de ton fichier.
+
+```py
+import prolobot
+bot = prolobot.Prolobot()
+```
+
+La première ligne va permettre d'indiquer au programme que tu veux utiliser le
+robot. La deuxième dit au programme de créer un robot appelé bot.
+C'est lui que tu vas faire bouger.
 
 ### Avancer
 
