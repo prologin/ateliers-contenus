@@ -218,7 +218,7 @@ Voici quelques exemples:
     `bot.eteindre_led()` éteint toutes les leds du dessous.
 
 ### Les boucles
-Comme vous auriez pu le remarquer, très souvent pour la même action on copie la même ligne plusieurs fois. Ou alors votre robot avance mais quand le programme a fini d'exécuter les lignes, il s'arrête. Pour pallier à ce probleme, il y a en Python ce que l'on appelle des boucles. Les boucles permettent d'exécuter un nombre de fois précis une série instructions.
+Comme vous avez pu le remarquer, très souvent pour la même action on copie la même ligne plusieurs fois. Ou alors votre robot avance mais quand le programme a fini d'exécuter les lignes, il s'arrête. Pour pallier à ce probleme, il y a en programmation ce que on appelle des boucles. Les boucles permettent d'exécuter un nombre de fois précis une série instructions.
 Prenons cet exemple:
 ```py
 #Debut du programme
