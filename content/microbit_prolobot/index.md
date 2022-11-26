@@ -25,17 +25,17 @@ fichier' avant de valider.
 ![]("img/load_button.png")
 
 ## Introduction
-Bonjour à toi jeune programmeur ou programmeuse, je me présente, je suis Joseph Marchand, et c'est moi qui vais t'accompagner au travers de cette decouverte au monde de l'informatique a travers cette atelier. Avant de commencer, laisse moi aussi te présenter mes fidèles acolytes : les organisateurs. Ce sont eux qui vont t'accompagner en ce début de matinée. Ils me remplacent car je suis très occupé en ce moment, mais si tu as une quelconque question à n'importe quel moment, n'hésite surtout pas à leur demander de l'aide, ils sont là pour ça. Je m'arrête là pour les présentations, et je vais commencer dans cette atelier par te montrer les bases pour créer un programme.
+Bonjour à toi jeune programmeuse programmeur, je me présente, je suis Joseph Marchand, et c'est moi qui vais t'accompagner au travers de cette decouverte au monde de l'informatique a travers cette atelier. Avant de commencer, laisse moi aussi te présenter mes fidèles acolytes : les organisateurs. Ce sont eux qui vont t'accompagner en ce début de matinée. Ils me remplacent car je suis très occupé en ce moment, mais si tu as une quelconque question à n'importe quel moment, n'hésite surtout pas à leur demander de l'aide, ils sont là pour ça. Je m'arrête là pour les présentations, et je vais commencer dans cette atelier par te montrer les bases pour créer un programme.
 
 Mais d'abord, un ordinateur, c'est quoi ? Un ordinateur n'est rien d'autre qu'un ensemble de composants électroniques qui exécutent des instructions. Lorsque tu ouvres un navigateur internet, ton ordinateur exécute les instructions du logiciel utilisé, qu'on appelle aussi programme. Le but de cet atelier est de te faire découvrir comment nous pouvons créer nos propres programmes, et pour cela il nous faut un moyen d'écrire ces instructions : un langage de programmation.
 
 Il existe énormément de langages de programmation, tout comme il existe des milliers de langues dans le monde ! Certains sont plus connus que d'autres et nous allons, avec les organisateurs, te faire découvrir Python, un langage facile à prendre en main tout en étant puissant.
 
 ### Qu'est ce que c'est `microbit:macqueen` ?
-Un `microbit` c'est un microcontrôleur de la taille d'une carte à jouer (indication: tu dois pouvoir voir le micro:bit à l'avant du robot). Et `maqueen` c'est le petit robot que vous avez devant vous. `maqueen` c'est un robot qui est entierement configurable avec Python.
+Un `microbit` c'est un microcontrôleur de la taille d'une carte à jouer (indication: tu dois pouvoir voir le micro:bit à l'avant du robot). Et `maqueen` c'est le petit robot que vous avez devant vous. `maqueen` c'est un robot qui est entièrement configurable avec Python.
 
 ### Variables
-Commençons dans le vive du sujet, les variables. Les variables sont essentiel en informatique elles permettent de stocker des valeurs et de plus tard les restituer mais aussi de les modifier au cours du temps. Voyons ca dans un exemple:
+Commençons dans le vif du sujet: les variables. Les variables sont essentielles en informatique elles permettent de stocker des valeurs et de les restituer plus tard mais aussi de les modifier au cours du temps. Voyons cela dans un exemple:
 ```py
 #Debut du programme
 
@@ -57,17 +57,17 @@ Sortie
 5
 ```
 
-Executons à la main ce petit programme:
+Exécutons à la main ce petit programme:
     1. `a = 2 b = 5` Stocke la valeur 2 dans la variable `a` et la valeur 5 dans la variable `b`.
-    2. Ensuite il y a une ligne vide cette ligne n'influence en aucun cas ton code il permet simplement d'ajouter de l'espace pour en augmenter sa lisibilité. N'hésite pas à t'en servir il permet souvent de ne pas se perdre.
-    3. `a = b + a` Ici la variable `a` va prendre la valeur de `b` c'est à dire 5 additionné à l'actuel valeur de `a` c'est à dire 2 pour un total donc de 7.
-    4. Encore une ligne vide ne servant qu'a rendre plus lisible le code.
-    5. `print(a)` Cette instruction permet en Python d'afficher une valeur sur la sortie (ici 7 est afficher).
-    6. `print(b)` Comme pour la ligne précédente affiche la valeur stocker dans `b` sur la sortie (ici 5 est afficher).
-Si jamais tu n'as pas bien compris les expliquations n'hesite pas à questionner mes acolytes pour t'éclaircir.
+    2. Ensuite il y a une ligne vide, cette ligne n'influence en aucun cas ton code il permet simplement d'ajouter de l'espace pour en augmenter sa lisibilité. N'hésite pas à t'en servir il permet souvent de ne pas se perdre.
+    3. `a = b + a` Ici la variable `a` va prendre la valeur de `b` c'est à dire 5 additionné à l'actuelle valeur de `a` c'est à dire 2 pour un total donc de 7.
+    4. Encore une ligne vide ne servant qu'à rendre plus lisible le code.
+    5. `print(a)` Cette instruction permet en Python d'afficher une valeur sur la sortie (ici 7 est affichés).
+    6. `print(b)` Comme pour la ligne précédente affiche la valeur stockée dans `b` sur la sortie (ici 5 est affichés).
+Si jamais tu n'as pas bien compris les explications n'hésite pas à questionner mes acolytes pour t'éclaircir.
 
 ### Conditions
-Les conditions sont aussi une partie importante dans l'informatique car elle permet de "séparer" le programme c'est essentiel quand on cherche à traiter des certaines choses. Voyons ça dans cette exemple:
+Les conditions sont aussi une partie importante dans l'informatique car elles permettent de "séparer" le programme. C'est essentiel quand on cherche à traiter certaines choses. Voyons cela dans cet exemple:
 
 ```py
 #Debut du programme
@@ -93,21 +93,24 @@ else:
 
 Executons ce programme a la main:
     1. La ligne `a = 2` initialise la variable `a` avec la valeur 2.
-    2. `if a == 1:` Ici le mot clé de condition `if` demande au programme "si `a` est égale à 1" si c'est vrai alors il va aller à l'interieur de la condition c'est a dire sur la ligne d'apres et de maniere general sur toute les lignes avec une TABULATION de plus que lui (les tabulations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
-    3. `print("Hello")` Ici on demande au programme d'afficher `Hello` si la condition est vrai (dans notre cas cette ligne ne sera pas lu car `a` different de 1).
-    4. `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égale à 2" si c'est vrai alors il va executer les lignes avec une TABULATION de plus que lui.
-    5. `print("World")` Ici on demande au programme d'afficher `World` si la condition est vrai (dans notre cas cette ligne sera executer et affichera "World").
+    2. `if a == 1:` Ici le mot clé de condition `if` demande au programme "si `a` est égal à 1". Si c'est vrai alors il va aller à l'intérieur de la condition c'est à dire sur la ligne d'après et de manière générale sur toutes les lignes avec une TABULATION de plus que lui (les tabulations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
+    3. `print("Hello")` Ici on demande au programme d'afficher `Hello` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `a` différent de 1).
+    4. `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égal à 2". Si c'est vrai alors il va exécuter les lignes avec une TABULATION de plus que lui.
+    5. `print("World")` Ici on demande au programme d'afficher `World` si la condition est vraie (dans notre cas cette ligne sera exécutée et affichera `World`).
     6. La ligne `heure = 14` initialise la variable `heure` avec la valeur 14.
-    7. `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12" si c'est vrai alors il entrera à l'interieur de la condition et affichera toutes les instructions possédant une indentation de plus que lui.
-    8. `print("A table!")` Ici on demande au programme d'afficher `A table!` si la condition est vrai (dans notre cas cette ligne ne sera pas lu car `heure` different de 12)
-    9. `else:` Ici le mot clé impose au programme d'aller dans la boucle s'il n'est pas entrer dans la condition (dans notre cas on entrera dans le `else`). On peut par ailleurs traduire le mot clé `else` par "sinon" (`if`: si oui, `else`: si non).
+    7. `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12" si c'est vrai alors il entrera à l'intérieur de la condition et affichera toutes les instructions possédant une TABULATION de plus que lui.
+    8. `print("A table!")` Ici on demande au programme d'afficher `A table!` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `heure` est différente de 12)
+    9. `else:` Ici le mot clé impose au programme d'aller dans la boucle s'il n'est pas entré dans la condition (dans notre cas on entrera dans le `else`). On peut par ailleurs traduire le mot clé `else` par "sinon" (`if`: si oui, `else`: si non).
     10. `print("Pas tout de suite")` Ici on demande au programme d'afficher `Pas tout de suite` si on n'est pas entré dans la condition `if`. Attention on ne peut pas mettre de `else` si il n'y a pas de `if`.
 
-Cette partie peut etre compliquer mais n'hesite pas à questionner mes acolytes afin de ne pas rester perdu.
+Cette partie peut être compliquée mais n'hésite pas à questionner mes acolytes afin de ne pas rester perdu.
 
-Revenons rapidement sur les expliquations de la TABULATION. La TABULATION est une chose extremement important en Python elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non. Quand vous ferez votre programme plus bas il sera sûrement nécessaire d'en utiliser. Pour se faire, la TABULATION est representer par les 2 fleches ayant des sens opposés. Cette touche est situé à côté de la touche `A`.
+Revenons rapidement sur les explications de la TABULATION. La TABULATION est une chose importante en Python. Elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non. Quand vous ferez votre programme plus bas il sera sûrement nécessaire d'en utiliser. Pour se faire, la TABULATION est représentée par les 2 flèches ayant des sens opposés. Cette touche est située à côté de la touche `A`.
 
 ## Le Prolobot
+
+C'est ici que les choses commencent enfin. On va maintenant t'apprendre à utiliser les fonctionnalités des petits robots que vous avez devant vous. Durant cette deuxième partie n'hésite pas à essayer ton code sur les robots c'est tout l'enjeu de cet atelier.
+Commençons par avancer.
 
 ### Avancer
 
@@ -140,12 +143,119 @@ on peut préciser la vitesse des roues entre les parenthèses.
 
 
 ### Ca tourne
+
+Faire avancer le robot c'est bien, le faire tourner c'est encore mieux. Pour se faire plusieurs méthodes existent: 
+    `bot.pivoter(direction,vitesse)`
+    `bot.tourner(direction,vitesse)`
+
+Ces deux instructions ont deux paramètres mais seule l'instruction direction est obligatoire. C'est à dire:
+    `bot.pivoter(direction)` fonctionne et aura une vitesse mise par défaut à 0.2
+    `bot.tourner(direction)` fonctionne et aura aussi une vitesse mise à 0.2
+
+Faisons une distinction, l'instruction `bot.tourner(GAUCHE)` allume seulement le moteur de droite pour faire tourner le robot. `bot.tourner(DROITE)` fait la même chose mais allume le moteur de gauche.
+
+Maintenant, l'instruction `bot.pivoter(GAUCHE)` allume le moteur droite comme pour `bot.tourner(GAUCHE)` cependant il allume aussi le moteur gauche mais dans le sens opposé à celui du moteur de droite. L'instruction `bot.pivoter(DROITE)` fait la même chose dans le sens inverse.
+
+Je te donne un court programme pour essayer ce que je viens de t'expliquer:
+
+```py
+import prolobot
+from microbit import *
+bot = Prolobot()
+
+bot.tourner(DROITE)
+sleep(1000)
+
+bot.pivoter(GAUCHE)
+sleep(1000)
+
+bot.tourner(DROITE)
+sleep(1000)
+
+bot.pivoter(GAUCHE)
+sleep(1000)
+
+bot.stop()
+```
+
 #### Le sleep
+L'instruction `sleep(Temps)` est une instruction pour mettre en pause le programme pour une duree de `Temps` milisecondes. 
 
 ## Les Bonus
+Voici maintenant la partie la plus amusante de cet atelier et le moment où c'est votre créativité qui va devoir parler.
+
 ### Les Leds
+Sur ce petit robot, plusieurs leds sont configurables et sont mises à votre disposition pour pouvoir s'amuser. 
+Au total le robot possède 6 leds:
+    2 positionnées à l'avant (qu'on appellera dans cet atelier "Phare") qu'on utilise avec la commande:
+        `bot.set_phare(Phare,État)`
+            `Phare` : DROITE (led avant droite) / GAUCHE (led avant gauche).
+            `État` : 1 (pour allumer) / 0 (pour éteindre).
+    4 positionnées en dessous qu'on utilise avec la commande:
+        `bot.allumer_led(Led, Couleur)`
+            `Led` : correspond à un chiffre entre 0 et 3.
+                0 : en haut à gauche.
+                1 : en bas à gauche.
+                2 : en bas à droite.
+                3 : en haut à droite.
+            `Couleur` : c'est un paramètre de la forme (rouge, vert, bleu) (aussi appelé rgb).
+                Les valeurs de `rouge`, `vert` et `bleu` sont entre 0 et 255.
+                (0,0,0) correspond au noir.
+                (255,255,255) correspond au blanc.
+        `bot.eteindre_led()` permet d'éteindre toutes les leds du dessous.
+
+Voici quelques exemples:
+    `bot.set_phare(DROITE,1)` allume le phare de droite
+    `bot.set_phare(GAUCHE,0)` éteint le phare de gauche
+    `bot.allumer_led(0,(0,0,0))` allume la led en haut à gauche avec la couleur noire
+    `bot.allumer_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleue ciel
+    `bot.eteindre_led()` éteint toutes les leds du dessous.
+
 ### Les boucles
+Comme vous auriez pu le remarquer, très souvent pour la même action on copie la même ligne plusieurs fois. Ou alors votre robot avance mais quand le programme a fini d'exécuter les lignes, il s'arrête. Pour pallier à ce probleme, il y a en Python ce que l'on appelle des boucles. Les boucles permettent d'exécuter un nombre de fois précis une série instructions.
+Prenons cet exemple:
+```py
+#Debut du programme
+
+for i in range(5):
+    bot.avancer()
+    sleep(1000)
+    bot.stop()
+    sleep(1000)
+
+#Fin du programme
+```
+Ce court programme permet à notre robot d'avancer pendant 1 seconde puis s'arrêter pendant 1 seconde et ce 5 fois avant de s'arrêter.
+
+Une autre boucle existe mais celle-ci permet au programme de ne jamais s'arrêter c'est `while`
+Prenons cet exemple:
+
+```py
+#Debut du programme
+
+while True:
+    bot.avancer()
+    sleep(1000)
+    bot.stop()
+    sleep(1000)
+
+#Fin du programme
+```
+Ce programme ressemble beaucoup à celui d'avant hormis le fait que il ne sera pas répété 5 fois mais une infinité de fois.
+`while True` peut se traduire pas "tant que vrai"
+
 ### Capteurs
+Maintenant que tu sais manipuler les boucles, tu vas pouvoir t'amuser avec ton robot et ce grâce aux différents capteurs.
+Les capteurs sont en bref des traductions du monde réel au monde numérique.
+Il y 3 capteurs différents sur le robot:
+    1 capteur de distance situé à l'avant qui permet de savoir la distance entre un objet et lui même.
+        `bot.distance()` est l'instruction qui permet de renvoyer la distance entre le robot l'obstacle devant lui
+    2 capteurs de ligne permettant de détecter les lignes sous le robot
+        `bot.capteur_sol(capteur)` est l'instruction qui permet de savoir si le capteur GAUCHE ou DROITE détecte une ligne noire. Si il en détecte une, il renvoie True sinon il renvoie False (True se traduit par "Vrai" et False par "Faux")
+
+### Conclusion
+Voilà tu as maintenant toutes les cartes en main pour pouvoir t'amuser. Tu retrouveras en dessous un resumé de toutes les instructions qui sont mises à ta disposition.
+Amuse toi bien !
 
 ## La Doc
 
