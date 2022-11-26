@@ -53,7 +53,7 @@ class Prolobot:
 
         self.__max_speed = 255
 
-    def deplacer(self, vl, vr):
+    def run(self, vl, vr):
         """
         Run wheels with given speed
         vl: left motor speed coeff
@@ -64,52 +64,52 @@ class Prolobot:
         self.__left_wheel.move(int(self.__max_speed * vl))
         self.__right_wheel.move(int(self.__max_speed * vr))
 
-    def avancer(self, vitesse=0.2):
+    def forward(self, speed=0.2):
         """
-        Fait avancer les 2 roues a une vitesse donnee
-        vitesse: nombre entre 0 et 1
+        Run forward the two wheels with the same speed
+        speed: number between 0 and 1
         """
-        self.deplacer(vitesse, vitesse)
+        self.run(speed, speed)
 
-    def reculer(self, vitesse=0.2):
+    def backward(self, speed=0.2):
         """
-        Fait reculer les 2 roues a une vitesse donnee
-        vitesse: nombre entre 0 et 1
+        Run backward the two wheels with the same speed
+        speed: number between 0 and 1
         """
-        self.deplacer(-vitesse, -vitesse)
+        self.run(-speed, -speed)
 
-    def tourner(self, direction, vitesse=0.2):
+    def turn(self, direction, speed=0.2):
         """
-        Tourne le prolobot a une vitesse donnee
-        direction: 0 pour aller a gauche et 1 pour aller a droite
-        vitesse: vitesse des roues entre 0 et 1
+        Turn the prolobot at the given speed
+        direction: 0 to go to the left | 1 to go to the right
+        speed: wheel speed between 0 and 1
         """
         if direction == 0:
-            self.deplacer(0, vitesse)
+            self.run(0, speed)
         else:
-            self.deplacer(vitesse, 0)
+            self.run(speed, 0)
 
-    def pivoter(self, direction, vitesse=0.2):
+    def rotate(self, direction, speed=0.2):
         """
-        Pivote le prolobot sur lui meme a une vitesse donnee
-        direction: 0 pour aller a gauche et 1 pour aller a droite
-        vitesse: vitesse des roues entre 0 et 1
+        Rotate the prolobot on itself at the given speed
+        direction: 0 to go to the left | 1 to go to the right
+        speed: wheels speed between 0 and 1
         """
         if direction == 0:
-            self.deplacer(-vitesse, vitesse)
+            self.run(-speed, speed)
         else:
-            self.deplacer(vitesse, -vitesse)
+            self.run(speed, -speed)
 
     def stop(self):
         """
-        Arrete les 2 roues
+        Stop the 2 wheels
         """
         self.__right_wheel.stop()
         self.__left_wheel.stop()
 
     def distance(self):
         """
-        Renvoie la distance entre le prolobot et les obstacles en face
+        Return the distance between the prolobot and hindrance in front of it
         """
         microbit.pin1.write_digital(1)
         time.sleep_ms(10)
@@ -119,38 +119,38 @@ class Prolobot:
         dist = 340 * t / 20000
         return dist
 
-    def capteur_sol(self, capteur):
+    def floor_sensor(self, sensor):
         """
-        Renvoie True si le capteur detecte du blanc
-        param capteur: 0 pour le capteur de gauche et 1 pour le capteur de droite
+        Return True if sensor detect white color
+        sensor: 0 for the left sensor | 1 for the right sensor
         """
-        if capteur == 0:
+        if sensor == 0:
             return microbit.pin13.read_digital()
         else:
             return microbit.pin14.read_digital()
 
-    def set_phares(self, phare, statut):
+    def set_headlight(self, led, statut):
         """
-        Allumer la led avant correspondante
-        param led: 0 pour la led de gauche et 1 pour la led de droite
-        param statut: 0 pour eteindre et 1 pour allumer
+        Switch on or off the front led led
+        led: 0 for the left led | 1 for the right led
+        statut: 0 for switch off | 1 for switch on
         """
-        if phare == 0:
+        if led == 0:
             microbit.pin8.write_digital(statut)
         else:
             microbit.pin12.write_digital(statut)
 
-    def allumer_led(self, led, couleur):
+    def turn_on_led(self, led, color):
         """
-        Allume la led correspondante
-        led: va de 0 a 3
-        couleur: un tuple (r, v, b)
+        Turn on the led led
+        led: take values between 0 and 3
+        color: tuple (r,g,b)
         """
-        self.__rgbleds[led] = couleur
+        self.__rgbleds[led] = color
         self.__rgbleds.show()
 
-    def eteindre_led(self):
+    def turn_off_led(self):
         """
-        Eteint toutes les leds de couleur
+        Turn off all colored leds (leds under the prolobot)
         """
         self.__rgbleds.clear()
