@@ -31,7 +31,7 @@ Une fonction possède un nom et se définit à l'aide du mot-clé `def` :
 def ajouter_4(x):
    return x + 4
 ```
-Ici, nous avons déclaré une fonction que nous avons appelée ajouter_4. Ensuite, nous avons ouvert des parenthèses afin de spécifier ses paramètres : dans notre cas, `ajouter_4` prend un seul paramètre que nous avons nommé `x`. Un paramètre se comporte comme une variable : elle possède un nom (qui doit être **unique** tout comme celui de la fonction) et une valeur d'un certain type (entier, texte, booléen, etc. comme vu précédemment).
+Ici, nous avons déclaré une fonction que nous avons appelée ajouter_4. Ensuite, nous avons ouvert des parenthèses afin de spécifier ses paramètres : dans notre cas, `ajouter_4` prend un seul paramètre que nous avons nommé `x`. Un paramètre de fonction se comporte comme une variable : il possède un nom (qui doit être **unique** tout comme celui de la fonction) et une valeur d'un certain type (entier, texte, booléen, etc. comme vu précédemment).
 
 Ensuite, nous avons utilisé la touche TAB pour aligner le code du corps de notre fonction, pour indenter. Ici, le corps de la fonction est composé d'une seule instruction : `return x + 4`. Ce mot-clé `return` permet à la fonction d'avoir une **valeur de retour**, c'est-à-dire une sortie que nous pourrons utiliser. Dans notre cas, nous souhaitons que la fonction renvoie la valeur de x + 4. Maintenant, nous allons pouvoir **appeler** cette fonction et observer le résultat !
 
