@@ -25,9 +25,13 @@ fichier' avant de valider.
 ![]("img/load_button.png")
 
 ## Introduction
-Bonjour à toi jeune programmeuse programmeur, je me présente, je suis Joseph Marchand, et c'est moi qui vais t'accompagner au travers de cette decouverte au monde de l'informatique a travers cette atelier. Avant de commencer, laisse moi aussi te présenter mes fidèles acolytes : les organisateurs. Ce sont eux qui vont t'accompagner en ce début de matinée. Ils me remplacent car je suis très occupé en ce moment, mais si tu as une quelconque question à n'importe quel moment, n'hésite surtout pas à leur demander de l'aide, ils sont là pour ça. Je m'arrête là pour les présentations, et je vais commencer dans cette atelier par te montrer les bases pour créer un programme.
+Bonjour à toi jeune programmeuse, programmeur. Je me présente, je suis Joseph Marchand, et c'est moi qui t'accompagnerais au travers de cette découverte du monde de l'informatique durant cet atelier.
+Avant de commencer, laisse moi te présenter mes fidèles acolytes : les organisateurs. Ce sont eux qui t'accompagnent
+aujourd'hui. Ils me remplacent car je suis très occupé en ce moment, mais si tu as une quelconque question, à n'importe quel moment, n'hésite surtout pas à leur demander de l'aide, ils sont là pour ça.
+Je m'arrête là pour les présentations, et commençons cet atelier par les bases de la création d'un programme.
 
-Mais d'abord, un ordinateur, c'est quoi ? Un ordinateur n'est rien d'autre qu'un ensemble de composants électroniques qui exécutent des instructions. Lorsque tu ouvres un navigateur internet, ton ordinateur exécute les instructions du logiciel utilisé, qu'on appelle aussi programme. Le but de cet atelier est de te faire découvrir comment nous pouvons créer nos propres programmes, et pour cela il nous faut un moyen d'écrire ces instructions : un langage de programmation.
+Mais d'abord, un ordinateur, c'est quoi ? Un ordinateur n'est rien d'autre qu'un ensemble de composants électroniques qui exécutent des instructions. Lorsque tu ouvres un navigateur internet, ton ordinateur exécute les instructions du logiciel utilisé, qu'on appelle aussi programme. Le but de cet atelier est de te faire découvrir comment nous pouvons créer nos propres programmes. 
+Et pour cela il nous faut un moyen d'écrire ces instructions : un langage de programmation.
 
 Il existe énormément de langages de programmation, tout comme il existe des milliers de langues dans le monde ! Certains sont plus connus que d'autres et nous allons, avec les organisateurs, te faire découvrir Python, un langage facile à prendre en main tout en étant puissant.
 
@@ -49,7 +53,7 @@ print(b)
 
 #Fin du programme
 ```
-output
+Ce que python nous renvoit :
 ```
 Sortie
 
@@ -93,23 +97,25 @@ else:
 
 Executons ce programme a la main:
     1. La ligne `a = 2` initialise la variable `a` avec la valeur 2.
-    2. `if a == 1:` Ici le mot clé de condition `if` demande au programme "si `a` est égal à 1". Si c'est vrai alors il va aller à l'intérieur de la condition c'est à dire sur la ligne d'après et de manière générale sur toutes les lignes avec une TABULATION de plus que lui (les tabulations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
+    2. `if a == 1:` Ici le mot clé `if` demande au programme "si `a` est égal à 1". Si c'est vrai alors il va éxécuter l'ensemble des lignes se trouvant à l'intérieur de la condition c'est à dire sur toutes les lignes avec une INDENTATION de plus que lui (les indentations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
     3. `print("Hello")` Ici on demande au programme d'afficher `Hello` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `a` différent de 1).
-    4. `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égal à 2". Si c'est vrai alors il va exécuter les lignes avec une TABULATION de plus que lui.
+    4. `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égal à 2". Si c'est vrai alors il va exécuter les lignes avec une INDENTATION de plus que lui.
     5. `print("World")` Ici on demande au programme d'afficher `World` si la condition est vraie (dans notre cas cette ligne sera exécutée et affichera `World`).
     6. La ligne `heure = 14` initialise la variable `heure` avec la valeur 14.
-    7. `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12" si c'est vrai alors il entrera à l'intérieur de la condition et affichera toutes les instructions possédant une TABULATION de plus que lui.
+    7. `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12". Si c'est vrai alors il éxécutera les instructions à l'intérieur de la condition.
     8. `print("A table!")` Ici on demande au programme d'afficher `A table!` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `heure` est différente de 12)
-    9. `else:` Ici le mot clé impose au programme d'aller dans la boucle s'il n'est pas entré dans la condition (dans notre cas on entrera dans le `else`). On peut par ailleurs traduire le mot clé `else` par "sinon" (`if`: si oui, `else`: si non).
+    9. `else:` Ici le mot clé impose au programme d'éxécuter ce qui suit si aucune des conditions précédentes, celle précédée d'un `if`, a été satisfaite (dans notre cas on entrera dans le `else`). 
+       On peut par ailleurs traduire le mot clé `else` par "sinon" (`if`: si oui, `else`: si non).
     10. `print("Pas tout de suite")` Ici on demande au programme d'afficher `Pas tout de suite` si on n'est pas entré dans la condition `if`. Attention on ne peut pas mettre de `else` si il n'y a pas de `if`.
 
 Cette partie peut être compliquée mais n'hésite pas à questionner mes acolytes afin de ne pas rester perdu.
 
-Revenons rapidement sur les explications de la TABULATION. La TABULATION est une chose importante en Python. Elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non. Quand vous ferez votre programme plus bas il sera sûrement nécessaire d'en utiliser. Pour se faire, la TABULATION est représentée par les 2 flèches ayant des sens opposés. Cette touche est située à côté de la touche `A`.
+Revenons rapidement sur les explications de l'INDENTATION. L'INDENTATION est très importante en Python. Elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non.
+Quand vous ferez votre programme plus tard, il sera sûrement nécessaire d'en utiliser. Pour se faire, l'INDENTATION est représentée par les 2 flèches ayant des sens opposés. Cette touche ce nomme tabulation, abrégé tab.
 
 ## Le Prolobot
 
-C'est ici que les choses commencent enfin. On va maintenant t'apprendre à utiliser les fonctionnalités des petits robots que vous avez devant vous. Durant cette deuxième partie n'hésite pas à essayer ton code sur les robots c'est tout l'enjeu de cet atelier.
+C'est ici que les choses commencent enfin. On va maintenant t'apprendre à utiliser les fonctionnalités des petits robots que tu as devant toi. Durant cette deuxième partie n'hésite pas à essayer ton code sur les robots c'est tout l'enjeu de cet atelier.
 Commençons par avancer.
 
 ### Avancer
