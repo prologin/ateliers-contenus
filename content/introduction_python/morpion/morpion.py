@@ -18,7 +18,7 @@ def afficherGrille(grille):
 
 
 def verifierGrille(grille):
-    """Verifie si dans la grille donnee parametre,
+    """Verifie si dans la grille donnee en parametre,
     un joueur est gagnant.
     Si un joueur est gagnant, on renvoie son symbole associe, 
     sinon on renvoie un espace " ". 

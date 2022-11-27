@@ -7,7 +7,7 @@ def afficherGrille(grille):
     for i in range(len(grille)):
         for j in range(len(grille[i])):
             print(grille[i][j], end="")
-            # Pour ne pas avoir de | a la fin de la ligne
+            # Pour ne pas avoir de | à la fin de la ligne
             if j != 2:
                 print("|", end="")
             else:
