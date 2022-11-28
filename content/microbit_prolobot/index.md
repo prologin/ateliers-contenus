@@ -10,95 +10,14 @@ code_stub_url: "./prolobot.py"
 Bonjour à toi jeune programmeuse, programmeur. Je me présente, je suis Joseph Marchand, et c'est moi qui t'accompagnerais au travers de cette découverte du monde de l'informatique durant cet atelier.
 Avant de commencer, laisse moi te présenter mes fidèles acolytes : les organisateurs. Ce sont eux qui t'accompagnent
 aujourd'hui. Ils me remplacent car je suis très occupé en ce moment, mais si tu as une quelconque question, à n'importe quel moment, n'hésite surtout pas à leur demander de l'aide, ils sont là pour ça.
-Je m'arrête là pour les présentations, et commençons cet atelier par les bases de la création d'un programme.
+Je m'arrête là pour les présentations, et commençons cet atelier par une introduction du robot de cet atelier.
 
-Mais d'abord, un ordinateur, c'est quoi ? Un ordinateur n'est rien d'autre qu'un ensemble de composants électroniques qui exécutent des instructions. Lorsque tu ouvres un navigateur internet, ton ordinateur exécute les instructions du logiciel utilisé, qu'on appelle aussi programme. Le but de cet atelier est de te faire découvrir comment nous pouvons créer nos propres programmes. 
-Et pour cela il nous faut un moyen d'écrire ces instructions : un langage de programmation.
-
-Il existe énormément de langages de programmation, tout comme il existe des milliers de langues dans le monde ! Certains sont plus connus que d'autres et nous allons, avec les organisateurs, te faire découvrir Python, un langage facile à prendre en main tout en étant puissant.
-
-### Qu'est ce que c'est `microbit:macqueen` ?
-Un `microbit` c'est un microcontrôleur de la taille d'une carte à jouer (indication: tu dois pouvoir voir le micro:bit à l'avant du robot). Et `maqueen` c'est le petit robot que vous avez devant vous. `maqueen` c'est un robot qui est entièrement configurable avec Python.
-
-### Variables
-Commençons dans le vif du sujet: les variables. Les variables sont essentielles en informatique elles permettent de stocker des valeurs et de les restituer plus tard mais aussi de les modifier au cours du temps. Voyons cela dans un exemple:
-```py
-#Debut du programme
-
-a = 2
-b = 5
-
-a = b + a
-
-print(a)
-print(b)
-
-#Fin du programme
-```
-Ce que python nous renvoit :
-```
-Sortie
-
-7
-5
-```
-
-Exécutons à la main ce petit programme:
-    1. `a = 2 b = 5` Stocke la valeur 2 dans la variable `a` et la valeur 5 dans la variable `b`.
-    2. Ensuite il y a une ligne vide, cette ligne n'influence en aucun cas ton code il permet simplement d'ajouter de l'espace pour en augmenter sa lisibilité. N'hésite pas à t'en servir il permet souvent de ne pas se perdre.
-    3. `a = b + a` Ici la variable `a` va prendre la valeur de `b` c'est à dire 5 additionné à l'actuelle valeur de `a` c'est à dire 2 pour un total donc de 7.
-    4. Encore une ligne vide ne servant qu'à rendre plus lisible le code.
-    5. `print(a)` Cette instruction permet en Python d'afficher une valeur sur la sortie (ici 7 est affichés).
-    6. `print(b)` Comme pour la ligne précédente affiche la valeur stockée dans `b` sur la sortie (ici 5 est affichés).
-Si jamais tu n'as pas bien compris les explications n'hésite pas à questionner mes acolytes pour t'éclaircir.
-
-### Conditions
-Les conditions sont aussi une partie importante dans l'informatique car elles permettent de "séparer" le programme. C'est essentiel quand on cherche à traiter certaines choses. Voyons cela dans cet exemple:
-
-```py
-#Debut du programme
-
-a = 2
-
-if a == 1:
-    print("Hello")
-
-if a == 2:
-    print("World")
-
-heure = 14
-
-if heure == 12:
-    print("A table!")
-
-else:
-    print("Pas tout de suite")
-
-#Fin du programme
-```
-
-Executons ce programme a la main:
-    1. La ligne `a = 2` initialise la variable `a` avec la valeur 2.
-    2. `if a == 1:` Ici le mot clé `if` demande au programme "si `a` est égal à 1". Si c'est vrai alors il va éxécuter l'ensemble des lignes se trouvant à l'intérieur de la condition c'est à dire sur toutes les lignes avec une INDENTATION de plus que lui (les indentations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
-    3. `print("Hello")` Ici on demande au programme d'afficher `Hello` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `a` différent de 1).
-    4. `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égal à 2". Si c'est vrai alors il va exécuter les lignes avec une INDENTATION de plus que lui.
-    5. `print("World")` Ici on demande au programme d'afficher `World` si la condition est vraie (dans notre cas cette ligne sera exécutée et affichera `World`).
-    6. La ligne `heure = 14` initialise la variable `heure` avec la valeur 14.
-    7. `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12". Si c'est vrai alors il éxécutera les instructions à l'intérieur de la condition.
-    8. `print("A table!")` Ici on demande au programme d'afficher `A table!` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `heure` est différente de 12)
-    9. `else:` Ici le mot clé impose au programme d'éxécuter ce qui suit si aucune des conditions précédentes, celle précédée d'un `if`, a été satisfaite (dans notre cas on entrera dans le `else`). 
-       On peut par ailleurs traduire le mot clé `else` par "sinon" (`if`: si oui, `else`: si non).
-    10. `print("Pas tout de suite")` Ici on demande au programme d'afficher `Pas tout de suite` si on n'est pas entré dans la condition `if`. Attention on ne peut pas mettre de `else` si il n'y a pas de `if`.
-
-Cette partie peut être compliquée mais n'hésite pas à questionner mes acolytes afin de ne pas rester perdu.
-
-Revenons rapidement sur les explications de l'INDENTATION. L'INDENTATION est très importante en Python. Elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non.
-Quand vous ferez votre programme plus tard, il sera sûrement nécessaire d'en utiliser. Pour se faire, l'INDENTATION est représentée par les 2 flèches ayant des sens opposés. Cette touche ce nomme tabulation, abrégé tab.
+### Qu'est ce que c'est `microbit:maqueen` ?
+Un `microbit` c'est un microcontrôleur de la taille d'une carte à jouer (indication: tu dois pouvoir voir le micro:bit à l'avant du robot). Et `maqueen` c'est le petit robot que tu as devant toi. `maqueen` c'est un robot qui est entièrement configurable avec avec un langage que l'on appelle le Python. Ce langage va être convertit en plein de petites instructions qui permettrons de diriger le robot.
 
 ## Le Prolobot
 
-C'est ici que les choses commencent enfin. On va maintenant t'apprendre à utiliser les fonctionnalités des petits robots que tu as devant toi. Durant cette deuxième partie n'hésite pas à essayer ton code sur les robots c'est tout l'enjeu de cet atelier.
-Commençons par forward.
+Entrons dans le vif du sujet. Dans cette partie, nous allons te montrer comment utiliser les petits robots maqueen.
 
 ### Utiliser avec l'éditeur
 
@@ -267,6 +186,51 @@ Il y 3 capteurs différents sur le robot:
         `bot.distance()` est l'instruction qui permet de renvoyer la distance entre le robot l'obstacle devant lui
     2 capteurs de ligne permettant de détecter les lignes sous le robot
         `bot.floor_sensor(capteur)` est l'instruction qui permet de savoir si le capteur LEFT ou RIGHT détecte une ligne noire. Si il en détecte une, il renvoie True sinon il renvoie False (True se traduit par "Vrai" et False par "Faux")
+
+Ces valeurs Vrai ou Faux vont servir à faire quelque chose de très utile que l'on appelle les conditions.
+
+### Conditions
+Les conditions sont aussi une partie importante dans l'informatique car elles permettent de "séparer" le programme. C'est essentiel quand on cherche à traiter certaines choses. Voyons cela dans cet exemple:
+
+```py
+#Debut du programme
+
+a = 2
+
+if a == 1:
+    print("Hello")
+
+if a == 2:
+    print("World")
+
+heure = 14
+
+if heure == 12:
+    print("A table!")
+
+else:
+    print("Pas tout de suite")
+
+#Fin du programme
+```
+
+Executons ce programme a la main:
+    1. La ligne `a = 2` initialise la variable `a` avec la valeur 2.
+    2. `if a == 1:` Ici le mot clé `if` demande au programme "si `a` est égal à 1". Si c'est vrai alors il va éxécuter l'ensemble des lignes se trouvant à l'intérieur de la condition c'est à dire sur toutes les lignes avec une INDENTATION de plus que lui (les indentations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
+    3. `print("Hello")` Ici on demande au programme d'afficher `Hello` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `a` différent de 1).
+    4. `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égal à 2". Si c'est vrai alors il va exécuter les lignes avec une INDENTATION de plus que lui.
+    5. `print("World")` Ici on demande au programme d'afficher `World` si la condition est vraie (dans notre cas cette ligne sera exécutée et affichera `World`).
+    6. La ligne `heure = 14` initialise la variable `heure` avec la valeur 14.
+    7. `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12". Si c'est vrai alors il éxécutera les instructions à l'intérieur de la condition.
+    8. `print("A table!")` Ici on demande au programme d'afficher `A table!` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `heure` est différente de 12)
+    9. `else:` Ici le mot clé impose au programme d'éxécuter ce qui suit si aucune des conditions précédentes, celle précédée d'un `if`, a été satisfaite (dans notre cas on entrera dans le `else`). 
+       On peut par ailleurs traduire le mot clé `else` par "sinon" (`if`: si oui, `else`: si non).
+    10. `print("Pas tout de suite")` Ici on demande au programme d'afficher `Pas tout de suite` si on n'est pas entré dans la condition `if`. Attention on ne peut pas mettre de `else` si il n'y a pas de `if`.
+
+Cette partie peut être compliquée mais n'hésite pas à questionner mes acolytes afin de ne pas rester perdu.
+
+Revenons rapidement sur les explications de l'INDENTATION. L'INDENTATION est très importante en Python. Elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non.
+Quand vous ferez votre programme plus tard, il sera sûrement nécessaire d'en utiliser. Pour se faire, l'INDENTATION est représentée par les 2 flèches ayant des sens opposés. Cette touche ce nomme tabulation, abrégé tab.
 
 ### Conclusion
 Voilà tu as maintenant toutes les cartes en main pour pouvoir t'amuser. Tu retrouveras en dessous un resumé de toutes les instructions qui sont mises à ta disposition.
