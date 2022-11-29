@@ -63,8 +63,8 @@ class Prolobot:
         """
         vl = max(min(vl * 127, self.__max_speed), -self.__max_speed)
         vr = max(min(vr * 127, self.__max_speed), -self.__max_speed)
-        self.__left_wheel.move(vl)
-        self.__right_wheel.move(vr)
+        self.__left_wheel.move(int(vl))
+        self.__right_wheel.move(int(vr))
 
     def forward(self, speed=0.4):
         """
