@@ -72,7 +72,7 @@ L'instruction `sleep(time)` est une instruction pour mettre en pause le
 programme pour une durée de `time` millisecondes. 
 
 Dans le programme au-dessus, la ligne `sleep(1000)` va donc indiquer au programme 
-qu'il doit attendre pendant 1000 millisecondes, soit 1 seconde.
+qu'il doit attendre pendant 1000 millisecondes, soit 1 seconde.  
 Le robot va donc activer les moteurs, puis attendre 1 seconde et activer les
 moteurs à la vitesse 100, puis il attend 2 secondes avant de s'arrêter.
 
@@ -87,11 +87,12 @@ Faire avancer le robot c'est bien, le faire tourner c'est encore mieux. Pour se 
     `bot.turn(direction, speed)`
 
 Ces deux instructions ont deux paramètres mais seul `direction` est obligatoire. C'est-à-dire :
-    `bot.rotate(direction)` fonctionne et aura une vitesse mise par défaut à 0.4
-    `bot.turn(direction)` fonctionne et aura aussi une vitesse mise à 0.4
-    De plus deux variables te sont fournies: 
-        `LEFT` pour la direction gauche
-        `RIGHT` pour la direction droite
+ - `bot.rotate(direction)` fonctionne et aura une vitesse mise par défaut à 0.4
+ - `bot.turn(direction)` fonctionne et aura aussi une vitesse mise à 0.4
+
+De plus deux variables te sont fournies: 
+ - `LEFT` pour la direction gauche
+ - `RIGHT` pour la direction droite
 
 Faisons une distinction, l'instruction `bot.turn(LEFT)` allume seulement le moteur de droite pour faire tourner le robot.
 Allumer le moteur de droite et éteindre le moteur de gauche va permettre au robot de tourner comme on le voit sur le schéma.
@@ -129,36 +130,34 @@ bot.stop()
 Voici maintenant la partie la plus amusante de cet atelier et le moment où c'est votre créativité qui va devoir parler.
 
 ### Les Leds
-Sur ce petit robot, plusieurs leds sont configurables et sont mises à votre disposition pour pouvoir s'amuser. 
+Sur ce petit robot, plusieurs leds sont configurables et sont mises à votre disposition pour pouvoir s'amuser.  
 Au total, le robot possède 6 leds :
-    2 positionnées à l'avant (qu'on appellera dans cet atelier "Phare") qu'on utilise avec la commande :
-        `bot.set_headlight(led, state)`
-            `led` : RIGHT (led avant droite) / LEFT (led avant gauche).
-            `state` : 1 (pour allumer) / 0 (pour éteindre).
-    4 positionnées en dessous qu'on utilise avec la commande :
-        `bot.turn_on_led(led, color)`
-            `led` : correspond à un chiffre entre 0 et 3.
-                0 : en haut à gauche.
-                1 : en bas à gauche.
-                2 : en bas à droite.
-                3 : en haut à droite.
-            `color` : c'est un paramètre de la forme (rouge, vert, bleu) (aussi appelé RVB).
-                Les valeurs de `rouge`, `vert` et `bleu` sont entre 0 et 255.
-                Le RVB est un systeme de couleur, qui permet à l'ordinateur de faire un mélange entre les couleurs pour obtenir la couleur voulu, comme en peinture avec les couleurs primaires !
-                Prenons l'exemple du Vert:
-                En peinture on utilise du jaune et bleu.
-                Et en systeme rvb on a simplement a mettre la valeur du vert à sa plus haute valeur : 255, et les autres valeurs à 0.
-                Il faut voir le rvb comme une addition de couleur.
-                Si on prend (r=0,v=0,b=0) l'addition d'aucune couleur, peut être identifié au noir.
-                Si on prend (r=255,v=255,b=255) l'addition de toutes, peut être identifié au blanc.
-        `bot.turn_off_led()` permet d'éteindre toutes les leds du dessous.
+   - 2 positionnées à l'avant (qu'on appellera dans cet atelier "Phare") qu'on utilise avec la commande : `bot.set_headlight(led, state)`
+     - `led` : RIGHT (led avant droite) / LEFT (led avant gauche).
+     - `state` : 1 (pour allumer) / 0 (pour éteindre).
+   - 4 positionnées en dessous qu'on utilise avec la commande : `bot.turn_on_led(led, color)`
+     - `led` : correspond à un chiffre entre 0 et 3.
+        - 0 : en haut à gauche.
+        - 1 : en bas à gauche.
+        - 2 : en bas à droite.
+        - 3 : en haut à droite.
+     - `color` : c'est un paramètre de la forme (rouge, vert, bleu) (aussi appelé RVB).  
+        Les valeurs de `rouge`, `vert` et `bleu` sont entre 0 et 255.  
+        Le RVB est un systeme de couleur, qui permet à l'ordinateur de faire un mélange entre les couleurs pour obtenir la couleur voulu, comme en peinture avec les couleurs primaires !  
+        Prenons l'exemple du Vert :  
+        - En peinture on utilise du jaune et bleu.  
+        - Et en systeme rvb on a simplement a mettre la valeur du vert à sa plus haute valeur : 255, et les autres valeurs à 0.  
+        - Il faut voir le rvb comme une addition de couleur.  
+        - Si on prend (r=0, v=0, b=0) l'addition d'aucune couleur, peut être identifié au noir.  
+        - Si on prend (r=255, v=255, b=255) l'addition de toutes, peut être identifié au blanc.  
+  - `bot.turn_off_led()` permet d'éteindre toutes les leds du dessous.
 
 Voici quelques exemples :
-    `bot.set_headlight(RIGHT,1)` allume le phare de droite
-    `bot.set_headlight(LEFT,0)` éteint le phare de gauche
-    `bot.turn_on_led(0,(255,0,0))` allume la led en haut à gauche avec la couleur rouge
-    `bot.turn_on_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleu ciel
-    `bot.turn_off_led()` éteint toutes les leds du dessous.
+  - `bot.set_headlight(RIGHT,1)` allume le phare de droite
+  - `bot.set_headlight(LEFT,0)` éteint le phare de gauche
+  - `bot.turn_on_led(0,(255,0,0))` allume la led en haut à gauche avec la couleur rouge
+  - `bot.turn_on_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleu ciel
+  - `bot.turn_off_led()` éteint toutes les leds du dessous.
 
 ### Les boucles
 Comme vous avez pu le remarquer, très souvent pour la même action, on copie la même ligne plusieurs fois. Ou alors votre robot avance mais quand le programme a fini d'exécuter les lignes, il s'arrête. Pour pallier ce problème, il y a en programmation ce qu'on appelle des boucles. Les boucles permettent d'exécuter un nombre de fois voulu une série d'instructions. Pour cela on utilise la boucle `for`.
@@ -199,9 +198,9 @@ Ce programme ressemble beaucoup à celui d'avant hormis le fait qu'il ne sera pa
 Maintenant que tu sais manipuler les boucles, tu vas pouvoir t'amuser avec ton robot et ce grâce aux différents capteurs.
 Les capteurs sont en bref des traductions du monde réel au monde numérique.
 Il y 3 capteurs différents sur le robot :
-    1 capteur de distance situé à l'avant qui permet de connaître la distance entre un objet et lui-même.
+  - 1 capteur de distance situé à l'avant qui permet de connaître la distance entre un objet et lui-même.  
         `bot.distance()` est l'instruction qui permet de renvoyer la distance entre le robot l'obstacle devant lui
-    2 capteurs de ligne permettant de détecter les lignes sous le robot
+  - 2 capteurs de ligne permettant de détecter les lignes sous le robot  
         `bot.floor_sensor(capteur)` est l'instruction qui permet de savoir si le capteur LEFT ou RIGHT détecte une ligne noire. S'il en détecte une, il renvoie True sinon il renvoie False (True se traduit par "Vrai" et False par "Faux")
 
 Ces valeurs Vrai ou Faux vont servir à faire quelque chose de très utile que l'on appelle les conditions.
@@ -231,22 +230,22 @@ else:
 #Fin du programme
 ```
 
-Executons ce programme a la main:
-    1. La ligne `a = 2` initialise la variable `a` avec la valeur 2.
-    2. `if a == 1:` Ici le mot clé `if` demande au programme "si `a` est égal à 1". Si c'est vrai alors il va éxécuter l'ensemble des lignes se trouvant à l'intérieur de la condition c'est à dire sur toutes les lignes avec une INDENTATION de plus que lui (les indentations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
-    3. `print("Hello")` Ici on demande au programme d'afficher `Hello` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `a` différent de 1).
-    4. `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égal à 2". Si c'est vrai alors il va exécuter les lignes avec une INDENTATION de plus que lui.
-    5. `print("World")` Ici on demande au programme d'afficher `World` si la condition est vraie (dans notre cas cette ligne sera exécutée et affichera `World`).
-    6. La ligne `heure = 14` initialise la variable `heure` avec la valeur 14.
-    7. `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12". Si c'est vrai alors il éxécutera les instructions à l'intérieur de la condition.
-    8. `print("A table!")` Ici on demande au programme d'afficher `A table!` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `heure` est différente de 12)
-    9. `else:` Ici le mot clé impose au programme d'éxécuter ce qui suit si aucune des conditions précédentes, celle précédée d'un `if`, a été satisfaite (dans notre cas on entrera dans le `else`). 
+Exécutons ce programme à la main :
+  - La ligne `a = 2` initialise la variable `a` avec la valeur 2.
+  - `if a == 1:` Ici le mot clé `if` demande au programme "si `a` est égal à 1". Si c'est vrai alors il va éxécuter l'ensemble des lignes se trouvant à l'intérieur de la condition c'est à dire sur toutes les lignes avec une INDENTATION de plus que lui (les indentations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
+  - `print("Hello")` Ici on demande au programme d'afficher `Hello` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `a` différent de 1).
+  - `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égal à 2". Si c'est vrai alors il va exécuter les lignes avec une INDENTATION de plus que lui.
+  - `print("World")` Ici on demande au programme d'afficher `World` si la condition est vraie (dans notre cas cette ligne sera exécutée et affichera `World`).
+  - La ligne `heure = 14` initialise la variable `heure` avec la valeur 14.
+  - `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12". Si c'est vrai alors il éxécutera les instructions à l'intérieur de la condition.
+  - `print("A table!")` Ici on demande au programme d'afficher `A table!` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `heure` est différente de 12)
+  - `else:` Ici le mot clé impose au programme d'éxécuter ce qui suit si aucune des conditions précédentes, celle précédée d'un `if`, a été satisfaite (dans notre cas on entrera dans le `else`).   
        On peut par ailleurs traduire le mot clé `else` par "sinon" (`if`: si oui, `else`: si non).
-    10. `print("Pas tout de suite")` Ici on demande au programme d'afficher `Pas tout de suite` si on n'est pas entré dans la condition `if`. Attention on ne peut pas mettre de `else` si il n'y a pas de `if`.
+  - `print("Pas tout de suite")` Ici on demande au programme d'afficher `Pas tout de suite` si on n'est pas entré dans la condition `if`. Attention on ne peut pas mettre de `else` si il n'y a pas de `if`.
 
 Cette partie peut être compliquée mais n'hésite pas à questionner mes acolytes afin de ne pas rester perdu.
 
-Revenons rapidement sur les explications de l'INDENTATION. L'INDENTATION est très importante en Python. Elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non.
+Revenons rapidement sur les explications de l'INDENTATION. L'INDENTATION est très importante en Python. Elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non.  
 Quand vous ferez votre programme plus tard, il sera sûrement nécessaire d'en utiliser. Pour se faire, l'INDENTATION est représentée par les 2 flèches ayant des sens opposés. Cette touche ce nomme tabulation, abrégé tab.
 
 ### Conclusion
@@ -270,7 +269,7 @@ bot = Prolobot()
 
 ### Variables globales
 
-`LEFT = 0`. A donner en parametre pour tourner à gauche.
+`LEFT = 0`. A donner en parametre pour tourner à gauche.  
 `RIGHT = 1`. A donner en parametre pour tourner à droite.
 
 ### Fonctions
