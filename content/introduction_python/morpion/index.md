@@ -56,10 +56,10 @@ Résumons ce qu'il vient de se passer dans cet exemple :
 - Pour appeler une fonction, nous écrivons son nom suivi des paramètres que nous voulons lui fournir entre parenthèses.
 - Les valeurs fournies en paramètre à la fonction sont copiées dans le paramètre correspondant au sein de la fonction :
     - Dans le premier appel, notre x au sein de la fonction va copier la valeur de la variable du même nom qui est de 6.
-    - dans le deuxième appel, notre x au sein de la fonction va prendre la valeur 5.
-    - dans le troisième appel, notre x au sein de la fonction va copier la valeur de la variable mon_entier qui est de 10.
+    - Dans le deuxième appel, notre x au sein de la fonction va prendre la valeur 5.
+    - Dans le troisième appel, notre x au sein de la fonction va copier la valeur de la variable mon_entier qui est de 10.
 
-- nous récupérons la valeur de retour de la fonction comme lorsque nous définissons une variable avec le =, ici la valeur de retour de la fonction est stockée dans la variable resultat.
+- Nous récupérons la valeur de retour de la fonction comme lorsque nous définissons une variable avec le =, ici la valeur de retour de la fonction est stockée dans la variable resultat.
 
 **Remarque :** il est possible d'avoir des fonctions qui ne prennent aucun paramètre ! Il suffit pour ça de ne pas en spécifier entre les parenthèses : `def ma_fonction():`
 
