@@ -28,7 +28,7 @@ Skeleton, faisant peur à Pacman, l'emporte contre Pacman. Pacman, quant à lui,
 mange des fantômes, il gagne en toute logique contre Bouh. Bouh le fantôme voudra attraper
 Skeleton, il gagnera donc contre notre ami le squelette.
 
-<!-- TODO: ajouter l'image du but du jeu -->
+{{< figure src="resources/images/all3.png" height=80% width=100% alt="Variable en Python">}}
 
 Pour faire cela, nous allons t'aider à créer le code étapes par étapes.
 Si tu as des questions particulières, n'hésite pas à demander à un
@@ -60,7 +60,7 @@ et de pouvoir les ressortir quand on le souhaite. Ce sont des éléments qui
 associent un nom à une valeur. C'est comme si on utilisait des boîtes pour
 ranger des éléments !
 
-<!-- TODO: ajouter les images -->
+{{< figure src="resources/images/variable.png" height=25% width=25% alt="Variable en Python">}}
 
 Pour déclarer une variable en Python, on va faire comme ça :
 
@@ -116,7 +116,7 @@ Prenons un exemple, si Skeleton mange, il n'aura plus faim pour une glace.
 Le début de cette phrase est une condition, qu'on peut identifier à l'aide
 du mot "si". La condition ici est : Skeleton mange. Elle peut être vraie ou fausse.
 
-<!-- TODO: rajouter les images -->
+{{< figure src="resources/images/conditions.png" height=75% width=75% alt="Conditions en Python">}}
 
 C'est la même chose en Python. On va pouvoir définir des conditions qui
 s'évaluent à vrai ou faux et exécuter des lignes de code en conséquence.
@@ -127,6 +127,11 @@ Le mot-clé "si" va être remplacé par son équivalent en anglais, `if`.
 if 1 == 1:
     # Affiche dans la console "Skeleton est trop fort !"
     print("Skeleton est trop fort !")
+
+# Sinon
+else:
+    # Affiche dans la console "Pacman est trop fort !"
+    print("Pacman est trop fort !")
 ```
 
 Parfois, il va falloir que tu vérifies si deux conditions sont vérifiées en
@@ -162,9 +167,7 @@ Python suit ligne par ligne ton programme, donc pour lui expliquer ce que tu veu
 faire sous certaines conditions, il faut rajouter des espaces avant les lignes
 pour créer des blocs. On parle alors d'indentation. Cela permet à Python de
 savoir quand est-ce qu'il faut sortir du bloc pour s'arrêter. Pour faire ça, on va utiliser la
-touche de tabulation (`Tab`) sur ton clavier, elle ressemble à ça :
-
-{{< figure src=resources/images/tab.png height=20% width=20% alt="La touche tabulation">}}
+touche de tabulation (`Tab`) sur ton clavier.
 
 On peut également utiliser les mots-clés "sinon" et "sinon si". Un petit exemple
 en français : Si je mange japonnais, je n'aurais plus faim. Sinon si je mange
@@ -230,7 +233,7 @@ par la suite, on ne va pas créer par exemple 20 variables.
 Ce qui sera plus pratique pour nous, ce sont les listes. Les listes vont
 nous permettre de stocker plusieurs valeurs dans une seule variable.
 
-<!-- TODO: rajouter des images -->
+{{< figure src="resources/images/liste.png" height=80% width=80% alt="Liste en Python">}}
 
 Par exemple,
 
