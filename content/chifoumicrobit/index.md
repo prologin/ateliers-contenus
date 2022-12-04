@@ -238,15 +238,15 @@ nous permettre de stocker plusieurs valeurs dans une seule variable.
 Par exemple,
 
 ```python
-# Liste des nombres de 0 à 5
-ma_liste_nombres = [0, 1, 2, 3, 4, 5]
+# Liste de lettres
+ma_liste_lettres = ["a", "b", "c", "d"]
 ```
 
 La liste est numérotée de 0 à la longueur de la liste moins 1. Tu peux accéder
 aux éléments d'une liste à l'aide de l'indice. Ce sont des nombres qui désignent
 l'emplacement de la case que tu veux regarder. Attention, en programmation, les
-indeices commencent à 0. Si on nomme la longueur de la liste `longueur`,
-les indices peuvent prendre des valeurs entre `0` et `longueur - 1`.
+indeices commencent à 0. Si on nomme la longueur de la liste `l`,
+les indices peuvent prendre des valeurs entre `0` et `l - 1`.
 
 En Python, pour accéder à un élément à l'indice 2, tu peux faire comme ceci :
 
