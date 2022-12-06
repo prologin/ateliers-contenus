@@ -30,7 +30,7 @@ Skeleton, il gagnera donc contre notre ami le squelette.
 
 {{<figure src="resources/images/all3.png" height=80% width=100% alt="Variable en Python">}}
 
-Pour faire cela, nous allons t'aider à créer le code étapes par étapes.
+Pour faire cela, nous allons t'aider à créer le code étape par étape.
 Si tu as des questions particulières, n'hésite pas à demander à un
 organisateur autour de toi, ils sont là pour ça !
 
@@ -206,7 +206,7 @@ afficher un texte dans la console, en suivant ces conditions :
 ## Les boucles en Python, les boucles en Python, les boucles en Python
 
 Les boucles nous permettent de répéter plusieurs tâches. En Python,
-il y a deux types de boucle ; cependant, dans cet atelier, seul un type
+il y a deux types de boucles ; cependant, dans cet atelier, seul un type
 nous suffira : les boucles `while`.
 
 On peut traduire `while` par "tant que" en français. On va pouvoir utiliser
@@ -228,7 +228,7 @@ while i < 3:
 
 ## Les listes en Python
 
-Lorsqu'on veut stocker de nombreuse valeurs pour pouvoir les réutiliser
+Lorsqu'on veut stocker de nombreuses valeurs pour pouvoir les réutiliser
 par la suite, on ne va pas créer par exemple 20 variables.
 Ce qui sera plus pratique pour nous, ce sont les listes. Les listes vont
 nous permettre de stocker plusieurs valeurs dans une seule variable.
@@ -245,7 +245,7 @@ ma_liste_lettres = ["a", "b", "c", "d"]
 La liste est numérotée de 0 à la longueur de la liste moins 1. Tu peux accéder
 aux éléments d'une liste à l'aide de l'indice. Ce sont des nombres qui désignent
 l'emplacement de la case que tu veux regarder. Attention, en programmation, les
-indeices commencent à 0. Si on nomme la longueur de la liste `l`,
+indices commencent à 0. Si on nomme la longueur de la liste `l`,
 les indices peuvent prendre des valeurs entre `0` et `l - 1`.
 
 En Python, pour accéder à un élément à l'indice 2, tu peux faire comme ceci :
@@ -336,7 +336,7 @@ from microbit import *
 ## J'ai envie de jouer avec les LEDs du `micro:bit`...
 
 Les LEDs d'un `micro:bit` peuvent soit s'allumer ou s'éteindre de manière
-totalement indépendantes. Cependant, dans notre cas, on s'intéressera seulement
+totalement indépendante. Cependant, dans notre cas, on s'intéressera seulement
 à afficher des images déjà fournies par la bibliothèque de `micro:bit`.
 Voici un exemple pour afficher un sourire :
 
@@ -350,7 +350,7 @@ display.show(Image.HAPPY)
 
 La fonction `display.show()` nous permet d'afficher ce que l'on souhaite sur
 les LEDs du `micro:bit`. `Image.HAPPY` est une image déjà définie par
-la bibliothèque des `micro:bit`. Tu peux y retrouver la liste des images
+la bibliothèque des `micro:bit`. Tu peux retrouver la liste des images
 disponibles [ici](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html).
 
 Pour afficher du texte ou des nombres, tu vas pouvoir utiliser la fonction
@@ -371,10 +371,10 @@ souhaiterait que tu affiches un cœur (heart en anglais) sur ton `micro:bit`.
 
 ### Mais il y a des boutons à côté des LEDs !
 
-À côté des 25 LEDs du `micro:bit`, tu peux retrouver à gauche, le bouton `A`,
+À côté des 25 LEDs du `micro:bit`, tu peux retrouver à gauche, le bouton A,
 et à droite, le bouton B. Pour connaître le nombre d'appuis sur les boutons,
 tu peux utiliser les fonctions `button_a.is_pressed()` et `button_a.was_pressed()`.
-Tu peux retrouver les mêmes fonctions pour le bouton `b` juste en remplaçant
+Tu peux retrouver les mêmes fonctions pour le bouton B juste en remplaçant
 `button_a` par `button_b`.
 
 Essaye les codes suivants pour comprendre la différence entre les deux fonctions !
