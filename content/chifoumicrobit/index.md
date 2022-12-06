@@ -165,9 +165,9 @@ if not ma_contion:
 
 Python suit ligne par ligne ton programme, donc pour lui expliquer ce que tu veux
 faire sous certaines conditions, il faut rajouter des espaces avant les lignes
-pour créer des blocs. On parle alors d'indentation. Cela permet à Python de
-savoir quand est-ce qu'il faut sortir du bloc pour s'arrêter. Pour faire ça, on va utiliser la
-touche de tabulation (`Tab`) sur ton clavier.
+pour créer des blocs. On parle alors d'indentation. Pour faire ça, on va utiliser
+la touche de tabulation (`Tab`) sur ton clavier. Cela permet à Python de
+savoir quand est-ce qu'il faut sortir du bloc pour s'arrêter.
 
 On peut également utiliser les mots-clés "sinon" et "sinon si". Un petit exemple
 en français : Si je mange japonnais, je n'aurais plus faim. Sinon si je mange
@@ -242,10 +242,9 @@ Par exemple,
 ma_liste_lettres = ["a", "b", "c", "d"]
 ```
 
-La liste est numérotée de 0 à la longueur de la liste moins 1. Tu peux accéder
-aux éléments d'une liste à l'aide de l'indice. Ce sont des nombres qui désignent
-l'emplacement de la case que tu veux regarder. Attention, en programmation, les
-indices commencent à 0. Si on nomme la longueur de la liste `l`,
+Tu peux accéder aux éléments d'une liste à l'aide de l'indice. Ce sont des nombres
+qui désignent l'emplacement de la case que tu veux regarder. Attention,
+en programmation, les indices commencent à 0. Si on nomme la longueur de la liste `l`,
 les indices peuvent prendre des valeurs entre `0` et `l - 1`.
 
 En Python, pour accéder à un élément à l'indice 2, tu peux faire comme ceci :
@@ -406,8 +405,7 @@ from microbit import *
 # Affiche "Go !" sur le `micro:bit`
 display.scroll("Go !")
 
-# Met en pause le programme le temps que l'utilisateur
-# appuie sur le bouton A
+# Met en pause le programme pour laisser du temps à l'utilisateur
 sleep(200)
 
 # `a_presse` est une variable qui contient `True`
@@ -426,7 +424,7 @@ else:
 
 *Mais c'est quoi ça `sleep(200)` ?*
 
-`sleep(100)`, permet de mettre en pause le programme pendant ici, 100 millisecondes.
+`sleep(200)`, permet de mettre en pause le programme pendant ici, 200 millisecondes.
 Cela te laisse le temps d'appuyer sur les boutons. Il peut alors vérifier si
 tu as appuyé sur les boutons pendant ce laps de temps.
 
