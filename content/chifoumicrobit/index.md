@@ -19,10 +19,10 @@ donc ils ne peuvent pas mimer les symboles ! Skeleton a besoin de ton aide !
 Il te demande de créer un programme leur permettant de jouer sur des `micro:bit` !
 Peux-tu aider notre ami ?
 
-Skeleton souhaiterait pouvoir choisir un élément parmi trois choix sur un
-`micro:bit` avec les boutons, que l'ordinateur choisisse aussi un élément
-et que l'on affiche le résultat. Les choix seront les suivants : Skeleton,
-Pacman et Bouh !
+Skeleton souhaiterait choisir un élément parmi trois choix sur un
+`micro:bit` à l'aide des boutons. De plus, l'ordinateur devra ensuite choisir
+à son tour un élément. Enfin, il faudra afficher le résultat. Les choix
+seront les suivants : Skeleton, Pacman et Bouh !
 
 Skeleton, faisant peur à Pacman, l'emporte contre lui. Pacman, quant à lui,
 mange des fantômes, il gagne en toute logique contre Bouh. Bouh le fantôme voudra attraper
@@ -258,7 +258,7 @@ ma_liste_lettres = ["a", "b", "c", "d"]
 ma_variable = liste[2]
 
 # Affiche `ma_variable` dans la console
-print(ma_valeur)
+print(ma_variable)
 ```
 
 ### Exercice 2
@@ -274,6 +274,7 @@ derniers_scores = [4242, 3942, 5832, 6048, 3891]
 # Longueur de la liste `derniers_scores` (ici 5)
 longueur = len(derniers_scores)
 ```
+
 
 ## L'aléAtOiRE eN PYthOn
 
@@ -509,12 +510,12 @@ ma_liste = [42, 56, 98]
 # On est à l'indice 3
 mon_indice = 3
 
-# Le nouveau indice est 3 modulo 3 = 0
+# Le nouvel indice est 3 modulo 3 = 0
 # car le reste de la division euclidienne de 3 par 3 est égal à 0
-mon_nouveau_indice = 3 % 3
+mon_nouvel_indice = 3 % 3
 
 # L'élément à l'indice 0 (3 % 3)
-mon_element = ma_liste[mon_nouveau_indice]
+mon_element = ma_liste[mon_nouvel_indice]
 
 # Affiche `mon_element`
 print(mon_element)
@@ -588,7 +589,7 @@ import radio
 
 Pour commencer, nous voulons que Skeleton puisse s'entraîner contre
 l'ordinateur, ou bien jouer en multijoueur avec ses amis.
-Pour stocker le mode de jeu choisi, nous allons utiliser une variable entière,
+Pour stocker le mode de jeu choisi, nous allons utiliser une variable,
 que nous appelerons `multijoueur`.
 Cette variable va prendre trois états différents :
 - `-1` si le joueur n'a pas encore fait son choix
