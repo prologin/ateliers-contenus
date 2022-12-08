@@ -2,21 +2,21 @@ from microbit import *
 from random import randint
 
 # TODO: Créer la liste des possibilités
-possibilites =
+possibilites = []
 
 # TODO: Créer une variable pour avoir la longueur
 # de la liste `possibilites`
-NB_POSSIBILITES =
+NB_POSSIBILITES = 0
 
 # TODO: Générer le choix du micro:bit
 # entre 0 et `NB_POSSIBILITES` exclu
-choix_adversaire =
+choix_adversaire = 0
 
 # Le choix du joueur est à 0 par défaut
 choix_joueur = 0
 
-#TODO: Ajouter la condition d'arrêt de la boucle avant les `:`
-while :
+# TODO: Modifier la condition d'arrêt de la boucle avant les `:`
+while False:
     # TODO: Afficher le choix actuel du joueur
 
     # TODO: Que faire si A est appuyé ?
