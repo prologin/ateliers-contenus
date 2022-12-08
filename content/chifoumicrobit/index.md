@@ -24,7 +24,7 @@ Skeleton souhaiterait pouvoir choisir un élément parmi trois choix sur un
 et que l'on affiche le résultat. Les choix seront les suivants : Skeleton,
 Pacman et Bouh !
 
-Skeleton, faisant peur à Pacman, l'emporte contre Pacman. Pacman, quant à lui,
+Skeleton, faisant peur à Pacman, l'emporte contre lui. Pacman, quant à lui,
 mange des fantômes, il gagne en toute logique contre Bouh. Bouh le fantôme voudra attraper
 Skeleton, il gagnera donc contre notre ami le squelette.
 
@@ -38,7 +38,7 @@ organisateur autour de toi, ils sont là pour ça !
 
 Les `micro:bit` sont des cartes programmables qu'on te fournit tout
 au long de l'atelier. Avec celles-ci, tu vas pouvoir interagir avec ses
-composants comme les 25 LEDs au milieu ou les boutons.
+composants. Les 25 LEDs au milieu ou les boutons en sont des exemples.
 
 {{<figure src=resources/images/microbit.png height=50% width=50% alt="Micro:bit">}}
 
@@ -62,7 +62,7 @@ ranger des éléments !
 
 {{<figure src="resources/images/variable.png" height=25% width=25% alt="Variable en Python">}}
 
-Pour déclarer une variable en Python, on va faire comme ça :
+Pour déclarer une variable en Python, on procède de la sorte :
 
 ```python
 # `ma_variable` stocke la valeur 42
@@ -217,6 +217,7 @@ nous ne devons pas faire de bruit.
 Un exemple serait celui-ci :
 
 ```python
+i = 0
 # Tant que i est inférieur à 3
 while i < 3:
     # Afficher "Bonjour !"
@@ -278,8 +279,8 @@ longueur = len(derniers_scores)
 
 En Python, on peut simuler de l'aléatoire, comme dans un lancé de dé. Pour faire
 cela, il faut alors donner deux nombres, qui formeront l'intervalle dans lequel on
-veut générer le nombre aléatoire. Par exemple, dans un dé, l'intervalle sur lequel
-le dé peut tomber est [1; 6].
+veut générer le nombre aléatoire. Par exemple, avec un dé, les valeurs que l'on 
+peut obtenir sont sur l'intervalle [1; 6].
 
 Afin de générer notre nombre aléatoire, il va d'abord falloir importer
 une bibliothèque. Cela va nous permettre d'utiliser des fonctions déjà écrites
@@ -294,7 +295,7 @@ travailler sur nos entrées pour ressortir un élément.
 # Importe la bibliothèque pour générer des nombres aléatoires
 from random import randint
 
-# `ma_variable` va contenir une valeur entre 0 et 4 inclus
+# `ma_variable` va contenir une valeur aléatoire comprise entre 0 et 4 inclus
 # Les valeurs possibles sont alors : 0, 1, 2, 3 et 4
 ma_variable = randint(0, 4)
 
@@ -307,7 +308,7 @@ généré.
 
 ### Exercice 3
 
-Bouh le fantôme n'arrive pas à faire de choix pour ce qu'il veut manger à midi.
+Bouh, le fantôme, n'arrive pas à faire de choix de ce qu'il veut manger à midi.
 Pour l'aider, Skeleton souhaiterait que tu lui fasses un programme permettant
 de choisir aléatoirement un élément dans la liste des choix possibles et
 d'afficher ce choix. On te donne alors la liste suivante :
@@ -334,8 +335,8 @@ from microbit import *
 
 ## J'ai envie de jouer avec les LEDs du `micro:bit`...
 
-Les LEDs d'un `micro:bit` peuvent soit s'allumer ou s'éteindre de manière
-totalement indépendante. Cependant, dans notre cas, on s'intéressera seulement
+Les LEDs d'un `micro:bit` peuvent soit s'allumer, soit s'éteindre de manière
+totalement indépendantes. Cependant, dans notre cas, on s'intéressera seulement
 à afficher des images déjà fournies par la bibliothèque de `micro:bit`.
 Voici un exemple pour afficher un sourire :
 
