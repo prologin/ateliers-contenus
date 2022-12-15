@@ -61,18 +61,18 @@ Voici par exemple comment tu peux le faire avancer.
 
 ```py
 bot.forward()
-sleep(1000)
+sleep(1)
 bot.forward(1)
-sleep(2000)
+sleep(2)
 bot.stop()
 ```
 
 #### Le sleep
 L'instruction `sleep(time)` est une instruction pour mettre en pause le 
-programme pour une durée de `time` millisecondes. 
+programme pour une durée de `time` secondes. 
 
-Dans le programme au-dessus, la ligne `sleep(1000)` va donc indiquer au programme 
-qu'il doit attendre pendant 1000 millisecondes, soit 1 seconde.  
+Dans le programme au-dessus, la ligne `sleep(1)` va donc indiquer au programme 
+qu'il doit attendre pendant 1 seconde.  
 Le robot va donc activer les moteurs, puis attendre 1 seconde et activer les
 moteurs à la vitesse 100, puis il attend 2 secondes avant de s'arrêter.
 
@@ -112,16 +112,16 @@ from microbit import *
 bot = Prolobot()
 
 bot.turn(RIGHT)
-sleep(1000)
+sleep(1)
 
 bot.rotate(LEFT)
-sleep(1000)
+sleep(1)
 
 bot.turn(RIGHT)
-sleep(1000)
+sleep(1)
 
 bot.rotate(LEFT)
-sleep(1000)
+sleep(1)
 
 bot.stop()
 ```
@@ -167,9 +167,9 @@ Prenons cet exemple :
 
 for i in range(5):
     bot.forward()
-    sleep(1000)
+    sleep(1)
     bot.stop()
-    sleep(1000)
+    sleep(1)
 
 #Fin du programme
 ```
@@ -185,9 +185,9 @@ Prenons cet exemple :
 
 while True:
     bot.forward()
-    sleep(1000)
+    sleep(1)
     bot.stop()
-    sleep(1000)
+    sleep(1)
 
 #Fin du programme
 ```

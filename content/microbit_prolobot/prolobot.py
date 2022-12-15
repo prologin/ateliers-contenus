@@ -3,11 +3,12 @@
 
 import microbit
 import machine
-import time
+from time import sleep, sleep_ms
 import neopixel
 
 LEFT = 0
 RIGHT = 1
+
 
 class Wheel:
     def __init__(self, moteur):
@@ -46,7 +47,7 @@ class Wheel:
 class Prolobot:
     def __init__(self, freq=100000):
         microbit.i2c.init(freq=freq, sda=microbit.pin20,
-                scl=microbit.pin19)
+                          scl=microbit.pin19)
         self.__rgbleds = neopixel.NeoPixel(microbit.pin15, 4)
         self.__left_wheel = Wheel(0x00)
         self.__right_wheel = Wheel(0x02)
@@ -114,7 +115,7 @@ class Prolobot:
         Return the distance between the prolobot and the obstacle in front of it
         """
         microbit.pin1.write_digital(1)
-        time.sleep_ms(10)
+        sleep_ms(10)
         microbit.pin1.write_digital(0)
         microbit.pin2.read_digital()
         t = machine.time_pulse_us(microbit.pin2, 1)
