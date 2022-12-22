@@ -9,6 +9,10 @@ possibilites = [Image.SKULL, Image.PACMAN, Image.GHOST]
 # La fonction `len` renvoie la longueur d'une liste
 NB_POSSIBILITES = len(possibilites)
 
+# On initialise le choix de l'adversaire à 0
+# par défaut
+choix_adversaire = 0
+
 # On rajoute une valeur booléenne pour savoir si
 # on veut jouer avec la radio ou non
 multijoueur = -1
