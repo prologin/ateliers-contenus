@@ -53,18 +53,18 @@ sleep(2000)
 
 # Égalité si les joueurs ont fait le même choix
 if choix_joueur == choix_adversaire:
-    display.scroll("Egalite !")
+    display.scroll("Egalite !", delay=50)
 
 # Tu as gagné si notre choix bat celui de l'adversaire
 elif choix_joueur == 0 and choix_adversaire == 1:
-    display.scroll("Tu as gagne !")
+    display.scroll("Gagne !", delay=50)
 
 elif choix_joueur == 1 and choix_adversaire == 2:
-    display.scroll("Tu as gagne !")
+    display.scroll("Gagne !", delay=50)
 
 elif choix_joueur == 2 and choix_adversaire == 0:
-    display.scroll("Tu as gagne !")
+    display.scroll("Gagne !", delay=50)
 
 # Tu as perdu sinon
 else:
-    display.scroll("Tu as perdu...")
+    display.scroll("Perdu...", delay=50)

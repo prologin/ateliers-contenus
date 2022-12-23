@@ -365,6 +365,16 @@ from microbit import *
 display.scroll("Chifoumicro:bit")
 ```
 
+Avec la dernière fonction, `display.scroll()`, tu peux changer la vitesse
+d'affichage avec l'argument `delay=nb` avec `nb` la vitesse. La valeur est
+à l'origine à 150. Ainsi, si tu donnes un nombre plus petit que 150, ton
+texte ira plus vite que par défaut.
+
+```python
+# Affiche "Je vais vite !" sur le micro:bit avec une vitesse de 50
+display.scroll("Je vais vite !", delay=50)
+```
+
 ### Exercice 4
 
 Pour voir si tu as bien compris comment on manipule les images, Skeleton
@@ -542,11 +552,11 @@ va d'abord vérifier s'il y a égalité entre les deux joueurs.
 Il y a égalité entre les deux joueurs dans notre jeu quand le choix de
 notre adversaire et le même que le nôtre. Il faut alors vérifier l'égalité
 entre `choix_joueur` et `choix_adversaire`. Il faut alors afficher sur le
-`micro:bit` "Egalite !".
+`micro:bit` "Egalite !" avec une vitesse d'affichage de 50.
 
 Sinon, s'il n'y a pas égalité, il faut vérifier les conditions pour savoir
-si on a gagné. Atention, il faudra alors afficher "Tu as gagne !". Les
-conditions sont les suivantes :
+si on a gagné. Atention, il faudra alors afficher "Gagne !" avec une vitesse
+d'affichage de 50. Les conditions sont les suivantes :
 
 - Si `choix_joueur` est égal à 0 et `choix_adversaire` est égal à 1
 (Skeleton fait peur à Pacman)
@@ -558,7 +568,8 @@ conditions sont les suivantes :
 (Bouh fait peur à Skeleton)
 
 Enfin, sinon, si toutes les conditions au-dessus ne sont pas remplies,
-cela veut dire que tu as perdu et il faut que tu affiches "Tu as perdu...".
+cela veut dire que tu as perdu et il faut que tu affiches "Perdu..." avec
+une vitesse d'affichage de 50.
 
 
 # Un mode multijoueur ?
