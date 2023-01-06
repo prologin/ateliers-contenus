@@ -255,7 +255,7 @@ En Python, pour accéder à un élément à l'indice 2, tu peux faire comme ceci
 ma_liste_lettres = ["a", "b", "c", "d"]
 
 # `ma_variable` est l'élément à l'indice 2 de `liste` ("c")
-ma_variable = liste[2]
+ma_variable = ma_liste_lettres[2]
 
 # Affiche `ma_variable` dans la console
 print(ma_variable)
