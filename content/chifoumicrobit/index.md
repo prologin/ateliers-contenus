@@ -157,7 +157,7 @@ contrôle. Ici, on a une négation, et la négation en Python se traduit comme s
 ma_condition = 42 == 0
 
 # Si `ma_condition` n'est pas vraie (si `ma_condition` est fausse)
-if not ma_contion:
+if not ma_condition:
     print("Bouh aime les carottes")
 ```
 
