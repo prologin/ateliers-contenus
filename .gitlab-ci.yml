@@ -3,6 +3,7 @@ default:
 
 variables:
   HUGO_ENV: production
+  GIT_SUBMODULE_STRATEGY: recursive
 
 build:
   stage: build

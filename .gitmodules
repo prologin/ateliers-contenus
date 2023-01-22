@@ -1,0 +1,3 @@
+[submodule "themes/prologin"]
+    path = themes/prologin
+    url = ../../tech/packages/hugo-base-theme.git
