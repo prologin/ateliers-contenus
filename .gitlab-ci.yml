@@ -3,18 +3,29 @@ default:
 
 variables:
   HUGO_ENV: production
-  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - build
+  - deploy
+
+.hugo:
+  before_script:
+    - apk add yarn bash
+  script:
+    - ./build.sh
+    - hugo
+  variables:
+      GIT_SUBMODULE_STRATEGY: recursive
 
 build:
+  extends: .hugo
   stage: build
-  script:
-    - hugo
   rules:
     - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
 
 pages:
-  script:
-    - hugo
+  extends: .hugo
+  stage: deploy
   artifacts:
     paths:
       - public
