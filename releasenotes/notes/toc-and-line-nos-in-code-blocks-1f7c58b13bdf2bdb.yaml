@@ -1,0 +1,4 @@
+---
+fixes:
+  - |
+    Add line numbers in the simple code blocks and change the level of details of the table of content

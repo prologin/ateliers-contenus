@@ -3,6 +3,18 @@ languageCode = "fr-fr"
 title = "Ateliers Prologin"
 theme = "prologin"
 
+[markup]
+    # Table of content level
+    [markup.tableOfContents]
+        endLevel = 2
+        ordered = false
+        startLevel = 1
+
+    # Display lines number in simple code blocks
+    [markup.highlight]
+        lineNos = true
+
+
 # Allow having shortcode inside other shortcodes
 [markup.goldmark.renderer]
-unsafe = true
+    unsafe = true
