@@ -21,9 +21,9 @@ De nos jours, beaucoup de choses, mais à la base seulement un langage informati
 
 Comme il ne s'agit que de texte, tu peux créer par toi-même une page très simplement :
 
-1. Crée le fichier `hello_world.html` et ouvre le avec ton navigateur
+1. Ouvre le fichier `blog.html` avec ton navigateur
 2. Ouvre le également dans `Visual Studio Code` s'il est disponible, `Bloc-note` sinon
-3. Écris `Hello world!`
+3. Écris `Hello world!` sur la ligne à remplacer
 4. Sauvegarde le fichier
 5. Retourne sur ton navigateur et rafraîchit la page (touche F5)
 
@@ -32,13 +32,11 @@ Et voilà ! Tu viens d'écrire une page très simple qui s'affichera dans n'impo
 # Balises
 
 La particularité du `HTML` par rapport à du texte simple, c'est qu'il permet de structurer la page (titres, paragraphes, liens, images, ...) à l'aide de balises.
-En quelques mots, il va te permettre de donner des instructions au navigateur sur l'affichage souhaité : ``"Ceci est du texte"``, ``"Ceci est une image"``, etc.
-
 *Mais qu'est-ce qu'une balise ?*
 
 Une balise est composée d'un texte entouré de chevrons (les symboles `<` et `>`). Elles viennent généralement par paires : une balise ouvrante (`<nom de la balise>`) et une balise fermante (`</nom de la balise>`), permettant d'encadrer du texte pour en définir la nature.
 
-```
+```html
 du texte <titre> Le titre </titre> du texte
 ```
 
@@ -64,7 +62,7 @@ Ici on ouvre `a` puis on ouvre `b`, puis on ferme `a`, et enfin on ferme `b` ; c
 
 Les navigateurs connaissent un certain nombre de balises, qui vont leur permettre de comprendre ce que tu veux afficher.
 
-Dans la suite de ce TP, tu vas rencontrer petit à petit différentes balises et comprendre leur rôle. Tu auras l'occasion de les utiliser, à chaque fois dans un fichier fourni. Tu devras écrire exclusivement entre les balises `<body>` et `</body>` (nous reviendrons plus tard sur leur utilité et celle des autres balises présentes dans ce fichier).
+Dans la suite de ce TP, tu vas rencontrer petit à petit différentes balises et comprendre leur rôle. Tu auras l'occasion de les utiliser, à chaque fois dans un fichier fourni. **Tu devras écrire exclusivement entre les balises `<body>` et `</body>`** (nous reviendrons plus tard sur leur utilité et celle des autres balises présentes dans ce fichier).
 
 ```html
 <!DOCTYPE html>
