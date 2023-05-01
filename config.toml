@@ -14,6 +14,11 @@ theme = "prologin"
     [markup.highlight]
         lineNos = true
 
+[params.style]
+    primaryColor = "#131325"
+    secondaryColor = "#dd3737"
+    headerFont = "Courier"
+
 
 # Allow having shortcode inside other shortcodes
 [markup.goldmark.renderer]
