@@ -1,7 +1,7 @@
 # Ateliers Contenu
 
 Ce repo réunit toutes les ressources utilisées lors des Ateliers Prologin.
-Le site est déployé à l'adresse [](https://ateliers.prologin.org).
+Le site est déployé à l'adresse [ateliers.prologin.org](https://ateliers.prologin.org).
 
 # Faire tourner le site en local
 
@@ -19,7 +19,7 @@ Hugo affiche ensuite le port sur lequel trouver le site (en général le port 13
 # Le thème
 
 Pour avoir un détail des fonctionalités du site, vous pouvez vous rendre sur le
-repo [hugo-base-theme]("https://gitlab.com/prologin/tech/packages/hugo-base-theme").
+repo [hugo-base-theme](https://gitlab.com/prologin/tech/packages/hugo-base-theme).
 
 C'est également ici qu'il faut faire toute issue concernant le site : du CSS pas
 très beau, un bouton qui marche pas, etc.
