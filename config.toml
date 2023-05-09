@@ -18,7 +18,8 @@ theme = "prologin"
     primaryColor = "#131325"
     secondaryColor = "#dd3737"
     headerFont = "Courier"
-
+    colorScheme = ["#dd3737", "#f59c2e", "#314658"]
+    menuOffset = 10
 
 # Allow having shortcode inside other shortcodes
 [markup.goldmark.renderer]
