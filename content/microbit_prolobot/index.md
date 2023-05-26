@@ -1,110 +1,203 @@
 ---
 title: Prolobot
 date: 2022
-authors: Julie 'DaiF' Fiadino, Hippolyte Pik
+authors: Julie 'DaiF' Fiadino
 subtitle: Codez avec le Robot Microbit
-code_stub_url: "./prolobot.py"
+code_stub_url: "./resources/given_resources/prolobot.py"
 ---
 
-## Introduction
-Bonjour à toi jeune programmeuse, programmeur. Je me présente, je suis Joseph Marchand, et c'est moi qui t'accompagnerai au travers de cette découverte du monde de l'informatique durant cet atelier.
-Avant de commencer, laisse-moi te présenter mes fidèles acolytes : les organisateurs. Ce sont eux qui t'accompagnent
-aujourd'hui. Ils me remplacent car je suis très occupé en ce moment, mais si tu as une quelconque question, à n'importe quel moment, n'hésite surtout pas à leur demander de l'aide, ils sont là pour ça.
-Je m'arrête là pour les présentations, et commençons cet atelier par une introduction du robot de cet atelier.
+<span style="font-family: Courier;">[Initialisation Procédure Formation]</span>  
+<span style="font-family: Courier;">[ID: PROLOBOT]</span>  
+<span style="font-family: Courier;">[Chargement des modules]</span>  
+<span style="font-family: Courier;">[Chargement terminé]</span>  
 
-### Qu'est ce que c'est `microbit:maqueen` ?
-Un `microbit` c'est un microcontrôleur de la taille d'une carte à jouer (indication: tu dois pouvoir voir le micro:bit à l'avant du robot). Et `maqueen` c'est le petit robot que tu as devant toi. `maqueen` c'est un robot qui est entièrement configurable avec avec un langage que l'on appelle le Python. Ce langage va être convertit en plein de petites instructions qui permettrons de diriger le robot.
+# <span style="font-family: Courier;">[Lancement Module Introduction]</span>
 
-## Le Prolobot
+Bonjour et bienvenue à ProloLab, un labo spécialisé dans la création de robots !
+Vous avez été assigné à l'un de nos récents projets secrets : le _Prolobot_.
 
-Entrons dans le vif du sujet. Dans cette partie, nous allons te montrer comment utiliser les petits robots maqueen.
+Le _Prolobot_ est un robot qui fonctionne à l'aide d'une carte électronique appelée `micro:bit`.
+Ce robot est contrôlé en envoyant une suite d'instructions sur la carte, qui
+va ensuite transmettre les informations aux autres composants.
 
-### Utiliser avec l'éditeur
+Cet ensemble d'instructions s'appelle un _"programme"_. En tant que nouveau technicien
+de notre labo, vous vous devez d'apprendre à les écrire.
+Tout au long de la mission, vous allez être accompagnés par des _techniciens de qualification supérieure_. N'hésitez pas à faire appel à eux en cas de problème. 
 
-<!-- NOTE: tuto pour l'editeur python du site microbit -->
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Informations incomplètes (ID: IEDITOR)]</span>
 
-Pour utiliser le robot, commence par télécharger le fichier donné.
+{{% box type="info" title="ID: IEDITOR" %}}
 
-Appuie ensuite sur le bouton 'Open...' en bas de l'écran puis 
-choisis le fichier que tu viens de télécharger.
-{{<figure src="img/open_button.png" >}}
+Pour s'assurer d'une communication réussie avec le robot, nous vous avons fourni
+un fichier permettant d'envoyer des commandes spécifiques. Veuillez donc le 
+télécharger en cliquant [ici](./resources/given_resources/prolobot.py) ou sur le
+bouton _Code à compléter_ en haut de cette page.
 
-Appuie enfin sur le bouton à côté du nom du fichier et sélectionne 'Ajouter le
-fichier' avant de valider.
-{{<figure src="img/load_button.png" >}}
+Pour l'édition des programmes, tous nos techniciens utilisent le site
+[python.microbit.org](https://python.microbit.org/). Afin de charger les fichiers
+utilitaires, veuillez cliquer sur le bouton `Ouvrir...` présenté ci-dessous.
 
-Toutes ces étapes permet à l'éditeur de reconnaitre le robot.
-Pour enfin l'utiliser, écris ces 2 lignes au début de ton fichier.
+{{<figure src="resources/images/open_button.png" >}}
+
+Sélectionnez ensuite le fichier téléchargé `prolobot.py`. Avant de confirmer,
+appuyez sur le bouton indiqué ci-dessous.
+
+{{<figure src="resources/images/load_button.png" >}}
+
+Changez ensuite pour l'option `Ajouter le fichier prolobot.py`. Vous pouvez
+maintenant confirmer.
+
+Afin d'envoyer le code au robot, veuillez brancher le haut de la carte électronique
+à l'ordinateur et appuyer sur le bouton `Envoyer vers micro:bit` comme ci-dessous :
+
+{{<figure src="resources/images/send_button.png" >}}
+
+En cas de problème, veuillez appeler un technicien de qualification supérieure pour qu'il vous montre
+la procédure.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Informations à jour]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Tout programme contrôlant le prolobot est précédé de ces 2 lignes :
 
 ```py
 from prolobot import *
 bot = Prolobot()
 ```
 
-La première ligne va permettre d'indiquer au programme que tu veux utiliser le
-robot. La deuxième dit au programme de créer un robot appelé bot.
-C'est lui que tu vas faire bouger.
+La première ligne charge le fichier utilitaire dans le programme, la seconde
+permet de créer un robot. Par convention du labo, le robot est nommé bot.
 
-### Avancer
+[SECTION-BREAK]
 
-Pour faire avancer le robot, tu peux écrire `bot.forward()`.
+# <span style="font-family: Courier;">[Lancement Module Déplacement]</span>
 
-Cette ligne va permettre d'activer les moteurs du robot.
-> Attention : cette instruction ne le fait pas arrêter ! Pour cela, il faut
-> écrire `bot.stop()`
+Ce module a pour but de vous montrer comment fonctionne le déplacement du robot.
+Toutes ces commandes permettent d'activer les roues du robots de manière
+différentes. Il est important que vous en saisissiez la nuance.
 
-Tu peux également préciser la vitesse du robot en mettant un nombre entre 0 et 2
-entre les parenthèses, cette vitesse correspondant au nombre tours de roue par secondes.
-Si tu ne précises pas, le robot ira à la vitesse 0.4.
+## <span style="font-family: Courier;">[Lancement Sous-Module Avancée]</span>
 
-Voici par exemple comment tu peux le faire avancer.
+Le robot avance après avoir reçu la commande `bot.forward()`.
+
+Le nombre de tours de roue par secondes peut également être précisé comme ceci :
+`bot.forward(0.6)`. Pour des raisons de clarté, nous appelerons _vitesse_ ce 
+nombre de tours de roue. Lorsqu'elle n'est pas précisée, la vitesse utilisée
+est `0.4`.
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Erreurs lors de l'exécution (ID: ESPEED)]</span>
+
+{{% box type="error" title="ID: ESPEED" %}}
+
+En raison des moteurs utilisés, la vitesse ne peut aller au delà de 2.
+Une mauvaise utilisation pourrait endommager le robot.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Erreurs supprimées]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Le robot peut également reculer à l'aide de la commande `bot.backward()`.
+Les précisions de vitesse fonctionnent de la même manière que la précédente.
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Vulnérabilité détectée (ID: WSTOP)]</span>
+
+{{% box type="warning" title="ID: WSTOP" %}}
+
+Les commandes `forward` et `backward` activent les moteurs mais ne les désactivent
+pas. Pour arrêter le robot, il est nécessaire d'utiliser la commande `bot.stop()`
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Vulnérabilité prise en charge avec succès]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Voici donc un programme illustrant les différents éléments abordés :
 
 ```py
+from prolobot import *
+bot = Prolobot()
+
 bot.forward()
 sleep(1)
-bot.forward(1)
+bot.backward(1)
 sleep(2)
 bot.stop()
 ```
 
-#### Le sleep
-L'instruction `sleep(time)` est une instruction pour mettre en pause le 
-programme pour une durée de `time` secondes. 
+Nous vous conseillons fortement de tester ce programme afin d'en comprendre les
+détails.
 
-Dans le programme au-dessus, la ligne `sleep(1)` va donc indiquer au programme 
-qu'il doit attendre pendant 1 seconde.  
-Le robot va donc activer les moteurs, puis attendre 1 seconde et activer les
-moteurs à la vitesse 100, puis il attend 2 secondes avant de s'arrêter.
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Informations incomplètes (ID: ISLEEP)]</span>
 
-Le robot peut aussi reculer en écrivant `bot.backward()`. Tout comme pour `bot.forward()`,
-on peut préciser la vitesse des roues entre les parenthèses.
+{{% box type="info" title="ID: ISLEEP" %}}
+La commande `sleep(time)` permet de mettre en pause le programme pour une durée
+de `time` secondes. 
 
+Les commandes `forward` et `backward` n'arrêtant pas les moteurs, les succéder
+d'un sleep permet d'indiquer la durée de celles-ci.
 
-### Ca tourne
+Le programme ci-dessous indique donc au robot d'avancer à une vitesse de 0.2
+pour une durée de 2 secondes, puis reculer durant 1 seconde, avant de s'arrêter.
 
-Faire avancer le robot c'est bien, le faire tourner c'est encore mieux. Pour se faire plusieurs méthodes existent: 
-    `bot.rotate(direction, speed)`
-    `bot.turn(direction, speed)`
+```py
+from prolobot import *
+bot = Prolobot()
 
-Ces deux instructions ont deux paramètres mais seul `direction` est obligatoire. C'est-à-dire :
- - `bot.rotate(direction)` fonctionne et aura une vitesse mise par défaut à 0.4
- - `bot.turn(direction)` fonctionne et aura aussi une vitesse mise à 0.4
+bot.forward(0.2)
+sleep(2)
+bot.backward()
+sleep(1)
+bot.stop()
+```
 
-De plus deux variables te sont fournies: 
- - `LEFT` pour la direction gauche
- - `RIGHT` pour la direction droite
+{{% /box %}}
 
-Faisons une distinction, l'instruction `bot.turn(LEFT)` allume seulement le moteur de droite pour faire tourner le robot.
-Allumer le moteur de droite et éteindre le moteur de gauche va permettre au robot de tourner comme on le voit sur le schéma.
-{{<figure src="img/maqueen_turn.png" >}}
-`bot.turn(RIGHT)` fait la même chose mais allume le moteur de gauche.
+<span style="font-family: Courier;">[Informations à jour]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
 
-Maintenant, l'instruction `bot.rotate(LEFT)` allume le moteur droite comme pour `bot.turn(LEFT)` cependant il allume aussi le moteur gauche mais dans le sens opposé à celui du moteur de droite. Les 2 roues avançant à la même vitesse, cela va permettre au robot
-de tourner sur lui même.
-{{<figure src="img/maqueen_rotate.png" >}}
-L'instruction `bot.rotate(RIGHT)` fait la même chose dans le sens inverse.
+## <span style="font-family: Courier;">[Lancement Sous-Module Rotation]</span>
 
-Voici un court programme pour essayer ce que je viens de t'expliquer :
+Le robot peut-être tourné à l'aide de 2 commandes différentes :
+- `bot.turn(direction)`
+- `bot.rotate(direction)`
+
+La valeur `direction` doit être remplacée par les mots `LEFT` ou `RIGHT`, indiquant
+au robot de tourner respectivement à gauche et à droite.
+
+Une vitesse peut y être précisé comme ceci : `bot.turn(direction, 0.5)`.
+Les spécifications de la vitesse sont les mêmes que les fonctions précédentes.
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Informations incomplètes (ID: IROTATURN)]</span>
+
+{{% box type="info" title="ID: IROTATURN" %}}
+
+Les commandes `rotate` et `turn` sont similaires mais contiennent une différence cruciale :
+la manière dont ils *pivotent*.
+
+La commande `turn` va activer une des 2 roues pour faire tourner le robot. La commande
+`rotate` va activer les 2 roues pour le faire pivoter sur lui même.
+
+Voici 2 exemples visuels pour illustrer cette différence :
+
+- `bot.turn(LEFT)`
+{{<figure src="resources/images/maqueen_turn.gif" width=50% >}}
+- `bot.rotate(LEFT)`
+{{<figure src="resources/images/maqueen_rotate.gif" width=50% >}}
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Informations à jour]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Voici donc un programme illustrant les éléments du sous-module de rotation :
 
 ```py
 import prolobot
@@ -117,208 +210,790 @@ sleep(1)
 bot.rotate(LEFT)
 sleep(1)
 
-bot.turn(RIGHT)
+bot.turn(LEFT, 1.0)
 sleep(1)
 
-bot.rotate(LEFT)
+bot.rotate(RIGHT, 0.3)
 sleep(1)
 
 bot.stop()
 ```
 
-## Les Bonus
-Voici maintenant la partie la plus amusante de cet atelier et le moment où c'est votre créativité qui va devoir parler.
+Tout comme le précédent, il vous est fortement conseillé de tester ce programme
+avec votre propre Prolobot.
 
-### Les Leds
-Sur ce petit robot, plusieurs leds sont configurables et sont mises à votre disposition pour pouvoir s'amuser.  
-Au total, le robot possède 6 leds :
-   - 2 positionnées à l'avant (qu'on appellera dans cet atelier "Phare") qu'on utilise avec la commande : `bot.set_headlight(led, state)`
-     - `led` : RIGHT (led avant droite) / LEFT (led avant gauche).
-     - `state` : 1 (pour allumer) / 0 (pour éteindre).
-   - 4 positionnées en dessous qu'on utilise avec la commande : `bot.turn_on_led(led, color)`
-     - `led` : correspond à un chiffre entre 0 et 3.
-        - 0 : en haut à gauche.
-        - 1 : en bas à gauche.
-        - 2 : en bas à droite.
-        - 3 : en haut à droite.
-     - `color` : c'est un paramètre de la forme (rouge, vert, bleu) (aussi appelé RVB).  
-        Les valeurs de `rouge`, `vert` et `bleu` sont entre 0 et 255.  
-        Le RVB est un systeme de couleur, qui permet à l'ordinateur de faire un mélange entre les couleurs pour obtenir la couleur voulu, comme en peinture avec les couleurs primaires !  
-        Prenons l'exemple du Vert :  
-        - En peinture on utilise du jaune et bleu.  
-        - Et en systeme rvb on a simplement a mettre la valeur du vert à sa plus haute valeur : 255, et les autres valeurs à 0.  
-        - Il faut voir le rvb comme une addition de couleur.  
-        - Si on prend (r=0, v=0, b=0) l'addition d'aucune couleur, peut être identifié au noir.  
-        - Si on prend (r=255, v=255, b=255) l'addition de toutes, peut être identifié au blanc.  
-  - `bot.turn_off_led()` permet d'éteindre toutes les leds du dessous.
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Demande d'intervention (ID: MSECUPERI)]</span>  
 
-Voici quelques exemples :
-  - `bot.set_headlight(RIGHT,1)` allume le phare de droite
-  - `bot.set_headlight(LEFT,0)` éteint le phare de gauche
-  - `bot.turn_on_led(0,(255,0,0))` allume la led en haut à gauche avec la couleur rouge
-  - `bot.turn_on_led(2,(135,206,235))` allume la led en bas à droite avec la couleur bleu ciel
-  - `bot.turn_off_led()` éteint toutes les leds du dessous.
+{{% box type="exercise" title="ID: MSECUPERI" %}}
 
-### Les boucles
-Comme vous avez pu le remarquer, très souvent pour la même action, on copie la même ligne plusieurs fois. Ou alors votre robot avance mais quand le programme a fini d'exécuter les lignes, il s'arrête. Pour pallier ce problème, il y a en programmation ce qu'on appelle des boucles. Les boucles permettent d'exécuter un nombre de fois voulu une série d'instructions. Pour cela on utilise la boucle `for`.
-Prenons cet exemple :
-```py
-#Debut du programme
+Une mission vous a été confiée.
 
-for i in range(5):
-    bot.forward()
-    sleep(1)
-    bot.stop()
-    sleep(1)
+Le Prolobot va être envoyé en territoire inconnu pour sécuriser le périmètre. 
 
-#Fin du programme
-```
-Ce court programme permet à notre robot d'avancer pendant 1 seconde puis s'arrêter pendant 1 seconde et ce 5 fois avant de s'arrêter.
+Pour que cela fonctionne, le robot doit poser 4 balises aux coins d'un carré parfait. 
+On considère qu'une balise est posée après une rotation complète du robot. 
 
-Une autre boucle existe c'est `while`. Celle-ci permet au programme de continuer la boucle tant que la condition qui lui est donné est vraie.
-`while` peut être traduit par "tant que".
+Le ProloLab vous souhaite bonne chance. 
 
-Prenons cet exemple :
+{{% /box %}}
 
-```py
-#Debut du programme
+<span style="font-family: Courier;">[Rapport de mission reçu]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>  
 
-while True:
-    bot.forward()
-    sleep(1)
-    bot.stop()
-    sleep(1)
+[SECTION-BREAK]
 
-#Fin du programme
-```
-Ce programme ressemble beaucoup à celui d'avant hormis le fait qu'il ne sera pas répété 5 fois mais une infinité de fois.
-`while True` peut se traduire pas "tant que vrai"
+# <span style="font-family: Courier;">[Lancement Module Signalement]</span>
 
-### Capteurs
-Maintenant que tu sais manipuler les boucles, tu vas pouvoir t'amuser avec ton robot et ce grâce aux différents capteurs.
-Les capteurs sont en bref des traductions du monde réel au monde numérique.
-Il y 3 capteurs différents sur le robot :
-  - 1 capteur de distance situé à l'avant qui permet de connaître la distance entre un objet et lui-même.  
-        `bot.distance()` est l'instruction qui permet de renvoyer la distance entre le robot l'obstacle devant lui
-  - 2 capteurs de ligne permettant de détecter les lignes sous le robot  
-        `bot.floor_sensor(capteur)` est l'instruction qui permet de savoir si le capteur LEFT ou RIGHT détecte une ligne noire. S'il en détecte une, il renvoie True sinon il renvoie False (True se traduit par "Vrai" et False par "Faux")
+Le but de ce module est de vous montrer comment le robot signale ses intentions aux utilisateurs
+externes. Il est important de le maîtriser avant d'envoyer le robot en mission.
 
-Ces valeurs Vrai ou Faux vont servir à faire quelque chose de très utile que l'on appelle les conditions.
+## <span style="font-family: Courier;">[Lancement Sous-Module LEDs]</span>
 
-### Conditions
-Les conditions sont aussi une partie importante dans l'informatique car elles permettent de "séparer" le programme. C'est essentiel quand on cherche à traiter certaines choses. Voyons cela dans cet exemple:
+Afin de signaler ses intentions, le robot est composé de 2 types différents de
+LEDs : 2 à l'avant, nommée phares, et 4 en dessous que nous nommerons simplement LEDs.
 
-```py
-#Debut du programme
+Les phares peuvent être contrôlés à l'aide de la commande `bot.set_headlight(led, state)`.
+La valeur led doit être remplacée par `LEFT` ou `RIGHT` pour indiquer quel phare contrôler.
+La valeur state, quant à elle, indique l'état du phare. Elle doit être remplacée
+par `ON` pour l'allumer et `OFF` pour l'éteindre.
 
-a = 2
+Pour une communication plus avancée, il est nécessaire d'utiliser les leds en
+raison de leur capacité à changer de couleur.
 
-if a == 1:
-    print("Hello")
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Informations incomplètes (ID: ICOLOR)]</span>
 
-if a == 2:
-    print("World")
+{{% box type="info" title="ID: ICOLOR" %}}
 
-heure = 14
+La couleur des LEDs est définie en suivant le format RGB (_Red Green Blue_, qui signifie _Rouge Vert Bleu_ en anglais).
+Une couleur est donc représentée ainsi : `(rouge, vert, bleu)` avec les valeur
+rouge, vert et bleu étant des entiers entre 0 et 255 (inclus).
 
-if heure == 12:
-    print("A table!")
+Ces valeurs correspondent respectivement à la quantité de rouge, de vert et de bleu.
+Elles vont ensuite être utilisées par le robot pour déterminer le mélange de
+couleur final.
 
-else:
-    print("Pas tout de suite")
+Voici quelques exemples de mélanges :
+- rouge : (255, 0, 0)
+- vert : (0, 255, 0)
+- bleu : (0, 0, 255)
+- cyan : (0, 255, 255)
+- jaune : (255, 255, 0)
 
-#Fin du programme
-```
+En raison de la difficulté de visualisation de ce système, il est vivement
+conseillé aux techniciens du labo d'utiliser un [ColorPicker](https://www.colorspire.com/rgb-color-wheel/)
+pour plus de simplicité lors du choix des couleur.
 
-Exécutons ce programme à la main :
-  - La ligne `a = 2` initialise la variable `a` avec la valeur 2.
-  - `if a == 1:` Ici le mot clé `if` demande au programme "si `a` est égal à 1". Si c'est vrai alors il va éxécuter l'ensemble des lignes se trouvant à l'intérieur de la condition c'est à dire sur toutes les lignes avec une INDENTATION de plus que lui (les indentations sont les espaces mis devant une instruction, nous reparlerons de leur importance dans la suite de cette introduction). 
-  - `print("Hello")` Ici on demande au programme d'afficher `Hello` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `a` différent de 1).
-  - `if a == 2:` Ici on retrouve le mot clé `if` qui demande au programme "si `a` est égal à 2". Si c'est vrai alors il va exécuter les lignes avec une INDENTATION de plus que lui.
-  - `print("World")` Ici on demande au programme d'afficher `World` si la condition est vraie (dans notre cas cette ligne sera exécutée et affichera `World`).
-  - La ligne `heure = 14` initialise la variable `heure` avec la valeur 14.
-  - `if heure == 12:` Ici le mot clé de condition `if` demande au programme "si `heure` est égale à 12". Si c'est vrai alors il éxécutera les instructions à l'intérieur de la condition.
-  - `print("A table!")` Ici on demande au programme d'afficher `A table!` si la condition est vraie (dans notre cas cette ligne ne sera pas lue car `heure` est différente de 12)
-  - `else:` Ici le mot clé impose au programme d'éxécuter ce qui suit si aucune des conditions précédentes, celle précédée d'un `if`, a été satisfaite (dans notre cas on entrera dans le `else`).   
-       On peut par ailleurs traduire le mot clé `else` par "sinon" (`if`: si oui, `else`: si non).
-  - `print("Pas tout de suite")` Ici on demande au programme d'afficher `Pas tout de suite` si on n'est pas entré dans la condition `if`. Attention on ne peut pas mettre de `else` si il n'y a pas de `if`.
+{{% /box %}}
 
-Cette partie peut être compliquée mais n'hésite pas à questionner mes acolytes afin de ne pas rester perdu.
+<span style="font-family: Courier;">[Informations à jour]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
 
-Revenons rapidement sur les explications de l'INDENTATION. L'INDENTATION est très importante en Python. Elle permet de faire comprendre au programme quand aller dans une partie d'un programme ou non.  
-Quand vous ferez votre programme plus tard, il sera sûrement nécessaire d'en utiliser. Pour se faire, l'INDENTATION est représentée par les 2 flèches ayant des sens opposés. Cette touche ce nomme tabulation, abrégé tab.
+Les LEDs peuvent être contrôlées à l'aide des commandes `bot.turn_on_led(led, color)`
+et `bot.turn_off_led(led)`.
 
-### Conclusion
-Voilà tu as maintenant toutes les cartes en main pour utiliser les fonctionnalités du robot. Tu retrouveras en dessous un résumé de toutes les instructions qui sont mises à ta disposition.
-Amuse-toi bien !
+La valeur `led` doit être remplacée par `FRONTLEFT`, `FRONTRIGHT`, `BACKLEFT` ou
+`BACKRIGHT` afin d'indiquer la led selectionnée. Voici un schéma indiquant où se trouvent
+les leds :
 
-## La Doc
+{{<figure src="resources/images/leds_position.png" width=50% >}}
 
-La doc répertorie toutes les fonctions qui permettent de contrôler le robot.
+La valeur `color` est quant à elle remplacée par une couleur au format RGB.
 
-<!-- NOTE: La doc est temporaire, si elle reste ca sera juste a la fin pour
-    en tant que recap -->
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Informations incomplètes (ID: ICSTALL)]</span>
 
-### Instantier le robot
+{{% box type="info" title="ID: ICSTALL" %}}
+
+Pour des raisons de simplicité, il est aussi possible de remplacer la valeur
+`led` par la constante `ALL`, afin d'allumer ou d'éteindre **toutes** les LEDs simultanément.
+
+Cette constante est aussi utilisable dans le cadre de la commande
+`set_headlight(led, state)`.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Informations à jour]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Voici un programme illustre tous les modules que nous avons abordés jusqu'ici :
 
 ```py
 from prolobot import *
+bot = Prolobot()
 
+bot.turn_on_led(ALL, (0, 255, 0))
+bot.rotate(LEFT)
+bot.set_headlight(LEFT, ON)
+sleep(2)
+
+bot.set_headlight(ALL, OFF)
+bot.backward()
+bot.turn_on_led(BACKLEFT, (255, 0, 0))
+bot.turn_on_led(BACKRIGHT, (255, 0, 0))
+sleep(2)
+
+bot.stop()
+bot.turn_off_led(ALL)
+```
+
+Le labo vous invite à envoyer ce programme à votre Prolobot afin d'en comprendre
+le fonctionnement.
+
+## <span style="font-family: Courier;">[Lancement Sous-Module Répétition]</span>
+
+Afin de diminuer le nombre de commandes du programme, il est possible de les
+répéter plusieurs fois à l'aide d'une commande nommée la boucle `for`.
+
+Voici un exemple d'utilisation (vous pouvez cliquer sur _Run_ pour afficher ce qu'il se passe) :
+
+```codepython
+for i in range(2):
+    print("Ceci est la commande 1")
+    print("Et ceci, la commande 2")
+```
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Informations incomplètes (ID: IPRINT)]</span>
+
+{{% box type="info" title="ID: IPRINT" %}}
+
+La commande `print` permet d'afficher le texte compris entre les guillemets.
+Elle n'est pas reconnue par le robot et est donc présentée ici uniquement à des
+fins de démonstration.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Informations à jour]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Il est important de noter plusieurs choses :
+1. Le nombre à l'intérieur de la commande `range()` permet d'indiquer le nombre
+    de répétitions ;
+2. Le début de la liste des commandes à répéter est annoncée à l'aide d'un `:`.
+    Ces `:` se doivent d'être sur la même ligne que la commande `for`. Par 
+    convention du labo, ils seront également attachés au caractère précédent ;
+3. Toutes les commandes à répéter sont reconnaissable car ayant la même **indentation**.
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Vulnérabilité détectée (ID: WINDENT)]</span>
+
+{{% box type="warning" title="ID: WINDENT" %}}
+
+L'indentation correspond à une quantité d'espacement avant la commande. Par
+convention du labo, une indentation correspond à 4 espaces. Celle-ci peut être
+ajoutée rapidement à l'aide de la touche `TAB` (la touche juste au dessus de la touche _Verrouillage Majuscule_).
+
+Bien que l'indentation puisse correspondre à 2 ou 6 espaces, il est important
+que le nombre d'espaces par indentations soit le même sur l'entièreté du programme.
+Cela est dû au fait que l'indentation permette de définir des blocs :
+
+```py
+bloc1
+bloc1
+    bloc2
+    bloc2
+
+    bloc2
+
+bloc1
+
+    bloc3
+        bloc4
+    bloc3
+```
+
+Comme vous pouvez le remarquer, augmenter d'une indentation permet de définir
+un nouveau bloc. Revenir d'une indentation en arrière ferme le bloc et fait
+revenir le programme au bloc précédent.
+
+Tout programme démarre avec une indentation de 0 et celle-ci est augmentée de 1
+à chaque apparition du caractère `:`. La boucle répètera alors les commandes
+du bloc ainsi créé.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Vulnérabilité prise en charge avec succès]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Le dernier élément qu'il vous faut comprendre est l'utilité de la valeur `i`.
+Cette valeur va être automatiquement remplacée par le numéro de répétition de
+la boucle. En voici un exemple :
+
+```codepython
+for i in range(4):
+    print("Ceci est la répétition", i)
+print("Ceci est la fin de la répétition")
+```
+
+Il est important de noter que cette numérotation démarre à 0. Ce `i` étant
+remplacé par un chiffre, il est donc possible de l'utiliser pour faire
+des calculs (addition avec `+`, soustraction avec `-`, multiplication avec `*`
+et division avec `/`).
+
+Voici donc un exemple d'utilisation avec le robot :
+
+```py
+from prolobot import *
+bot = Prolobot()
+
+for i in range(2):
+    bot.forward(i + 1)
+    sleep(1) # Attend 1 seconde avant de recommencer la boucle
+
+bot.stop()
+```
+
+Il est recommandé de tester cet exemple avec votre propre robot, afin d'en
+comprendre le fonctionnement.
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Demande d'intervention (ID: MPSGNL)]</span>  
+
+{{% box type="exercise" title="ID: MPSGNL" %}}
+
+Une mission vous a été confiée.
+
+Un rapport de mission récent indique que certains robots ont été interrompus lors
+de la sécurisation du périmètre. Voici les annonces récentes à ce sujet :
+
+> Les robots furent interrompus dans leur mission en raison d'un manque de
+> communication quant au stade d'avancement de la sécurisation.
+> Désormais les robots devront indiquer leur direction à l'aide des phares avant :
+> *2 phares* allumés lors d'une avancée en ligne droite, *un seul phare* lors de 
+> la rotation pour indiquer la direction de celle-ci. À la fin de la sécurisation,
+> soit après la formation complète du carré, les phares doivent être éteints.
+> Les robots devront également signaler l'étape en cours à l'aide du code couleur
+> suivant : *rouge* lors de la pose d'une balise, *orange* lors du déplacement.
+> À la fin de la sécurisation, le robot devra afficher 2 fois la lumière *bleue*.
+
+Il vous faut donc mettre à jour les instructions du robot en fonction de ces
+nouvelles règlementations.
+
+Le ProloLab vous souhaite bonne chance. 
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Rapport de mission reçu]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>  
+
+[SECTION-BREAK]
+
+# <span style="font-family: Courier;">[Lancement Module Automatisation]</span>
+
+Dans le cas de missions plus importantes, le robot se devra de réagir à la situation
+sans instructions externes. Ce module donne donc les bases permettant d'automatiser
+les déplacement du robot.
+
+## <span style="font-family: Courier;">[Lancement Sous-Module Détection]</span>
+
+Le robot peut suivre les commandes qui lui ont été données, mais il peut également
+envoyer des informations sur son état au programme.
+
+Il existe 2 commandes permettant d'indiquer l'état du robot : `bot.distance()`
+et `bot.floor_sensor(capteur)`.
+
+La commande `bot.distance()` va utiliser les capteurs frontaux du robot pour
+déterminer la distances en centimètres des obstacles sur son chemin. Une fois
+envoyée au robot, la commande va ensuite être remplacée dans le programme par
+la valeur de cette distance.
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Erreurs lors de l'exécution (ID: EWHTRUE)]</span>
+
+{{% box type="error" title="ID: EDIST" %}}
+
+En raison de limitations techniques, le capteur ne détecte uniquement les
+obstacles entre 2cm et 400cm de distance. Tout objet plus proche ou plus loin
+ne sera pas reconnu.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Erreurs supprimées]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Voici où ils sont situés sur le robot :
+
+{{<figure src="resources/images/distance_captors_location.png" width=50% >}}
+
+La commande `bot.floor_sensor(capteur)` permet d'utiliser les capteurs en dessous
+du robot. La valeur `capteur` doit être remplacée par `LEFT` ou `RIGHT` pour
+déterminer quel capteur utiliser. Une fois envoyée au robot, la commande va être
+remplacée par `True` si le robot se déplace sur une zone noire, `False` autrement.
+
+Voici où ils sont situés sur le robot :
+
+{{<figure src="resources/images/floor_captors_location.png" width=50% >}}
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Informations incomplètes (ID: ICOND)]</span>
+
+{{% box type="info" title="ID: ICOND" %}}
+
+Une condition est valeur qui peut être remplacée par `True` (vrai) ou `False` (faux).
+Les conditions peuvent être utilisées pour déterminer l'action qui suit.
+Il est également possible d'effectuer des opérations avec :
+
+- Le mot clé `not` (pas) va remplacer la condition par son inverse. `not True`
+    (pas vrai) devient donc `False` (faux) et inversement.
+
+- Le mot clé `and` (et) permet d'associer 2 conditions différentes. L'instruction
+    sera remplacée par `True` si les **2 conditions sont vraies**.
+
+- Enfin, le mot clé `or` (ou) remplacera les 2 conditions par `True` si **au moins
+    l'une des 2** est vraie.
+
+Voici un exemple pour illustrer le comportement de ces différentes opérations :
+
+```codepython
+print("Mot clé not")
+print("not True  ->", not True)
+print("not False ->", not False)
+print("\nMot clé and") # '\n' indique à l'ordinateur de revenir à la ligne
+print("True and False  ->", True and False)
+print("False and False ->", False and False)
+print("True and True   ->", True and True)
+print("\nMot clé or")
+print("True or False  ->", True or False)
+print("False or False ->", False or False)
+print("True or True   ->", True or True)
+```
+
+Toute commande remplacée par une condition est également considérée comme tel,
+et peut donc être utilisée pour effectuer des opérations.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Informations à jour]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+## <span style="font-family: Courier;">[Lancement Sous-Module Analyse]</span>
+
+Il est possible de déterminer une action en fonction d'une condition à l'aide
+de la commande `if`.
+Voici comment elle est utilisée :
+
+```py
+if condition:
+    bloc
+```
+
+Un élément important à noter est la présence du caractère `:` après la condition
+annonçant la création d'un bloc. En effet la commande `if` enverra les instructions
+du bloc au robot uniquement si la `condition` est vraie.
+
+En voici donc un exemple d'utilisation :
+
+```py
+from prolobot import *
+bot = Prolobot()
+
+if not bot.floor_sensor(LEFT) and not bot.floor_sensor(RIGHT):
+    bot.turn_on_led(ALL, (0, 255, 0))
+```
+
+Dans cet exemple, le robot va donc allumer toutes ses LEDs si le capteur de 
+gauche **ne détecte pas** du noir **et** le capteur de droit **ne détecte pas**
+du noir non plus.
+
+Le robot peut également déterminer les actions à effectuer avec le mot clé `else`.
+Celle-ci peut être indiquée uniquement après le bloc d'une commande `if`.
+
+Les commandes du bloc `else` ne seront envoyées aux composants du robot uniquement
+si la condition du `if` n'a pas été validée, et donc si les commandes de son bloc
+n'ont pas été envoyées.
+
+Ces 2 mot clés peuvent se traduire par 'si ...' et 'sinon'.
+
+Voici une suite de l'exemple d'utilisation précédent :
+
+```py
+from prolobot import *
+bot = Prolobot()
+
+if not bot.floor_sensor(LEFT) and not bot.floor_sensor(RIGHT):
+    bot.turn_on_led(ALL, (0, 255, 0))
+else:
+    bot.turn_off_led(ALL)
+```
+
+Il existe également un 3ème mot clé qui correspond à la contraction des 2 précédents :
+le mot clé `elif` (sinon, si ...).
+
+Pour illustrer cette contraction, voici un court programme avec plusieurs commandes
+`if` et `else` :
+
+```py
+if condition1:
+    bloc1
+else:
+    if condition2:
+        bloc2
+    else:
+        bloc3
+```
+
+Comme vous pouvez le voir, si la `condition1` n'est pas vraie, le programme
+va donc analyser le bloc `else` et vérifier la `condition2`.
+
+Voici un autre programme utilisant `elif` et faisant exactement la même chose :
+
+```py
+if condition1:
+    bloc1
+elif condition2:
+    bloc2
+else:
+    bloc3
+```
+
+Ce programme ce comportera de la même manière que le précédent :
+si la `condition1` est fausse, le programme analysera la `condition2`.
+
+Voici comment il est possible de modifier l'exemple d'utilisation précédent avec
+ces informations :
+
+```py
+from prolobot import *
+bot = Prolobot()
+
+if not bot.floor_sensor(LEFT) and not bot.floor_sensor(RIGHT):
+    bot.turn_on_led(ALL, (0, 255, 0))
+elif not bot.floor_sensor(LEFT):
+    bot.turn_on_led(FRONTLEFT, (0, 0, 255))
+    bot.turn_on_led(BACKLEFT, (0, 0, 255))
+elif not bot.floor_sensor(RIGHT):
+    bot.turn_on_led(FRONTRIGHT, (0, 0, 255))
+    bot.turn_on_led(BACKRIGHT, (0, 0, 255))
+else:
+    bot.turn_off_led(ALL)
+```
+
+Les mots clés `if`, `elif` et `else` sont également utilisables avec des
+conditions provenant d'une transformation.
+Essayez ce code sur votre robot pour tenter de comprendre ce qu'il fait ! Si vous avez des questions, n'hésitez pas à vous adresser à un technicien de qualification supérieure. 
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Informations incomplètes (ID: ITRCOND)]</span>
+
+{{% box type="info" title="ID: ITRCOND" %}}
+
+Tout nombre peut être transformé en condition à l'aide de comparateurs. Voici
+la liste des comparateurs reconnus par le robot :
+
+- `==` permet d'indiquer l'égalité, et sera remplacé par `True` uniquement si
+    les 2 nombres sont identiques, `False` dans le cas contraire ;
+- `!=` permet d'indiquer la différence, et sera remplacé par `True` si les 2 nombres
+    sont différents, `False` autrement.
+
+Voici un exemple permettant d'afficher par quoi ces comparateurs sont remplacés :
+
+```codepython
+print("Comparateur ==")
+print("1 == 1 ->", 1 == 1)
+print("1 == 2 ->", 1 == 2)
+print("\nComparateur !=")
+print("1 != 1 ->", 1 != 1)
+print("1 != 2 ->", 1 != 2)
+```
+
+Il existe également des comparateurs dit 'comparateurs d'ordre'. Ceci permettent
+d'indiquer si 2 nombres sont ordonnées.
+
+Prenons 2 nombres quelconques. Étant quelconques, il n'est pas possible de
+connaître en avance de quel nombre il s'agit, nous les nommerons donc `a` et `b`.
+
+- `a < b` est remplacé par `True` uniquement si le chiffre que représente `a` est
+*plus petit* que `b` ;
+- `a > b` en revanche, est remplacé par `True` si `a` est *plus grand* que `b`.
+
+Voici un exemple affichant le comportement de ces comparateurs :
+
+```codepython
+print("Comparateur <")
+print("1 < 1 ->", 1 < 1)
+print("1 < 2 ->", 1 < 2)
+print("3 < 1 ->", 3 < 1)
+print("\nComparateur >")
+print("1 > 1 ->", 1 > 1)
+print("1 > 2 ->", 1 > 2)
+print("3 > 1 ->", 3 > 1)
+```
+
+Les comparateurs peuvent également être combinés comme ceci :
+- `a <= b` est remplacé par le programme par `True` si `a` est plus petit que `b`
+    **ou** `a` est égal à `b` ;
+- `a >= b` est remplacé par `True` si `a` est plus grand que `b` **ou** `a` est
+    égal à `b`.
+
+Voici un exemple permettant d'illustrer le fonctionnement de ces comparateurs :
+
+```codepython
+print("Comparateur <=")
+print("1 <= 1 ->", 1 <= 1)
+print("1 <= 2 ->", 1 <= 2)
+print("3 <= 1 ->", 3 <= 1)
+print("\nComparateur >=")
+print("1 >= 1 ->", 1 >= 1)
+print("1 >= 2 ->", 1 >= 2)
+print("3 >= 1 ->", 3 >= 1)
+```
+
+Il est important de noter que toute commande remplacée par un nombre est considérée
+comme tel, et peut donc également être transformé en condition.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Informations à jour]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Il est également possible d'indiquer au robot de répéter des commandes *tant que*
+la condition n'est pas égale à `True`, donnant naissance au mot clé `while`.
+Voici comment il est utilisé :
+
+```python
+while condition:
+    bloc
+```
+
+Le mot clé `while` va donc répéter les commandes du bloc *tant que* la condition
+est vraie.
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Erreurs lors de l'exécution (ID: EWHTRUE)]</span>
+
+{{% box type="error" title="ID: EWHTRUE" %}}
+
+Bien qu'il soit possible de remplacer la valeur condition par `True`, cette
+pratique est prohibée au sein du labo car cela rendrait le robot incapable de
+s'arrêter.
+
+De la même manière, l'usage de la commande la commande `while False:` est déconseillée
+car toute commande située dans le bloc ne seraient jamais envoyée au robot.
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Erreurs supprimées]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>
+
+Voici un exemple mettant en scène les éléments du module :
+
+```py
+from prolobot import *
+bot = Prolobot()
+
+for i in range(3):
+    if i == 0:
+        bot.turn_on_led(ALL, (255, 0, 0))
+    elif i == 1:
+        bot.turn_on_led(ALL, (0, 255, 0))
+    else:
+        bot.turn_on_led(ALL, (0, 0, 255))
+
+    sleep(1)
+
+bot.turn_off_led(ALL)
+
+while bot.distance() >= 10:
+    bot.rotate(LEFT)
+
+bot.stop()
+```
+
+Tout technicien du labo est vivement invité à envoyer cet exemple au Prolobot,
+afin d'en étudier le comportement.
+
+<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier;">[Demande d'intervention (ID: MRECTDTC)]</span>  
+
+{{% box type="exercise" title="ID: MRECTDTC" %}}
+
+Une mission vous a été confiée.
+
+Suite à une mise à jour des balises, il n'est plus nécessaire de former un carré
+parfait pour définir le périmètre. La zone doit tout de même rester rectangulaire.
+
+Les robots doivent donc couvrir la plus grande zone possible. Celle-ci est
+définie par une bande *noire* visible sur le sol, chaque robot se doit donc
+de poser une balise à l'apparition de cette ligne.
+
+En cas d'obstacle en face de lui, le robot se doit d'ignorer la recherche de la
+bande noire et poser une balise immédiatement.
+
+Le signalement reste inchangé malgré ces modifications.
+
+Veuillez donc mettre à jour le programme des robots pour satisfaire ces nouvelles
+conditions.
+
+Le ProloLab vous souhaite bonne chance. 
+
+{{% /box %}}
+
+<span style="font-family: Courier;">[Rapport de mission reçu]</span>  
+<span style="font-family: Courier;">[Reprise de la procédure]</span>  
+
+[SECTION-BREAK]
+
+<span style="font-family: Courier;">[Procédure Formation Terminée]</span>  
+<span style="font-family: Courier;">[Analyse des modules...]</span>  
+<span style="font-family: Courier;">[Analyse terminée]</span>  
+# <span style="font-family: Courier;">[Rapport de modules]</span>  
+
+### <span style="font-family: Courier;">[Prélude: Notations]</span>
+
+Les spécifications de commandes sont inscrites comme ceci :
+
+`commande(option1, option2 = valeurParDéfaut)`: description
+- option1: descrition option1
+- option2: description option2
+
+Si une option est suivie d'un `=`, elle est donc facultative. Dans l'exemple
+ci-dessous, `option2` sera donc remplacée par `valeurParDéfaut` si elle n'est
+pas précisée.
+
+### <span style="font-family: Courier;">[Informations additionnelles: Initialisation du Prolobot]</span>
+
+Voici les commandes à écrire au début du fichier pour toute utilisation du robot :
+
+```py
+from prolobot import *
 bot = Prolobot()
 ```
 
-### Variables globales
+### <span style="font-family: Courier;">[Sous-Module Déplacement]</span>
 
-`LEFT = 0`. A donner en parametre pour tourner à gauche.  
-`RIGHT = 1`. A donner en parametre pour tourner à droite.
+`bot.forward(vitesse = 0.4)`: avance à la vitesse donnée.
+- vitesse: nombre entre 0 et 2 (inclus). Correspond au nombre de tours de roue
+    secondes.
 
-### Fonctions
+`bot.backward(vitesse = 0.4)`: recule à la vitesse donnée.
+- vitesse: nombre entre 0 et 2 (inclus). Correspond au nombre de tours de roue
+    secondes.
 
-#### Déplacement
+`bot.stop()` : arrête le robot. À écrire après toute utilisation du robot, celui-ci
+ne s'arrêtant pas de lui même
 
-`bot.forward()`: avance le robot.
-- La vitesse par défaut est 0.4.
+### <span style="font-family: Courier;">[Sous-Module Rotation]</span>
 
-`bot.forward(vitesse)`: avance à la vitesse donnée.
-- La vitesse est un nombre entre 0 et 2.
+`LEFT` / `RIGHT` : variables de direction. À utiliser en paramètre.
 
-`bot.backward()`: recule le robot.
-- La vitesse par défaut est 0.4.
+`bot.turn(direction, vitesse = 0.4)`: tourne le robot dans la direction et à la vitesse donnée.
+- direction: prend la valeur `LEFT` ou `RIGHT`.
+- vitesse: nombre entre 0 et 2 (inclus). Correspond au nombre de tours de roue
+    secondes.
 
-`bot.backward(vitesse)`: recule le robot à la vitesse donnée.
-- La vitesse est un nombre entre 0 et 2.
+`bot.rotate(direction, vitesse = 0.4)`: tourne le robot sur lui-même dans la direction
+et à la vitesse donnée.
+- direction: prend la valeur `LEFT` ou `RIGHT`.
+- vitesse: nombre entre 0 et 2 (inclus). Correspond au nombre de tours de roue
+    secondes.
 
-`bot.turn(direction)`: tourne le robot dans la direction donnée. 
-- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer la direction.
+### <span style="font-family: Courier;">[Informations additionnelles: Durée de déplacement]</span>
 
-`bot.turn(direction, vitesse)`: tourne le robot dans la direction et à la vitesse donnée.
-- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer la direction
-- La vitesse est entre 0 et 2
+Pour indiquer la durée de la commande, il faut la succéder de `sleep(secondes)`,
+avec `secondes` le temps en secondes de la commande.
 
-`bot.rotate(direction)`: tourne le robot sur lui-même dans la direction donnée. 
-- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer la direction.
+```py
+bot.forward() # Démarre les roues
+sleep(1)      # Continue à avancer durant 1 seconde
+bot.stop()    # Stop les roues
+```
 
-`bot.rotate(direction, vitesse)`: tourne le robot sur lui-même dans la direction et à la vitesse donnée.
-- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer la direction
-- La vitesse est entre 0 et 2
+### <span style="font-family: Courier;">[Sous-Module LEDs]</span>
 
-`bot.stop()`: arrête le robot.
+`LEFT` / `RIGHT` / `ALL` : variables pour le choix des phares. À utiliser en paramètre.
+`FRONTLEFT` / `FRONTRIGHT` / `BACKLEFT` / `BACKRIGHT` / `ALL` : variable pour le choix des leds.
+À utiliser en paramètre.
 
-#### Capteurs
+`bot.set_headlight(light, status)` : allume ou éteint un des phares avant,
+- `light` : prend la valeur `LEFT`, `RIGHT` ou `ALL`
+- `statut` : prend la valeur `ON` pour allumer, `OFF` pour éteindre
 
-`bot.distance()`: renvoie la distance entre le robot et les obstacles en face de lui.
+`bot.turn_on_led(led, couleur)` : allume la led correspondante avec la couleur donnée.
+- `led` : prend la valeur `FRONTLEFT`, `FRONTRIGHT`, `BACKLEFT`, `BACKRIGHT` ou `ALL`
+- `couleur : de la forme `(rouge, vert, bleu)`, les variables `rouge`, `vert` et `bleu`
+    allant de 0 à 255 inclus.
 
-`bot.floor_sensor(capteur)`: renvoie True si le capteur détecte du blanc.
-- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer quel capteur utiliser.
+`bot.turn_off_led(led)` : éteint la led correspondante.
+- `led` : prend la valeur `FRONTLEFT`, `FRONTRIGHT`, `BACKLEFT`, `BACKRIGHT` ou `ALL`
 
-#### LEDs
+### <span style="font-family: Courier;">[Sous-Module Répétition]</span>
 
-`bot.set_headlight(led, status)`: allume ou éteint un des phares avant,
-- On peut utiliser les constantes `RIGHT` et `LEFT` pour indiquer quel capteur utiliser.
-- Le statut est à 1 pour allumer et 0 pour éteindre la led
+```py
+for i in range(repetition):
+    bloc
+    bloc
+```
 
-`bot.turn_on_led(led, couleur)`: allume la led correspondante.
-- La led est un entier de 0 à 3 servant à préciser la led à allumer
-- La couleur est de la forme (rouge, vert, bleu), avec les valeurs des couleurs allant de 0 a 255
+`range(repetition)` : indique à la boucle le nombre de répétition.
+- `repetition` : remplacer par le nombre souhaité de répétitions.
 
-`bot.turn_off_led()`: éteint toutes les leds de couleur (situé en dessous du robot)
+`i` : remplacé par le nombre actuel de répétition, la première étant au numéro 0.
+Ce nombre de répétitions étant un chiffre, il est donc possible de l'utiliser
+pour effectuer des opérations.
+
+### <span style="font-family: Courier;">[Informations additionnelles: Indentation]</span>
+
+Une indentation sert à définir des blocs. Elle est composée de 4 espaces et peut
+être ajoutée à l'aide de la touche `TAB`.
+
+Ajouter une indentation crée un bloc, enlever une indentation le ferme et revient
+au bloc précédent.
+
+Un bloc doit être défini après toute apparition du caractère `:`.
+
+### <span style="font-family: Courier;">[Informations additionnelles: Opérations]</span>
+
+Il existe 4 types d'opérations sur les nombres :
+- `+` (addition)
+- `-` (soustraction)
+- `*` (multiplication)
+- `/` (division)
+
+Il est possible de faire des opérations sur toute commande remplacée par un nombre.
+
+### <span style="font-family: Courier;">[Sous-Module Détection]</span>
+
+`LEFT` / `RIGHT` : variables pour le choix des capteurs. À utiliser en paramètre.
+
+`bot.distance()` : donne la distance entre le robot et les obstacles en face de lui.
+
+`bot.floor_sensor(capteur)` : renvoie True si le capteur détecte du blanc.
+- `capteur` : prend la valeur `LEFT` ou `RIGHT`
+
+### <span style="font-family: Courier;">[Sous-Module Analyse]</span>
+
+```py
+if condition1:
+    bloc1
+elif condition2:
+    bloc2
+else:
+    bloc3
+```
+
+`if condition` : exécute les commandes du bloc si `condition` est vraie.
+
+`elif condition` : exécute les commandes du bloc si `condition` est vraie, et
+si la condition du bloc au dessus est fausse.
+
+`else` : exécute les commandes du bloc si la condition du bloc au dessus est fausse.
+
+### <span style="font-family: Courier;">[Informations additionnelles: Conditions]</span>
+
+Une condition peut prendre la valeur `True` ou `False`. Il existe 3 mot clés
+permettant de faire des opérations avec :
+
+- `not` (pas) qui inverse la condition
+- `and` (et) qui prend la valeur `True` si les 2 conditions sont vraies
+- `or` (ou) qui prend la valeur `True` si seulement une des 2 conditions est vraie
+
+Une condition peut également être créer à partir de nombres à l'aide de comparateurs.
+Il en existe 6 :
+
+- `==` (égalité)
+- `!=` (différence)
+- `<` (inférieur)
+- `>` (supérieur)
+- `<=` (inférieur ou égal)
+- `>=` (supérieur ou égal)
