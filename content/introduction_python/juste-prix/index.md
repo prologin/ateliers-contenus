@@ -3,6 +3,8 @@ title: Introduction au Python - Juste Prix
 date: 2022
 authors: Dorian 'renji' Péron, Gaëtan 'Downvot_ED' Mouisset, Clarisse 'Nyota' Blanco
 subtitle: Code ton jeu du juste prix
+tags:
+    - Python
 ---
 # Introduction au Python - Juste Prix
 

@@ -2,6 +2,8 @@
 title: Blog
 date: 2022
 subtitle: Coder ton propre blog
+tags:
+    - HTML
 code_stub_url: "./blog.zip"
 ---
 

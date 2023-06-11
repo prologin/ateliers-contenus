@@ -21,6 +21,11 @@ theme = "prologin"
     colorScheme = ["#dd3737", "#f59c2e", "#314658"]
     menuOffset = 10
 
+[params.tags]
+    "Micro:bit" = "#343240"
+    HTML = "#F2622E"
+    Python = "#3C7DA6"
+
 # Allow having shortcode inside other shortcodes
 [markup.goldmark.renderer]
     unsafe = true

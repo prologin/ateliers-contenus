@@ -10,7 +10,7 @@ Pour lancer le site en local, il suffit de taper ces commandes dans un terminal
 
 ```
 git submodule update --init themes/prologin
-./build.sh
+make -C themes/prologin deploy
 hugo server
 ```
 

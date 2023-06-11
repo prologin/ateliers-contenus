@@ -6,4 +6,4 @@
     HUGO_VERSION = "0.111.3"
 
 [context.deploy-preview]
-    command = "./build.sh && hugo --buildDrafts"
+    command = "make -C themes/prologin deploy && hugo --buildDrafts"
