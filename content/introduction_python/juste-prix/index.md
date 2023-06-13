@@ -271,6 +271,9 @@ Ensuite, pour générer un nombre aléatoire, il existe l'instruction :
 ```codepython
 import random
 
+x = 0
+y = 5
+
 nombre_aleatoire = random.randint(x, y)
 # x et y sont des nombres entiers
 # par exemple, si x est égal à 1 et y à 5,
