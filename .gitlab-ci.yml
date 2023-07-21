@@ -12,7 +12,7 @@ stages:
   before_script:
     - apk add yarn zip make bash
   script:
-    - make -C themes/prologin deploy
+    - make -C themes/prolotheme
     - hugo
   variables:
       GIT_SUBMODULE_STRATEGY: recursive

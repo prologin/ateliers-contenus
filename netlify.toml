@@ -1,9 +1,9 @@
 [build]
     publish = "public"
-    command = "./build.sh && hugo"
+    command = "make -C themes/prolotheme && hugo"
 
 [build.environment]
     HUGO_VERSION = "0.111.3"
 
 [context.deploy-preview]
-    command = "make -C themes/prologin deploy && hugo --buildDrafts"
+    command = "make -C themes/prolotheme && hugo --buildDrafts"
