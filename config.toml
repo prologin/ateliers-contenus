@@ -6,7 +6,7 @@ theme = "prolotheme"
 [params]
     logo = "ateliers.png"
     logoText = "Logo Ateliers"
-    favicon  = "ateliers.png"
+    favicon  = "favicon.png"
 
 [markup]
     # Table of content level
