@@ -91,6 +91,8 @@ Crée une fonction récursive qui fait la somme des nombres pairs entre `0` et
 ```codepython
 def add(n):
     # Code ici
+    # Enlève le `pass` !
+    pass
 
 # Teste la fonction
 print("add(42) =", add(42)) # Affiche la valeur 462
