@@ -1,5 +1,6 @@
 from microbit import *
 from random import randint
+import radio
 
 # TODO: Créer la liste des possibilités
 possibilites = []
@@ -7,10 +8,6 @@ possibilites = []
 # TODO: Créer une variable pour avoir la longueur
 # de la liste `possibilites`
 NB_POSSIBILITES = 0
-
-# TODO: Générer le choix du micro:bit
-# entre 0 et `NB_POSSIBILITES` exclu
-choix_adversaire = 0
 
 # Le choix du joueur est à 0 par défaut
 choix_joueur = 0
@@ -26,6 +23,10 @@ while False:
     # Permet de mettre en pause le programme le
     # temps de lire l'entrée du joueur
     sleep(100)
+
+# TODO: Générer le choix du micro:bit
+# entre 0 et `NB_POSSIBILITES` exclu
+choix_adversaire = 0
 
 # Éteint toutes les LEDs de l'écran
 display.clear()

@@ -9,10 +9,6 @@ possibilites = [Image.SKULL, Image.PACMAN, Image.GHOST]
 # La fonction `len` renvoie la longueur d'une liste
 NB_POSSIBILITES = len(possibilites)
 
-# On initialise le choix de l'adversaire à 0
-# par défaut
-choix_adversaire = 0
-
 # On rajoute une valeur booléenne pour savoir si
 # on veut jouer avec la radio ou non
 multijoueur = -1
@@ -26,11 +22,6 @@ while multijoueur == -1:
 
     elif button_b.was_pressed():
         multijoueur = 0
-
-if multijoueur == 0:
-    # Choix aléatoire du microbit
-    # entre 0 et `NB_POSSIBILITES` exclu
-    choix_adversaire = randint(0, NB_POSSIBILITES - 1)
 
 # Le choix du joueur est à 0 par défaut
 choix_joueur = 0
@@ -57,6 +48,14 @@ while not (button_a.is_pressed() and button_b.is_pressed()):
     # le temps de lire l'entrée du joueur
     sleep(100)
 
+# On initialise le choix de l'adversaire à 0
+# par défaut
+choix_adversaire = 0
+
+if multijoueur == 0:
+    # Choix aléatoire du microbit
+    # entre 0 et `NB_POSSIBILITES` exclu
+    choix_adversaire = randint(0, NB_POSSIBILITES - 1)
 
 # Gérer la radio si on est en mode `multijoueur`
 if multijoueur == 1:

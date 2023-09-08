@@ -1,5 +1,6 @@
 from microbit import *
 from random import randint
+import radio
 
 # La liste des possibilités
 possibilites = [Image.SKULL, Image.PACMAN, Image.GHOST]
@@ -7,10 +8,6 @@ possibilites = [Image.SKULL, Image.PACMAN, Image.GHOST]
 # Le nombre de possibilités
 # La fonction `len` renvoie la longueur d'une liste
 NB_POSSIBILITES = len(possibilites)
-
-# Choix aléatoire du micro:bit
-# entre 0 et `NB_POSSIBILITES` exclu
-choix_adversaire = randint(0, NB_POSSIBILITES - 1)
 
 # Le choix du joueur est à 0 par défaut
 choix_joueur = 0
@@ -36,6 +33,10 @@ while not (button_a.is_pressed() and button_b.is_pressed()):
     # Permet de mettre en pause le programme
     # le temps de lire l'entrée du joueur
     sleep(100)
+
+# Choix aléatoire du micro:bit
+# entre 0 et `NB_POSSIBILITES` exclu
+choix_adversaire = randint(0, NB_POSSIBILITES - 1)
 
 # Éteint toutes les LEDs de l'écran
 display.clear()
