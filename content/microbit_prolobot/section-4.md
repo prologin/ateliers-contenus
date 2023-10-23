@@ -21,8 +21,8 @@ déterminer la distances en centimètres des obstacles sur son chemin. Une fois
 envoyée au robot, la commande va ensuite être remplacée dans le programme par
 la valeur de cette distance.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Erreurs lors de l'exécution (ID: EWHTRUE)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Erreurs lors de l'exécution (ID: EWHTRUE)]</span>
 
 {{% box type="error" title="ID: EDIST" %}}
 
@@ -32,8 +32,8 @@ ne sera pas reconnu.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Erreurs supprimées]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Erreurs supprimées]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Voici où ils sont situés sur le robot :
 
@@ -48,8 +48,8 @@ Voici où ils sont situés sur le robot :
 
 {{<figure src="resources/images/floor_captors_location.png" width=50% >}}
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Informations incomplètes (ID: ICOND)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Informations incomplètes (ID: ICOND)]</span>
 
 {{% box type="info" title="ID: ICOND" %}}
 
@@ -87,8 +87,8 @@ et peut donc être utilisée pour effectuer des opérations.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Informations à jour]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Informations à jour]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 ## <span style="font-family: Courier;">[Lancement Sous-Module Analyse]</span>
 
@@ -194,9 +194,10 @@ else:
 
 Les mots clés `if`, `elif` et `else` sont également utilisables avec des
 conditions provenant d'une transformation.
-Essayez ce code sur votre robot pour tenter de comprendre ce qu'il fait ! Si vous avez des questions, n'hésitez pas à vous adresser à un technicien de qualification supérieure. 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Informations incomplètes (ID: ITRCOND)]</span>
+Essayez ce code sur votre robot pour tenter de comprendre ce qu'il fait ! Si vous avez des questions, n'hésitez pas à vous adresser à un technicien de qualification supérieure.
+
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Informations incomplètes (ID: ITRCOND)]</span>
 
 {{% box type="info" title="ID: ITRCOND" %}}
 
@@ -266,8 +267,8 @@ comme tel, et peut donc également être transformé en condition.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Informations à jour]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Informations à jour]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Il est également possible d'indiquer au robot de répéter des commandes *tant que*
 la condition n'est pas égale à `True`, donnant naissance au mot clé `while`.
@@ -281,8 +282,8 @@ while condition:
 Le mot clé `while` va donc répéter les commandes du bloc *tant que* la condition
 est vraie.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Erreurs lors de l'exécution (ID: EWHTRUE)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Erreurs lors de l'exécution (ID: EWHTRUE)]</span>
 
 {{% box type="error" title="ID: EWHTRUE" %}}
 
@@ -295,8 +296,8 @@ car toute commande située dans le bloc ne seraient jamais envoyée au robot.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Erreurs supprimées]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Erreurs supprimées]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Voici un exemple mettant en scène les éléments du module :
 
@@ -325,8 +326,8 @@ bot.stop()
 Tout technicien du labo est vivement invité à envoyer cet exemple au Prolobot,
 afin d'en étudier le comportement.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Demande d'intervention (ID: MRECTDTC)]</span>  
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Demande d'intervention (ID: MRECTDTC)]</span>  
 
 {{% box type="exercise" title="ID: MRECTDTC" %}}
 
@@ -351,7 +352,7 @@ Le ProloLab vous souhaite bonne chance.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Rapport de mission reçu]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>  
+<span style="font-family: Courier; color: #606060;">[Rapport de mission reçu]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>  
 
 

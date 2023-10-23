@@ -17,8 +17,8 @@ Le nombre de tours de roue par secondes peut également être précisé comme ce
 nombre de tours de roue. Lorsqu'elle n'est pas précisée, la vitesse utilisée
 est `0.4`.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Erreurs lors de l'exécution (ID: ESPEED)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Erreurs lors de l'exécution (ID: ESPEED)]</span>
 
 {{% box type="error" title="ID: ESPEED" %}}
 
@@ -27,14 +27,14 @@ Une mauvaise utilisation pourrait endommager le robot.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Erreurs supprimées]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Erreurs supprimées]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Le robot peut également reculer à l'aide de la commande `bot.backward()`.
 Les précisions de vitesse fonctionnent de la même manière que la précédente.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Vulnérabilité détectée (ID: WSTOP)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Vulnérabilité détectée (ID: WSTOP)]</span>
 
 {{% box type="warning" title="ID: WSTOP" %}}
 
@@ -43,8 +43,8 @@ pas. Pour arrêter le robot, il est nécessaire d'utiliser la commande `bot.stop
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Vulnérabilité prise en charge avec succès]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Vulnérabilité prise en charge avec succès]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Voici donc un programme illustrant les différents éléments abordés :
 
@@ -62,8 +62,8 @@ bot.stop()
 Nous vous conseillons fortement de tester ce programme afin d'en comprendre les
 détails.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Informations incomplètes (ID: ISLEEP)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Informations incomplètes (ID: ISLEEP)]</span>
 
 {{% box type="info" title="ID: ISLEEP" %}}
 La commande `sleep(time)` permet de mettre en pause le programme pour une durée
@@ -88,8 +88,8 @@ bot.stop()
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Informations à jour]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Informations à jour]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 ## <span style="font-family: Courier;">[Lancement Sous-Module Rotation]</span>
 
@@ -103,8 +103,8 @@ au robot de tourner respectivement à gauche et à droite.
 Une vitesse peut y être précisé comme ceci : `bot.turn(direction, 0.5)`.
 Les spécifications de la vitesse sont les mêmes que les fonctions précédentes.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Informations incomplètes (ID: IROTATURN)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Informations incomplètes (ID: IROTATURN)]</span>
 
 {{% box type="info" title="ID: IROTATURN" %}}
 
@@ -123,8 +123,8 @@ Voici 2 exemples visuels pour illustrer cette différence :
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Informations à jour]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Informations à jour]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Voici donc un programme illustrant les éléments du sous-module de rotation :
 
@@ -151,8 +151,8 @@ bot.stop()
 Tout comme le précédent, il vous est fortement conseillé de tester ce programme
 avec votre propre Prolobot.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Demande d'intervention (ID: MSECUPERI)]</span>  
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Demande d'intervention (ID: MSECUPERI)]</span>  
 
 {{% box type="exercise" title="ID: MSECUPERI" %}}
 
@@ -167,7 +167,7 @@ Le ProloLab vous souhaite bonne chance.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Rapport de mission reçu]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>  
+<span style="font-family: Courier; color: #606060;">[Rapport de mission reçu]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>  
 
 

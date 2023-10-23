@@ -20,8 +20,8 @@ par `ON` pour l'allumer et `OFF` pour l'éteindre.
 Pour une communication plus avancée, il est nécessaire d'utiliser les leds en
 raison de leur capacité à changer de couleur.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Informations incomplètes (ID: ICOLOR)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Informations incomplètes (ID: ICOLOR)]</span>
 
 {{% box type="info" title="ID: ICOLOR" %}}
 
@@ -46,8 +46,8 @@ pour plus de simplicité lors du choix des couleur.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Informations à jour]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Informations à jour]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Les LEDs peuvent être contrôlées à l'aide des commandes `bot.turn_on_led(led, color)`
 et `bot.turn_off_led(led)`.
@@ -60,8 +60,8 @@ les leds :
 
 La valeur `color` est quant à elle remplacée par une couleur au format RGB.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Informations incomplètes (ID: ICSTALL)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Informations incomplètes (ID: ICSTALL)]</span>
 
 {{% box type="info" title="ID: ICSTALL" %}}
 
@@ -73,8 +73,8 @@ Cette constante est aussi utilisable dans le cadre de la commande
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Informations à jour]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Informations à jour]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Voici un programme illustre tous les modules que nous avons abordés jusqu'ici :
 
@@ -113,8 +113,8 @@ for i in range(2):
     print("Et ceci, la commande 2")
 ```
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Informations incomplètes (ID: IPRINT)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Informations incomplètes (ID: IPRINT)]</span>
 
 {{% box type="info" title="ID: IPRINT" %}}
 
@@ -124,8 +124,8 @@ fins de démonstration.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Informations à jour]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Informations à jour]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Il est important de noter plusieurs choses :
 1. Le nombre à l'intérieur de la commande `range()` permet d'indiquer le nombre
@@ -135,8 +135,8 @@ Il est important de noter plusieurs choses :
     convention du labo, ils seront également attachés au caractère précédent ;
 3. Toutes les commandes à répéter sont reconnaissable car ayant la même **indentation**.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Vulnérabilité détectée (ID: WINDENT)]</span>
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Vulnérabilité détectée (ID: WINDENT)]</span>
 
 {{% box type="warning" title="ID: WINDENT" %}}
 
@@ -173,8 +173,8 @@ du bloc ainsi créé.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Vulnérabilité prise en charge avec succès]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060;">[Vulnérabilité prise en charge avec succès]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Le dernier élément qu'il vous faut comprendre est l'utilité de la valeur `i`.
 Cette valeur va être automatiquement remplacée par le numéro de répétition de
@@ -207,8 +207,8 @@ bot.stop()
 Il est recommandé de tester cet exemple avec votre propre robot, afin d'en
 comprendre le fonctionnement.
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Demande d'intervention (ID: MPSGNL)]</span>  
+<span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060;">[Demande d'intervention (ID: MPSGNL)]</span>  
 
 {{% box type="exercise" title="ID: MPSGNL" %}}
 
@@ -234,7 +234,7 @@ Le ProloLab vous souhaite bonne chance.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Rapport de mission reçu]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>  
+<span style="font-family: Courier; color: #606060;">[Rapport de mission reçu]</span>  
+<span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>  
 
 

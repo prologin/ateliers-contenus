@@ -162,6 +162,7 @@ class Prolobot:
         """
         if led == ALL:
             self.__rgbleds.fill(color)
+            self.__rgbleds.show()
             return
 
         self.__rgbleds[led] = color
@@ -174,6 +175,7 @@ class Prolobot:
         """
         if led == ALL:
             self.__rgbleds.clear()
+            self.__rgbleds.show()
             return
 
         self.__rgbleds[led] = (0, 0, 0)

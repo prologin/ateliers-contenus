@@ -2,9 +2,9 @@
 show_toc: false
 ---
 
-<span style="font-family: Courier;">[Procédure Formation Terminée]</span>  
-<span style="font-family: Courier;">[Analyse des modules...]</span>  
-<span style="font-family: Courier;">[Analyse terminée]</span>  
+<span style="font-family: Courier; color: #606060;">[Procédure Formation Terminée]</span>  
+<span style="font-family: Courier; color: #606060;">[Analyse des modules...]</span>  
+<span style="font-family: Courier; color: #606060;">[Analyse terminée]</span>  
 # <span style="font-family: Courier;">[Rapport de modules]</span>  
 
 ### <span style="font-family: Courier;">[Prélude: Notations]</span>

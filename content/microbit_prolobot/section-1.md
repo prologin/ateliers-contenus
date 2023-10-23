@@ -2,10 +2,10 @@
 show_toc: false
 ---
 
-<span style="font-family: Courier;">[Initialisation Procédure Formation]</span>  
-<span style="font-family: Courier;">[ID: PROLOBOT]</span>  
-<span style="font-family: Courier;">[Chargement des modules]</span>  
-<span style="font-family: Courier;">[Chargement terminé]</span>  
+<span style="font-family: Courier; color: #606060">[Initialisation Procédure Formation]</span>  
+<span style="font-family: Courier; color: #606060">[ID: PROLOBOT]</span>  
+<span style="font-family: Courier; color: #606060">[Chargement des modules]</span>  
+<span style="font-family: Courier; color: #606060">[Chargement terminé]</span>  
 
 # <span style="font-family: Courier;">[Lancement Module Introduction]</span>
 
@@ -20,8 +20,8 @@ Cet ensemble d'instructions s'appelle un _"programme"_. En tant que nouveau tech
 de notre labo, vous vous devez d'apprendre à les écrire.
 Tout au long de la mission, vous allez être accompagnés par des _techniciens de qualification supérieure_. N'hésitez pas à faire appel à eux en cas de problème. 
 
-<span style="font-family: Courier;">[Procédure mise en pause...]</span>  
-<span style="font-family: Courier;">[Informations incomplètes (ID: IEDITOR)]</span>
+<span style="font-family: Courier; color: #606060">[Procédure mise en pause...]</span>  
+<span style="font-family: Courier; color: #606060">[Informations incomplètes (ID: IEDITOR)]</span>
 
 {{% box type="info" title="ID: IEDITOR" %}}
 
@@ -54,8 +54,8 @@ la procédure.
 
 {{% /box %}}
 
-<span style="font-family: Courier;">[Informations à jour]</span>  
-<span style="font-family: Courier;">[Reprise de la procédure]</span>
+<span style="font-family: Courier; color: #606060">[Informations à jour]</span>  
+<span style="font-family: Courier; color: #606060">[Reprise de la procédure]</span>
 
 Tout programme contrôlant le prolobot est précédé de ces 2 lignes :
 
