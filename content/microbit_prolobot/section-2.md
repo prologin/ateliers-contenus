@@ -129,7 +129,7 @@ Voici 2 exemples visuels pour illustrer cette différence :
 Voici donc un programme illustrant les éléments du sous-module de rotation :
 
 ```py
-import prolobot
+from prolobot import *
 from microbit import *
 bot = Prolobot()
 
