@@ -1,11 +1,15 @@
 ---
-title: Introduction au Python - Morpion
-date: 2022
+title: Morpion
 authors: Dorian 'renji' Péron, Clarisse 'Nyota' Blanco
-subtitle: Code ton jeu du Morpion 
+date: 2022
+description: |
+    Maintenant, plus besoin de papier pour faire une bonne partie de morpion !
+
+code_stub_url: ../resources/given_resources/morpion.py
+
+showcase: ./morpion-showcase.webp
 tags:
     - Python
-code_stub_url: ../resources/given_resources/morpion.py
 ---
 
 # Introduction au Python - Morpion

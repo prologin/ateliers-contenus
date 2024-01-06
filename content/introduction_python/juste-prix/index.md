@@ -1,8 +1,11 @@
 ---
-title: Introduction au Python - Juste Prix
-date: 2022
+title: Juste Prix
 authors: Dorian 'renji' Péron, Gaëtan 'Downvot_ED' Mouisset, Clarisse 'Nyota' Blanco
-subtitle: Code ton jeu du juste prix
+date: 2022
+description: |
+    Découvre les bases de Python en codant ta version du jeu télé : Le Juste Prix
+
+showcase: ./juste-prix-showcase.webp
 tags:
     - Python
 ---

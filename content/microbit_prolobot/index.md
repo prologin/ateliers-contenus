@@ -2,9 +2,14 @@
 title: Prolobot
 date: 2022
 authors: Julie 'DaiF' Fiadino
-subtitle: Codez avec le Robot Microbit
+description: |
+    Apprends les bases de la programmation à l'aide du Prolobot, et crée ta
+    propre voiture autonome.
+
 layout: multiple_sections
-tags:
-    - Micro:bit
 code_stub_url: "./resources/given_resources/prolobot.py"
+
+showcase: ./resources/images/prolobot-showcase.webp
+tags:
+    - bot
 ---

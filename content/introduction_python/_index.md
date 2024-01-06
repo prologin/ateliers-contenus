@@ -1,6 +1,9 @@
 ---
 title: Introduction à Python
-subtitle: TPs d'introduction à Python (Juste Prix et Morpion)
+description: |
+    Découvre le Python, crée des mini jeux, et joues-y avec tes amis !
+
+showcase: ./resources/python-showcase.webp
 tags:
     - Python
 ---
