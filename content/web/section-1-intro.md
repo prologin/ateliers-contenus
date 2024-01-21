@@ -15,7 +15,7 @@ Comme il ne s'agit que de texte, tu peux créer par toi-même une page très sim
 
 {{% box type="exercise" %}}
 
-1. Télécharge le code source en [cliquant ici](./resources/given_resources/blog.html)
+1. Télécharge le code source en cliquant sur le bouton `Code à compléter` en haut de la page
 2. Ouvre le fichier `blog.html` avec ton navigateur (Firefox, Chrome, Edge...)
 3. Ouvre le également dans `Visual Studio Code` s'il est disponible, `Bloc-notes` sinon
 4. Remplace la ligne `<!-- Écrire à la place de cette ligne -->` par `Hello World!`
