@@ -9,8 +9,8 @@ Pour lancer le site en local, il suffit de taper ces commandes dans un terminal
 à la racine du repo :
 
 ```
-git submodule update --init themes/prologin
-make -C themes/prologin deploy
+git submodule update --init themes/prolotheme
+make -C themes/prolotheme deploy
 hugo server
 ```
 
