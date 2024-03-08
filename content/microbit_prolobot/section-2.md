@@ -131,7 +131,6 @@ Voici donc un programme illustrant les éléments du sous-module de rotation :
 
 ```py
 from prolobot import *
-from microbit import *
 bot = Prolobot()
 
 bot.turn(RIGHT)
