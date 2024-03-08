@@ -5,8 +5,8 @@ show_toc: true
 # <span style="font-family: Courier;">[Lancement Module Automatisation]</span>
 
 Dans le cas de missions plus importantes, le robot se devra de réagir à la situation
-sans instructions externes. Ce module donne donc les bases permettant d'automatiser
-les déplacement du robot.
+sans instruction externe. Ce module donne donc les bases permettant d'automatiser
+les déplacements du robot.
 
 ## <span style="font-family: Courier;">[Lancement Sous-Module Détection]</span>
 
@@ -17,7 +17,7 @@ Il existe 2 commandes permettant d'indiquer l'état du robot : `bot.distance()`
 et `bot.floor_sensor(capteur)`.
 
 La commande `bot.distance()` va utiliser les capteurs frontaux du robot pour
-déterminer la distances en centimètres des obstacles sur son chemin. Une fois
+déterminer la distance en centimètres des obstacles sur son chemin. Une fois
 envoyée au robot, la commande va ensuite être remplacée dans le programme par
 la valeur de cette distance.
 
@@ -53,7 +53,7 @@ Voici où ils sont situés sur le robot :
 
 {{% box type="info" title="ID: ICOND" %}}
 
-Une condition est valeur qui peut être remplacée par `True` (vrai) ou `False` (faux).
+Une condition est une valeur qui peut être remplacée par `True` (vrai) ou `False` (faux).
 Les conditions peuvent être utilisées pour déterminer l'action qui suit.
 Il est également possible d'effectuer des opérations avec :
 
@@ -120,7 +120,7 @@ gauche **ne détecte pas** du noir **et** le capteur de droit **ne détecte pas*
 du noir non plus.
 
 Le robot peut également déterminer les actions à effectuer avec le mot clé `else`.
-Celle-ci peut être indiquée uniquement après le bloc d'une commande `if`.
+Celui-ci peut être indiquée uniquement après le bloc d'une commande `if`.
 
 Les commandes du bloc `else` ne seront envoyées aux composants du robot uniquement
 si la condition du `if` n'a pas été validée, et donc si les commandes de son bloc
@@ -170,7 +170,7 @@ else:
     bloc3
 ```
 
-Ce programme ce comportera de la même manière que le précédent :
+Ce programme se comportera de la même manière que le précédent :
 si la `condition1` est fausse, le programme analysera la `condition2`.
 
 Voici comment il est possible de modifier l'exemple d'utilisation précédent avec
@@ -221,12 +221,12 @@ print("1 != 2 ->", 1 != 2)
 ```
 
 Il existe également des comparateurs dit 'comparateurs d'ordre'. Ceci permettent
-d'indiquer si 2 nombres sont ordonnées.
+d'indiquer si 2 nombres sont ordonnés.
 
 Prenons 2 nombres quelconques. Étant quelconques, il n'est pas possible de
 connaître en avance de quel nombre il s'agit, nous les nommerons donc `a` et `b`.
 
-- `a < b` est remplacé par `True` uniquement si le chiffre que représente `a` est
+- `a < b` est remplacé par `True` uniquement si le nombre que représente `a` est
 *plus petit* que `b` ;
 - `a > b` en revanche, est remplacé par `True` si `a` est *plus grand* que `b`.
 
@@ -263,7 +263,7 @@ print("3 >= 1 ->", 3 >= 1)
 ```
 
 Il est important de noter que toute commande remplacée par un nombre est considérée
-comme tel, et peut donc également être transformé en condition.
+comme tel, et peut donc également être transformée en condition.
 
 {{% /box %}}
 
@@ -271,7 +271,7 @@ comme tel, et peut donc également être transformé en condition.
 <span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
 Il est également possible d'indiquer au robot de répéter des commandes *tant que*
-la condition n'est pas égale à `True`, donnant naissance au mot clé `while`.
+la condition est égale à `True`, donnant naissance au mot clé `while`.
 Voici comment il est utilisé :
 
 ```python
@@ -291,8 +291,8 @@ Bien qu'il soit possible de remplacer la valeur condition par `True`, cette
 pratique est prohibée au sein du labo car cela rendrait le robot incapable de
 s'arrêter.
 
-De la même manière, l'usage de la commande la commande `while False:` est déconseillée
-car toute commande située dans le bloc ne seraient jamais envoyée au robot.
+De la même manière, l'usage de la commande `while False:` est déconseillée
+car toute commande située dans le bloc ne serait jamais envoyée au robot.
 
 {{% /box %}}
 

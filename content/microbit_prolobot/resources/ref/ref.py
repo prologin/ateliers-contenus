@@ -48,7 +48,7 @@ def mission1():
 
 
 ### Mission 2 (ID: MPSGNL)
-def mission2()
+def mission2():
     for i in range(4):
         # Go forward
         bot.forward()
@@ -67,7 +67,7 @@ def mission2()
         sleep(1)
 
     # Signal end of square
-    for i in range(2)
+    for i in range(2):
         bot.turn_on_led(ALL, (0, 0, 255))
         sleep(0.5)
         bot.turn_off_led(ALL)
@@ -78,8 +78,7 @@ def mission2()
 def mission3():
     for i in range(4):
         # Go forward while no obstacle
-        while not bot.floor_sensor(LEFT) and not bot.floor_sensor(RIGHT) and
-            bot.distance() >= 12: # TODO: check if correct value
+        while not bot.floor_sensor(LEFT) and not bot.floor_sensor(RIGHT) and bot.distance() >= 12: # TODO: check if correct value
             bot.forward()
             bot.set_headlight(ALL, ON)
             bot.turn_on_led(ALL, (255, 122, 0))
@@ -95,7 +94,7 @@ def mission3():
         sleep(1)
 
     # Signal end of square
-    for i in range(2)
+    for i in range(2):
         bot.turn_on_led(ALL, (0, 0, 255))
         sleep(0.5)
         bot.turn_off_led(ALL)

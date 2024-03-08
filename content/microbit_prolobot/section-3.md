@@ -12,9 +12,9 @@ externes. Il est important de le maîtriser avant d'envoyer le robot en mission.
 Afin de signaler ses intentions, le robot est composé de 2 types différents de
 LEDs : 2 à l'avant, nommée phares, et 4 en dessous que nous nommerons simplement LEDs.
 
-Les phares peuvent être contrôlés à l'aide de la commande `bot.set_headlight(led, state)`.
-La valeur led doit être remplacée par `LEFT` ou `RIGHT` pour indiquer quel phare contrôler.
-La valeur state, quant à elle, indique l'état du phare. Elle doit être remplacée
+Les phares peuvent être contrôlés à l'aide de la commande `bot.set_headlight(led, state)` :
+- La valeur `led` doit être remplacée par `LEFT` ou `RIGHT` pour indiquer quel phare contrôler.
+- La valeur `state`, quant à elle, indique l'état du phare. Elle doit être remplacée
 par `ON` pour l'allumer et `OFF` pour l'éteindre.
 
 Pour une communication plus avancée, il est nécessaire d'utiliser les leds en
@@ -26,12 +26,12 @@ raison de leur capacité à changer de couleur.
 {{% box type="info" title="ID: ICOLOR" %}}
 
 La couleur des LEDs est définie en suivant le format RGB (_Red Green Blue_, qui signifie _Rouge Vert Bleu_ en anglais).
-Une couleur est donc représentée ainsi : `(rouge, vert, bleu)` avec les valeur
+Une couleur est donc représentée ainsi : `(rouge, vert, bleu)` avec les valeurs
 rouge, vert et bleu étant des entiers entre 0 et 255 (inclus).
 
 Ces valeurs correspondent respectivement à la quantité de rouge, de vert et de bleu.
 Elles vont ensuite être utilisées par le robot pour déterminer le mélange de
-couleur final.
+couleurs final.
 
 Voici quelques exemples de mélanges :
 - rouge : (255, 0, 0)
@@ -41,8 +41,8 @@ Voici quelques exemples de mélanges :
 - jaune : (255, 255, 0)
 
 En raison de la difficulté de visualisation de ce système, il est vivement
-conseillé aux techniciens du labo d'utiliser un [ColorPicker](https://www.colorspire.com/rgb-color-wheel/)
-pour plus de simplicité lors du choix des couleur.
+conseillé aux techniciens du labo d'utiliser un [ColorPicker](https://colorspire.com/rgb-color-wheel/)
+pour plus de simplicité lors du choix des couleurs.
 
 {{% /box %}}
 
@@ -76,7 +76,7 @@ Cette constante est aussi utilisable dans le cadre de la commande
 <span style="font-family: Courier; color: #606060;">[Informations à jour]</span>  
 <span style="font-family: Courier; color: #606060;">[Reprise de la procédure]</span>
 
-Voici un programme illustre tous les modules que nous avons abordés jusqu'ici :
+Voici un programme qui illustre tous les modules que nous avons abordés jusqu'ici :
 
 ```py
 from prolobot import *
@@ -133,7 +133,7 @@ Il est important de noter plusieurs choses :
 2. Le début de la liste des commandes à répéter est annoncée à l'aide d'un `:`.
     Ces `:` se doivent d'être sur la même ligne que la commande `for`. Par 
     convention du labo, ils seront également attachés au caractère précédent ;
-3. Toutes les commandes à répéter sont reconnaissable car ayant la même **indentation**.
+3. Toutes les commandes à répéter sont reconnaissables car ayant la même **indentation**.
 
 <span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
 <span style="font-family: Courier; color: #606060;">[Vulnérabilité détectée (ID: WINDENT)]</span>
@@ -142,10 +142,10 @@ Il est important de noter plusieurs choses :
 
 L'indentation correspond à une quantité d'espacement avant la commande. Par
 convention du labo, une indentation correspond à 4 espaces. Celle-ci peut être
-ajoutée rapidement à l'aide de la touche `TAB` (la touche juste au dessus de la touche _Verrouillage Majuscule_).
+ajoutée rapidement à l'aide de la touche `TAB` (la touche juste au dessus de la touche _Verrouillage Majuscule_ sur le clavier).
 
 Bien que l'indentation puisse correspondre à 2 ou 6 espaces, il est important
-que le nombre d'espaces par indentations soit le même sur l'entièreté du programme.
+que le nombre d'espaces par indentation soit le même sur l'entièreté du programme.
 Cela est dû au fait que l'indentation permette de définir des blocs :
 
 ```py

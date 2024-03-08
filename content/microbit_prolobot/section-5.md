@@ -79,7 +79,7 @@ bot.stop()    # Stop les roues
 
 `bot.turn_on_led(led, couleur)` : allume la led correspondante avec la couleur donnée.
 - `led` : prend la valeur `FRONTLEFT`, `FRONTRIGHT`, `BACKLEFT`, `BACKRIGHT` ou `ALL`
-- `couleur : de la forme `(rouge, vert, bleu)`, les variables `rouge`, `vert` et `bleu`
+- `couleur` : de la forme `(rouge, vert, bleu)`, les variables `rouge`, `vert` et `bleu`
     allant de 0 à 255 inclus.
 
 `bot.turn_off_led(led)` : éteint la led correspondante.
@@ -94,7 +94,7 @@ for i in range(repetition):
 ```
 
 `range(repetition)` : indique à la boucle le nombre de répétition.
-- `repetition` : remplacer par le nombre souhaité de répétitions.
+- `repetition` : remplacé par le nombre souhaité de répétitions.
 
 `i` : remplacé par le nombre actuel de répétition, la première étant au numéro 0.
 Ce nombre de répétitions étant un chiffre, il est donc possible de l'utiliser
@@ -149,14 +149,14 @@ si la condition du bloc au dessus est fausse.
 
 ### <span style="font-family: Courier;">[Informations additionnelles: Conditions]</span>
 
-Une condition peut prendre la valeur `True` ou `False`. Il existe 3 mot clés
+Une condition peut prendre la valeur `True` ou `False`. Il existe 3 mot-clés
 permettant de faire des opérations avec :
 
 - `not` (pas) qui inverse la condition
 - `and` (et) qui prend la valeur `True` si les 2 conditions sont vraies
 - `or` (ou) qui prend la valeur `True` si seulement une des 2 conditions est vraie
 
-Une condition peut également être créer à partir de nombres à l'aide de comparateurs.
+Une condition peut également être créée à partir de nombres à l'aide de comparateurs.
 Il en existe 6 :
 
 - `==` (égalité)

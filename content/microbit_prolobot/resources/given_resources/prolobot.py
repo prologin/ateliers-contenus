@@ -13,7 +13,7 @@ RIGHT = 1
 # Const for lights
 ON = 0
 OFF = 1
-ALL = 2 
+ALL = 10
 
 # Const for leds
 FRONTLEFT = 0

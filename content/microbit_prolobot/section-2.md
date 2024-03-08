@@ -5,14 +5,14 @@ show_toc: true
 # <span style="font-family: Courier;">[Lancement Module Déplacement]</span>
 
 Ce module a pour but de vous montrer comment fonctionne le déplacement du robot.
-Toutes ces commandes permettent d'activer les roues du robots de manière
+Toutes ces commandes permettent d'activer les roues du robot de manière
 différentes. Il est important que vous en saisissiez la nuance.
 
 ## <span style="font-family: Courier;">[Lancement Sous-Module Avancée]</span>
 
 Le robot avance après avoir reçu la commande `bot.forward()`.
 
-Le nombre de tours de roue par secondes peut également être précisé comme ceci :
+Le nombre de tours de roue par seconde peut également être précisé comme ceci :
 `bot.forward(0.6)`. Pour des raisons de clarté, nous appelerons _vitesse_ ce 
 nombre de tours de roue. Lorsqu'elle n'est pas précisée, la vitesse utilisée
 est `0.4`.
@@ -66,6 +66,7 @@ détails.
 <span style="font-family: Courier; color: #606060;">[Informations incomplètes (ID: ISLEEP)]</span>
 
 {{% box type="info" title="ID: ISLEEP" %}}
+
 La commande `sleep(time)` permet de mettre en pause le programme pour une durée
 de `time` secondes. 
 
@@ -100,7 +101,7 @@ Le robot peut-être tourné à l'aide de 2 commandes différentes :
 La valeur `direction` doit être remplacée par les mots `LEFT` ou `RIGHT`, indiquant
 au robot de tourner respectivement à gauche et à droite.
 
-Une vitesse peut y être précisé comme ceci : `bot.turn(direction, 0.5)`.
+Une vitesse peut y être précisée comme ceci : `bot.turn(direction, 0.5)`.
 Les spécifications de la vitesse sont les mêmes que les fonctions précédentes.
 
 <span style="font-family: Courier; color: #606060;">[Procédure mise en pause...]</span>  
