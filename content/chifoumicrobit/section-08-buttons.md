@@ -61,7 +61,7 @@ tu as appuyé sur les boutons pendant ce laps de temps.
 
 {{% /box %}}
 
-{{% box type="exercise" title="Entraînement 5 : Un grand sourire !" %}}
+{{% box type="exercise" title="Entraînement 6 : Un grand sourire !" %}}
 
 Pour tester si le `micro:bit` fonctionne bien, Skeleton voudrait que lorsqu'on
 appuie sur les deux boutons en même temps, l'image sourire s'affiche.

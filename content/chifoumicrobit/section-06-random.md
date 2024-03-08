@@ -29,7 +29,7 @@ print(ma_variable)
 N'hésite pas à relancer plusieurs fois ton code pour avoir un autre nombre
 généré.
 
-{{% box type="exercise" title="Entraînement 3 : Faire un choix" %}}
+{{% box type="exercise" title="Entraînement 4 : Faire un choix" %}}
 
 Bouh, le fantôme, n'arrive pas à faire de choix de ce qu'il veut manger à midi.
 Pour l'aider, Skeleton souhaiterait que tu lui fasses un programme permettant

@@ -55,7 +55,7 @@ display.scroll("Je vais vite !", delay=50)
 
 <br/>
 
-{{% box type="exercise" title="Entraînement 4 : Afficher une image !" %}}
+{{% box type="exercise" title="Entraînement 5 : Afficher une image !" %}}
 
 Pour voir si tu as bien compris comment on manipule les images, Skeleton
 souhaiterait que tu affiches un cœur (heart en anglais) sur ton `micro:bit`.

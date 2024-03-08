@@ -49,7 +49,7 @@ print(longueur)
 
 <br/>
 
-{{% box type="exercise" title="Entraînement 2 : Afficher les derniers scores"%}}
+{{% box type="exercise" title="Entraînement 3 : Afficher les derniers scores"%}}
 
 Pacman a stocké dans une liste ses derniers scores dans le jeu. Il voudrait
 les afficher un à un, ligne par ligne. Pour faire cela, il te donne la liste et

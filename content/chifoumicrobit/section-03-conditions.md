@@ -46,7 +46,8 @@ en français : Si je mange japonnais, je n'aurais plus faim. Sinon si je mange
 italien, j'aurais encore un peu faim. Sinon, j'aurais trop faim. On peut alors
 utiliser `else` pour "sinon" et `elif` pour "sinon si".
 
-```python
+```codepython
+# Essaye de modifier la valeur de `ma_variable` !
 ma_variable = 2
 
 # Vérifie si `ma_variable` est égale à 1

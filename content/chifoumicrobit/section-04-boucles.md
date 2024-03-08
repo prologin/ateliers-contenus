@@ -21,3 +21,15 @@ while i < 3:
     # Ajouter 1 à i à chaque tour de boucle
     i = i + 1
 ```
+
+{{% box type="exercise" title="Entraînement 2 : Boucler, boucler, boucler"%}}
+
+Bouh est très content de revoir son ami d'enfance ! Il est si content qu'il
+voudrait lui dire 15 fois "Salut !". Pour faire ça, il voudrait utiliser une
+boucle !
+
+```codepython
+# Écris ton code ici !
+```
+
+{{% /box %}}
