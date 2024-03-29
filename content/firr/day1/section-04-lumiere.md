@@ -54,7 +54,7 @@ Nous pouvons également choisir quelle LED doit changer de couleur. La commande
 à utiliser est :
 
 ```python
-r = leds.range(debut, fin)
+r = leds.range(debut, nb_leds)
 r.show_color(neopixel.colors(couleur))
 ```
 
@@ -65,7 +65,7 @@ Ici, nous avons 3 paramètres :
 couleur. Attention, en Python on commence à compter avec 0. (Pour commencer par
 la première LED, il faut mettre 0, pour la deuxième, il faudra mettre 1, ainsi
 de suite...)
-- `fin` doit être remplacé par le numéro de la dernière LED à changer de couleur
+- `nb_leds` doit être remplacé par le nombre de LEDs que tu veux allumer
 - `couleur` fonctionne comme dans l’exercice précédent
 
 {{% box type="exercise" title="Afficher des LEDs" %}}
