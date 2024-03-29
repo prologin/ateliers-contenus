@@ -1,6 +1,6 @@
-# Étape 4 : Variations lumineuses
+# Étape 3 : Variations lumineuses
 
-{{% box type="error" title="Objectfs" %}}
+{{% box type="error" title="Objectifs" %}}
 
 Utiliser votre nouvelle installation pour créer les conditions lumineuses
 optimales pour vos plantes, cette étape est cruciale pour leur adaptation à leur
