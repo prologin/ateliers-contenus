@@ -25,12 +25,12 @@ Pour afficher un texte sur notre `micro:bit`, il faut utiliser la commande
 suivante :
 
 ```python
-basic.showstring(“Le texte à afficher”)
+basic.show_string(“Le texte à afficher”)
 ```
 
 {{% /box %}}
 
-Ici, `basic.showstring` est ce qu’on appelle une fonction. Une fonction est
+Ici, `basic.show_string` est ce qu’on appelle une fonction. Une fonction est
 toujours suivie de parenthèses avec dedans, 0, 1 ou plusieurs paramètres. Dans
 notre cas, il y a 1 seul paramètre : le texte que nous voulons afficher. C’est
 important de le mettre entre guillemets.
