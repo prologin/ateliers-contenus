@@ -12,7 +12,7 @@ Pour informer notre `micro:bit` que l'éclairage est branché, il faut ajouter l
 ligne suivante au dessus de notre code :
 
 ```python
-leds = neopixel.create(DigitalPin.P0, 10, NeoPixel.RGB)
+leds = neopixel.create(DigitalPin.P0, 10, NeoPixelMode.RGB)
 ```
 
 Ici, nous utilisons la fonction `neopixel.create`. Les paramètres, dans l’ordre,
@@ -26,7 +26,7 @@ et que ces LEDs peuvent faire différentes couleurs.
 La fonction à utiliser est :
 
 ```python
-leds.show_color(couleur)
+leds.show_color(neopixel.colors(couleur))
 ```
 
 {{% /box %}}
@@ -54,7 +54,8 @@ Nous pouvons également choisir quelle LED doit changer de couleur. La commande
 à utiliser est :
 
 ```python
-leds.range(debut, fin).show_color(couleur)
+r = leds.range(debut, fin)
+r.show_color(neopixel.colors(couleur))
 ```
 
 {{% /box %}}
