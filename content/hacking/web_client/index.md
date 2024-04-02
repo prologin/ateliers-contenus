@@ -7,7 +7,7 @@ description: |
         **OU** alors il l'a fini mais a caché les pa**R**ties de son TP et **C**'**E**st à toi de les retrouver!
 
 layout: multiple_sections
-showcase: "./resources/images/showcase.gif" # or remove
+showcase: "./resources/images/showcase.webp" # or remove
 tags:
     - web
 ---

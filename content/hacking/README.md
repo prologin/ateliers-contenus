@@ -19,7 +19,7 @@ Ascii to Flag
 
 On nous donne explicitement le flag et en plus on nous dit qu'il faut convertir ce qui est à l'intérieur grâce à la table ASCII
 
-Flag : Prologin
+Flag : nigolorP
 
 
 ## Part 3
@@ -29,7 +29,7 @@ http://alasql.org/
 On utilise la lib : *Alasql*
 
 On génère une BDD
-Et comme le sujet nous donne si bien la réponse, on doit entrer la requête `SELECT val FROM users WHERE id="FLAG"`
+Et comme le sujet nous donne si bien la réponse, on doit entrer la requête `SELECT password FROM users WHERE id="FLAG"`
 
 Flag : PostgreSQL
 
