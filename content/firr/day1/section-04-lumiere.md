@@ -115,7 +115,7 @@ Pour qu’un code soit exécuté indéfiniment, il faut utiliser par exemple :
 
 ```python
 while True:
-    basic.showstring(“Hello Mars”)
+    basic.show_string(“Hello Mars”)
 ```
 
 La partie importante est le `while True`. En dessous, de cette ligne, tout ce

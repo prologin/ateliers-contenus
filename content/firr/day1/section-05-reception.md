@@ -20,7 +20,7 @@ niveau_de_lumiere = input.light_level()
 
 Ici, le niveau de lumière va être stocké dans la variable qui s’appelle : `niveau_de_lumiere`. Pensez à une boîte sur laquelle il y a une étiquette avec écrit `niveau_de_lumiere`. Dans cette boite, on range notre valeur.
 
-Le capteur de lumière va de la valeur 0 à 200.
+Le capteur de lumière va de la valeur 0 à 255.
 
 {{% /box %}}
 
