@@ -9,7 +9,7 @@ Date : 04 avril 2024 - Mission 2
 
 Après avoir éclairé notre **serre martienne**, la prochaine étape essentielle est de s'assurer que nos plantes reçoivent l'eau vitale pour leur croissance. 
 
-{{<figure src="resources/firr.png" alt="Logo FIRR">}}
+{{<figure src="resources/images/firr.png" alt="Logo FIRR">}}
 
 Sur Mars, chaque goutte d'eau est précieuse, et notre système d'arrosage doit être à la fois **efficace** et **intelligent**. 
 

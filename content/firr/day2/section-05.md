@@ -1,40 +1,20 @@
-# Étape 3 : Utilisation des boutons
+# Étape 4 : Arrosage automatique
 
 {{% box type="error" title="Objectif" %}}
 
-Programmer le micro:bit pour utiliser des boutons externes afin de contrôler **manuellement** l'activation ou la désactivation de la pompe à eau. Cette fonctionnalité permettra une intervention rapide en cas de besoin et une flexibilité dans la gestion de l'arrosage.
+Créer un système d'arrosage automatique qui s'active en fonction des données recueillies par le capteur d'humidité, assurant ainsi que les plantes reçoivent la quantité d'eau optimale sans gaspillage.
 
 {{% /box %}}
 
-{{% box type="info" title="Fonctionnement des boutons" %}}
 
-Avant toute chose, il faut définir le comportement des boutons. Pour cela, on utilise par exemple:
+{{% box type="exercise" title="Systeme anti-secheresse" %}}
 
-```python
-def on_button_pressed_a():
-    basic.show_string(“Hello Mars !”)
-
-```
+Si le capteur d'humidité passe en dessous de la valeur seuil, il doit s’activer pendant 2 secondes puis s'arrêter.
 
 {{% /box %}}
 
-La partie importante est la première ligne. 
-On indique à la machine que l’on veut changer le comportement du bouton a. 
-Ensuite, on ajoute le code qui doit s'exécuter lorsqu’on appuie sur le bouton. Ici, afficher “Hello Mars !”
+{{% box type="exercise" title="BONUS : Estimation de la consommation d’eau" %}}
 
-{{% box type="exercise" title="Interrupteur basique" %}}
-
-En utilisant le même principe, essayez de reprogrammer les boutons pour que le bouton de gauche allume la pompe et que celui de droite l’éteigne.
+Pendant l’arrosage automatique, essayer d’estimer la quantité d’eau qui a été consommée et afficher la consommation toutes les 10 secondes sur le micro:bit.
 
 {{% /box %}}
-
-Un jour sur mars fait à peu près 24 heures aussi. Pour l’exercice, nous allons considérer que 1 heure = 1 seconde. 
-
-{{% box type="exercise" title="Interrupteur basique" %}}
-
-Votre code devra attendre que l’utilisateur appuie en tout 24 fois sur le bouton gauche et droite. Ensuite, il affiche le cycle prévu. 
-
-{{% /box %}}
-
-Exemple : On appuie 4 fois sur le bouton gauche, 12 fois sur le bouton droit et 8 fois sur le bouton gauche. 
-Ensuite, le cycle pompe se lance. La pompe s'allume pendant 4 secondes, s'éteint pendant 12 secondes et se rallume pendant 8 secondes. 
