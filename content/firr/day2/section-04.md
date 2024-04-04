@@ -38,12 +38,21 @@ considérer que 1 heure correspond 1 seconde.
 
 {{% box type="exercise" title="Interrupteur basique" %}}
 
-Votre code devra attendre que l’utilisateur appuie en tout 24 fois sur le
-bouton gauche et droite. Ensuite, il affiche le cycle prévu. 
+On va compter le nombre d'appuis sur le bouton A et le nombre d'appuis sur le
+bouton B pour définir ces principes :
+
+- le nombre d'appuis sur le bouton A correspond au temps pendant lequel la pompe
+est allumée ;
+- le nombre d'appuis sur le bouton B correspond au temps pendant lequel la pompe
+est éteinte.
+
+Au total, nous devons avoir 24 nombre d'appuis sur le bouton A et le bouton B.
+Tant qu'on n'a pas atteint ces 24 appuis, vous devez vérifier les entrées sur
+les boutons.
+
+Par la suite, tu devras faire une itération du cycle de la pompe.
 
 {{% /box %}}
 
-*Exemple :* On appuie 4 fois sur le bouton gauche, 12 fois sur le bouton droit et
-8 fois sur le bouton gauche. Ensuite, le cycle pompe se lance. La pompe s'allume
-pendant 4 secondes, s'éteint pendant 12 secondes et se rallume pendant 8
-secondes. 
+Pour cette étape, tu dois utiliser les boucle `while` pour compter le nombre
+d'appuis.
