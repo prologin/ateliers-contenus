@@ -35,7 +35,7 @@ affiche le taux d'humidité actuellement récupéré par le capteur).
 
 ```python
 while True:
-    basic.show_number(pins.analog_read(AnalogPin.1))
+    basic.show_number(pins.analog_read_pin(AnalogPin.P1))
 ```
 
 Vous pouvez désormais tester votre capteur d'humidité pour voir la valeur qui
