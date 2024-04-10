@@ -46,10 +46,9 @@ Enter that SQL statement : "SELECT id FROM USER ORDER BY"
 
 Stégano :D
 
-On nous donne un échange entre George Sand et Alfred de Musset et le but des de décoder leurs petits messages
-Indice : lire les premiers mots de chaque vers
+Indice : lire les premières lettres de chaque vers
 
-Flag : Cette nuit (peut-importe l'ecriture, la fonction de verif met la string en MAJ)
+Flag : Lit (peut-importe l'ecriture, la fonction de verif met la string en MAJ)
 
 
 ## Part 6 : Check
